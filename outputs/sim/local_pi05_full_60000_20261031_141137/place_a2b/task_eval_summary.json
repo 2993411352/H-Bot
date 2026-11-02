@@ -1,0 +1,82 @@
+{
+  "task_name": "place_a2b",
+  "status": "ok",
+  "episodes": 50,
+  "successes": 13,
+  "success_rate": 0.26,
+  "avg_progress": 0.37000000000000005,
+  "skipped_episodes": 0,
+  "stage_success_rate": {
+    "reach_pick": 0.64,
+    "contact_pick": 0.46,
+    "grasp_pick": 0.32,
+    "lift_pick": 0.28,
+    "reach_place": 0.26,
+    "place_within_xy": 0.26
+  },
+  "error": null,
+  "configs": [
+    {
+      "group_id": "group_0000",
+      "config_index": 0,
+      "config_path": "/tmp/place_a2b_split_2n6s512j/place_a2b.yaml",
+      "error": null,
+      "eval_result_json": "/home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/place_a2b/group_0000/config_0000/eval_result.json",
+      "seed": 100000,
+      "episode_num": 50,
+      "success_count": 13,
+      "success_rate": 0.26,
+      "average_progress": 0.37000000000000005,
+      "total": 50
+    }
+  ],
+  "configs_total": 1,
+  "configs_failed": 0,
+  "configs_succeeded": 1,
+  "shards": [
+    {
+      "shard": {
+        "shard_id": "place_a2b__group_0000__config_0000__shard_0000",
+        "task_name": "place_a2b",
+        "task_type": "place_a2b",
+        "group_id": "group_0000",
+        "config_index": 0,
+        "config_path": "/tmp/place_a2b_split_2n6s512j/place_a2b.yaml",
+        "shard_index": 0,
+        "shard_count": 1,
+        "episode_offset": 0,
+        "episode_count": 50,
+        "seed_start": 100000,
+        "fallback_seed_start": 100050,
+        "fallback_seed_count": 100,
+        "episodes_per_scene": 1
+      },
+      "status": "ok",
+      "episodes": 50,
+      "successes": 13,
+      "success_rate": 0.26,
+      "avg_progress": 0.37000000000000005,
+      "skipped_episodes": 0,
+      "stage_success_rate": {
+        "reach_pick": 0.64,
+        "contact_pick": 0.46,
+        "grasp_pick": 0.32,
+        "lift_pick": 0.28,
+        "reach_place": 0.26,
+        "place_within_xy": 0.26
+      },
+      "error": null,
+      "configs": [
+        {
+          "group_id": "group_0000",
+          "config_index": 0,
+          "config_path": "/tmp/place_a2b_split_2n6s512j/place_a2b.yaml",
+          "eval_result_json": "/home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/eval_result.json",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "task_type": "place_a2b",
+  "groups": 1
+}

@@ -1,0 +1,203 @@
+{
+  "evaluation_id": "contest-evaluation",
+  "team_id": "contest-team",
+  "status": "succeeded",
+  "eval_average_score": 0.37777777777777777,
+  "eval_average_success_rate": 0.16666666666666666,
+  "task_results": {
+    "pick_color": {
+      "episode_count": 1,
+      "failed_episode_count": 0,
+      "score": 0.5,
+      "success_rate": 0.0,
+      "stage_success_rate": {
+        "reach_pick": 1.0,
+        "contact_pick": 1.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      },
+      "preview_episodes": [
+        {
+          "episode_index": 0,
+          "seed": 100000,
+          "status": "succeeded",
+          "success": false,
+          "score": 0.5,
+          "steps": 200,
+          "stop_reason": "max_steps",
+          "instruction": "Grab orange carrot.",
+          "stage_scores": {
+            "reach_pick": 0.25,
+            "contact_pick": 0.25,
+            "grasp_pick": 0.0,
+            "lift_pick": 0.0
+          },
+          "video": "videos/pick_color/episode_0000_seed_100000.mp4"
+        }
+      ]
+    },
+    "pick_spatial": {
+      "episode_count": 1,
+      "failed_episode_count": 0,
+      "score": 1.0,
+      "success_rate": 1.0,
+      "stage_success_rate": {
+        "reach_pick": 1.0,
+        "contact_pick": 1.0,
+        "grasp_pick": 1.0,
+        "lift_pick": 1.0
+      },
+      "preview_episodes": [
+        {
+          "episode_index": 0,
+          "seed": 100000,
+          "status": "succeeded",
+          "success": true,
+          "score": 1.0,
+          "steps": 83,
+          "stop_reason": "success",
+          "instruction": "Pick up the carrot to the left of the wine glass.",
+          "stage_scores": {
+            "reach_pick": 0.25,
+            "contact_pick": 0.25,
+            "grasp_pick": 0.25,
+            "lift_pick": 0.25
+          },
+          "video": "videos/pick_spatial/episode_0000_seed_100000.mp4"
+        }
+      ]
+    },
+    "place_a2b": {
+      "episode_count": 1,
+      "failed_episode_count": 0,
+      "score": 0.16666666666666666,
+      "success_rate": 0.0,
+      "stage_success_rate": {
+        "reach_pick": 1.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      },
+      "preview_episodes": [
+        {
+          "episode_index": 0,
+          "seed": 100000,
+          "status": "succeeded",
+          "success": false,
+          "score": 0.16666666666666666,
+          "steps": 300,
+          "stop_reason": "max_steps",
+          "instruction": "Grab carrot and set in tray.",
+          "stage_scores": {
+            "reach_pick": 0.16666666666666666,
+            "contact_pick": 0.0,
+            "grasp_pick": 0.0,
+            "lift_pick": 0.0,
+            "reach_place": 0.0,
+            "place_within_xy": 0.0
+          },
+          "video": "videos/place_a2b/episode_0000_seed_100000.mp4"
+        }
+      ]
+    },
+    "stack_cubes": {
+      "episode_count": 1,
+      "failed_episode_count": 0,
+      "score": 0.0,
+      "success_rate": 0.0,
+      "stage_success_rate": {
+        "first_pair_stacked": 0.0,
+        "first_three_stacked": 0.0,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      },
+      "preview_episodes": [
+        {
+          "episode_index": 0,
+          "seed": 100000,
+          "status": "succeeded",
+          "success": false,
+          "score": 0.0,
+          "steps": 900,
+          "stop_reason": "max_steps",
+          "instruction": "Stack the cubes bottom-to-top: purple, green, lime, orange.",
+          "stage_scores": {
+            "first_pair_stacked": 0.0,
+            "first_three_stacked": 0.0,
+            "full_order_stacked": 0.0,
+            "settled_stack": 0.0
+          },
+          "video": "videos/stack_cubes/episode_0000_seed_100000.mp4"
+        }
+      ]
+    },
+    "open_drawer": {
+      "episode_count": 1,
+      "failed_episode_count": 0,
+      "score": 0.6,
+      "success_rate": 0.0,
+      "stage_success_rate": {
+        "reach": 1.0,
+        "contact": 1.0,
+        "moved": 1.0,
+        "target_joint_state": 0.0,
+        "settled_at_target": 0.0
+      },
+      "preview_episodes": [
+        {
+          "episode_index": 0,
+          "seed": 100000,
+          "status": "succeeded",
+          "success": false,
+          "score": 0.6,
+          "steps": 300,
+          "stop_reason": "max_steps",
+          "instruction": "Open the lower middle drawer of the desktop drawer.",
+          "stage_scores": {
+            "reach": 0.2,
+            "contact": 0.2,
+            "moved": 0.2,
+            "target_joint_state": 0.0,
+            "settled_at_target": 0.0
+          },
+          "video": "videos/open_drawer/episode_0000_seed_100000.mp4"
+        }
+      ]
+    },
+    "joint_direction": {
+      "episode_count": 1,
+      "failed_episode_count": 0,
+      "score": 0.0,
+      "success_rate": 0.0,
+      "stage_success_rate": {
+        "reach": 0.0,
+        "contact": 0.0,
+        "moved": 0.0,
+        "target_joint_state": 0.0,
+        "settled_at_target": 0.0
+      },
+      "preview_episodes": [
+        {
+          "episode_index": 0,
+          "seed": 100000,
+          "status": "succeeded",
+          "success": false,
+          "score": 0.0,
+          "steps": 300,
+          "stop_reason": "max_steps",
+          "instruction": "Open the door of the microwave oven.",
+          "stage_scores": {
+            "reach": 0.0,
+            "contact": 0.0,
+            "moved": 0.0,
+            "target_joint_state": 0.0,
+            "settled_at_target": 0.0
+          },
+          "video": "videos/joint_direction/episode_0000_seed_100000.mp4"
+        }
+      ]
+    }
+  }
+}

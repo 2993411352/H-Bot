@@ -1,0 +1,78 @@
+{
+  "task_name": "stack_cubes",
+  "status": "ok",
+  "episodes": 1,
+  "successes": 0,
+  "success_rate": 0.0,
+  "avg_progress": 0.0,
+  "skipped_episodes": 0,
+  "stage_success_rate": {
+    "first_pair_stacked": 0.0,
+    "first_three_stacked": 0.0,
+    "full_order_stacked": 0.0,
+    "settled_stack": 0.0
+  },
+  "error": null,
+  "configs": [
+    {
+      "group_id": "group_0000",
+      "config_index": 0,
+      "config_path": "robo_orchard_sim/benchmark/manipulation/stack_cubes/configs/stack_cubes.yaml",
+      "error": null,
+      "eval_result_json": "/home/users/wangmengfan/outputs/sim/local_holobrain_20261027_214149/stack_cubes/group_0000/config_0000/eval_result.json",
+      "seed": 100000,
+      "episode_num": 1,
+      "success_count": 0,
+      "success_rate": 0.0,
+      "average_progress": 0.0,
+      "total": 1
+    }
+  ],
+  "configs_total": 1,
+  "configs_failed": 0,
+  "configs_succeeded": 1,
+  "shards": [
+    {
+      "shard": {
+        "shard_id": "stack_cubes__group_0000__config_0000__shard_0000",
+        "task_name": "stack_cubes",
+        "task_type": "stack_cubes",
+        "group_id": "group_0000",
+        "config_index": 0,
+        "config_path": "robo_orchard_sim/benchmark/manipulation/stack_cubes/configs/stack_cubes.yaml",
+        "shard_index": 0,
+        "shard_count": 1,
+        "episode_offset": 0,
+        "episode_count": 1,
+        "seed_start": 100000,
+        "fallback_seed_start": 100001,
+        "fallback_seed_count": 2,
+        "episodes_per_scene": 1
+      },
+      "status": "ok",
+      "episodes": 1,
+      "successes": 0,
+      "success_rate": 0.0,
+      "avg_progress": 0.0,
+      "skipped_episodes": 0,
+      "stage_success_rate": {
+        "first_pair_stacked": 0.0,
+        "first_three_stacked": 0.0,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      },
+      "error": null,
+      "configs": [
+        {
+          "group_id": "group_0000",
+          "config_index": 0,
+          "config_path": "robo_orchard_sim/benchmark/manipulation/stack_cubes/configs/stack_cubes.yaml",
+          "eval_result_json": "/home/users/wangmengfan/outputs/sim/local_holobrain_20261027_214149/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/eval_result.json",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "task_type": "stack_cubes",
+  "groups": 1
+}

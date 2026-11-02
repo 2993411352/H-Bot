@@ -1,0 +1,57 @@
+{
+  "run": "local_pi05_full_80000_parallel_20261101_083416",
+  "output": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_80000_parallel_20261101_083416",
+  "checkpoint": "/study/wangmengfan/hbot/checkpoints/pi05_hbot_full/80000",
+  "started_at": "2026-11-01T08:34:16.155298+08:00",
+  "state": "evaluating",
+  "workers_per_gpu": 2,
+  "model_pid": 3846322,
+  "evaluation_pid": 3846578,
+  "evaluation_started_at": "2026-11-01T08:34:34.825759+08:00",
+  "gpu_model": 1,
+  "gpu_sim": 0,
+  "cpu_threads_per_worker": 8,
+  "cpu_affinity_sim": "0-23,48-71",
+  "recordings_per_task": 2,
+  "power_limits_changed": false,
+  "docker_environment": {
+    "PYTHONUNBUFFERED": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "HBOT_EVAL_PROFILE": "1",
+    "HBOT_EVAL_DEEP_PROFILE": "0",
+    "HBOT_SIM_WORKERS_PER_GPU": "2",
+    "HBOT_SIM_CPU_THREADS": "8",
+    "HBOT_EVAL_NUM_RECORD": "2",
+    "HBOT_EVAL_EXPORT_VIDEO": "0",
+    "OMP_NUM_THREADS": "8",
+    "OPENBLAS_NUM_THREADS": "8",
+    "MKL_NUM_THREADS": "8",
+    "PXR_WORK_THREAD_LIMIT": "8"
+  },
+  "initial_resources": [
+    {
+      "gpu": 0,
+      "temperature": 56,
+      "memory_free_mib": 24118,
+      "memory_used_mib": 18,
+      "utilization": 0,
+      "power_w": 24.46
+    },
+    {
+      "gpu": 1,
+      "temperature": 40,
+      "memory_free_mib": 24064,
+      "memory_used_mib": 72,
+      "utilization": 0,
+      "power_w": 19.62
+    }
+  ],
+  "concurrency_caveat": "Independent client RNG streams; not exact serial trajectory parity.",
+  "sha256": {
+    "/study/wangmengfan/hbot/config/local_pi05_full_80000_parallel_20261101_083416.yaml": "1bdaa513819a52c8b20a036b22d9db43775daf6ac882233a417803cf42eec45a",
+    "/study/wangmengfan/hbot/config/local_pi05_full_80000_parallel_20261101_083416-model.yaml": "5277220d22f0517fd422ab9db1f9a0f5f45a6e498e89a3e517370906e2f64340",
+    "/study/wangmengfan/hbot/config/local_pi05_full_80000_parallel_20261101_083416-client.yaml": "670344c42fdcf5c453e30f12d0b070367df9c66f3265146e7c703bb97e2b2de7",
+    "/study/wangmengfan/hbot/checkpoints/pi05_hbot_full/80000/assets/hbot_panda_joint_delta_h15/norm_stats.json": "48fc140c4306c12e57f991a1b75df7c1ae3071a78bcda69e983950c2ed389c8d",
+    "/study/wangmengfan/hbot/checkpoints/pi05_hbot_full/80000/params/_METADATA": "f27d21952e602528615298c668b588ba14ae8268e03e94598ea0235eaea52a5f"
+  }
+}

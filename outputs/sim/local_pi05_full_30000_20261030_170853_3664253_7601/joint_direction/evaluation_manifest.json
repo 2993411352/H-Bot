@@ -1,0 +1,23 @@
+{
+  "policy_id": "server",
+  "run_id": "local_pi05_full_30000_20261030_170853_3664253_7601",
+  "shards": [
+    {
+      "config_index": 0,
+      "config_path": "/tmp/joint_direction_split_rdm96kdv/joint_direction.yaml",
+      "episode_count": 50,
+      "episode_offset": 0,
+      "episodes_per_scene": 1,
+      "fallback_seed_count": 100,
+      "fallback_seed_start": 100050,
+      "group_id": "group_0000",
+      "seed_start": 100000,
+      "shard_count": 1,
+      "shard_id": "joint_direction__group_0000__config_0000__shard_0000",
+      "shard_index": 0,
+      "task_name": "joint_direction",
+      "task_type": "joint_direction"
+    }
+  ],
+  "version": 2
+}

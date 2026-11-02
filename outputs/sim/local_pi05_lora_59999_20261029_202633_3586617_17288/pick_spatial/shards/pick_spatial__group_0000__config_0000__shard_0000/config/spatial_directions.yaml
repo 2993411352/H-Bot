@@ -1,0 +1,90 @@
+scene:
+  type: room_table
+  num_envs: 1
+  env_spacing: 2.5
+  physics_fps: 600
+  render_fps: 30
+  step_fps: 30
+embodiment:
+  type: panda_droid
+  initial_pos:
+  - 0.0
+  - 0.0
+  - 0.0
+  init_joint_noise_std: 0.05
+instruction:
+  template: spatial_pick_default
+  template_mode: fixed
+  actor_description_mode: raw
+asset_configs:
+  pick_front:
+    filter:
+      tags:
+      - has_interactive_poses
+    split: seen
+  pick_left:
+    same_as: pick_front
+  pick_behind:
+    same_as: pick_front
+  pick_right:
+    same_as: pick_front
+  ref:
+    filter:
+      tags:
+      - has_interactive_poses
+    anchor: pick_front
+    differ:
+    - category
+    prim_name_prefix: ref
+    min_count: 1
+    max_count: 1
+task:
+  params:
+    pose_reset:
+      anchor_range:
+        x:
+        - 0.45
+        - 0.6
+        y:
+        - -0.08
+        - 0.08
+      workspace:
+        x:
+        - 0.25
+        - 0.8
+        y:
+        - -0.4
+        - 0.4
+      axis_jitter: 35
+      min_separation: 0.03
+      candidates:
+        pick_front:
+          relation: front_of
+          axis: 0
+          radius:
+          - 0.15
+          - 0.4
+        pick_left:
+          relation: left_of
+          axis: 90
+          radius:
+          - 0.15
+          - 0.4
+        pick_behind:
+          relation: behind
+          axis: 180
+          radius:
+          - 0.15
+          - 0.4
+        pick_right:
+          relation: right_of
+          axis: 270
+          radius:
+          - 0.15
+          - 0.4
+    light_reset:
+      enabled: false
+      preset: default_distant_light
+    texture_reset:
+      enabled: false
+      preset: default_table_texture

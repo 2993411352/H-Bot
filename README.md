@@ -15,10 +15,11 @@
 - `scripts/`：训练、服务、评测、汇总及其测试。
 - `config/`：可复现配置、环境准备与校验脚本。
 - `patches/`：对 OpenPI、RoboOrchardSim 上游仓库的本地改动。
-- `results/`：经整理的轻量成绩报告，不包含视频、MCAP 或海量原始日志。
+- `results/`：经整理的关键成绩报告。
+- `outputs/sim/`：结构化评测结果、配置快照与运行日志；MP4 和 MCAP 录制文件不进入 Git。
 - `docs/`：上游版本、资产边界和协作约定。
 
-服务器仍使用以下本地目录，但它们均被 `.gitignore` 排除：`datasets/`、`models/`、`checkpoints/`、`outputs/`、`logs/`、缓存、虚拟环境和上游源码检出。
+服务器仍使用以下本地目录，但它们均被 `.gitignore` 排除：`datasets/`、`models/`、`checkpoints/`、`logs/`、缓存、虚拟环境和上游源码检出。`outputs/sim/` 仅跟踪非媒体结果；其中的 MP4、MCAP 始终排除。
 
 ## 常用入口
 
@@ -46,4 +47,3 @@ python -m unittest discover -s scripts/train/tests -p 'test*.py'
 3. 检查 `git status` 和 `git diff --cached` 后再提交、推送。
 
 任何数据、模型、检查点或原始视频都不应使用普通 Git 推送。若比赛需要共享大文件，应单独使用对象存储或明确评估 Git LFS 配额。
-

@@ -1,0 +1,71 @@
+{
+  "policy_id": "server",
+  "run_id": "local_pi05_full_99999_parallel_20261101_191358",
+  "shards": [
+    {
+      "config_index": 0,
+      "config_path": "robo_orchard_sim/benchmark/manipulation/stack_cubes/configs/stack_cubes.yaml",
+      "episode_count": 13,
+      "episode_offset": 0,
+      "episodes_per_scene": 1,
+      "fallback_seed_count": 26,
+      "fallback_seed_start": 100050,
+      "group_id": "group_0000",
+      "seed_start": 100000,
+      "shard_count": 4,
+      "shard_id": "stack_cubes__group_0000__config_0000__shard_0000",
+      "shard_index": 0,
+      "task_name": "stack_cubes",
+      "task_type": "stack_cubes"
+    },
+    {
+      "config_index": 0,
+      "config_path": "robo_orchard_sim/benchmark/manipulation/stack_cubes/configs/stack_cubes.yaml",
+      "episode_count": 13,
+      "episode_offset": 13,
+      "episodes_per_scene": 1,
+      "fallback_seed_count": 26,
+      "fallback_seed_start": 100076,
+      "group_id": "group_0000",
+      "seed_start": 100013,
+      "shard_count": 4,
+      "shard_id": "stack_cubes__group_0000__config_0000__shard_0001",
+      "shard_index": 1,
+      "task_name": "stack_cubes",
+      "task_type": "stack_cubes"
+    },
+    {
+      "config_index": 0,
+      "config_path": "robo_orchard_sim/benchmark/manipulation/stack_cubes/configs/stack_cubes.yaml",
+      "episode_count": 12,
+      "episode_offset": 26,
+      "episodes_per_scene": 1,
+      "fallback_seed_count": 24,
+      "fallback_seed_start": 100102,
+      "group_id": "group_0000",
+      "seed_start": 100026,
+      "shard_count": 4,
+      "shard_id": "stack_cubes__group_0000__config_0000__shard_0002",
+      "shard_index": 2,
+      "task_name": "stack_cubes",
+      "task_type": "stack_cubes"
+    },
+    {
+      "config_index": 0,
+      "config_path": "robo_orchard_sim/benchmark/manipulation/stack_cubes/configs/stack_cubes.yaml",
+      "episode_count": 12,
+      "episode_offset": 38,
+      "episodes_per_scene": 1,
+      "fallback_seed_count": 24,
+      "fallback_seed_start": 100126,
+      "group_id": "group_0000",
+      "seed_start": 100038,
+      "shard_count": 4,
+      "shard_id": "stack_cubes__group_0000__config_0000__shard_0003",
+      "shard_index": 3,
+      "task_name": "stack_cubes",
+      "task_type": "stack_cubes"
+    }
+  ],
+  "version": 2
+}

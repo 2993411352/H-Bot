@@ -1,0 +1,18 @@
+{
+  "run": "local_pi05_full_80000_parallel_20261101_083416",
+  "output": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_80000_parallel_20261101_083416",
+  "checkpoint": "/study/wangmengfan/hbot/checkpoints/pi05_hbot_full/80000",
+  "started_at": "2026-11-01T08:34:16.155298+08:00",
+  "state": "completed",
+  "workers_per_gpu": 2,
+  "model_pid": 3846322,
+  "evaluation_pid": 3846578,
+  "evaluation_started_at": "2026-11-01T08:34:34.825759+08:00",
+  "evaluation_exit_code": 0,
+  "complete_300_episode_evaluation": true,
+  "model_stopped_at": "2026-11-01T18:58:59.589957+08:00",
+  "preview_count": 12,
+  "video_export_pid": 3930052,
+  "video_export_exit_code": 0,
+  "finished_at": "2026-11-01T19:01:29.603342+08:00"
+}

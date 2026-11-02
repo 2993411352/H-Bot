@@ -1,0 +1,119 @@
+{
+  "complete_300_episode_evaluation": true,
+  "run": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_60000_20261031_141137",
+  "reference": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_30000_20261030_170853_3664253_7601",
+  "status": "succeeded",
+  "score_60000": 0.5265,
+  "success_rate_60000": 0.37000000000000005,
+  "score_30000": 0.47750000000000004,
+  "success_rate_30000": 0.2866666666666667,
+  "elapsed_seconds": 49718.85,
+  "tasks": [
+    {
+      "task": "place_a2b",
+      "episodes": 50,
+      "execution_failures": 0,
+      "score_60000": 0.37,
+      "success_rate_60000": 0.26,
+      "score_30000": 0.28,
+      "success_rate_30000": 0.16,
+      "score_delta": 0.08999999999999997,
+      "success_delta_pp": 10.0,
+      "stage_success_rate": {
+        "reach_pick": 0.64,
+        "contact_pick": 0.46,
+        "grasp_pick": 0.32,
+        "lift_pick": 0.28,
+        "reach_place": 0.26,
+        "place_within_xy": 0.26
+      }
+    },
+    {
+      "task": "pick_color",
+      "episodes": 50,
+      "execution_failures": 0,
+      "score_60000": 0.565,
+      "success_rate_60000": 0.44,
+      "score_30000": 0.56,
+      "success_rate_30000": 0.4,
+      "score_delta": 0.004999999999999893,
+      "success_delta_pp": 3.9999999999999982,
+      "stage_success_rate": {
+        "reach_pick": 0.76,
+        "contact_pick": 0.6,
+        "grasp_pick": 0.46,
+        "lift_pick": 0.44
+      }
+    },
+    {
+      "task": "pick_spatial",
+      "episodes": 50,
+      "execution_failures": 0,
+      "score_60000": 0.595,
+      "success_rate_60000": 0.4,
+      "score_30000": 0.525,
+      "success_rate_30000": 0.34,
+      "score_delta": 0.06999999999999995,
+      "success_delta_pp": 6.0,
+      "stage_success_rate": {
+        "reach_pick": 0.88,
+        "contact_pick": 0.66,
+        "grasp_pick": 0.44,
+        "lift_pick": 0.4
+      }
+    },
+    {
+      "task": "open_drawer",
+      "episodes": 50,
+      "execution_failures": 0,
+      "score_60000": 0.6559999999999999,
+      "success_rate_60000": 0.46,
+      "score_30000": 0.584,
+      "success_rate_30000": 0.32,
+      "score_delta": 0.07199999999999995,
+      "success_delta_pp": 14.000000000000002,
+      "stage_success_rate": {
+        "reach": 1.0,
+        "contact": 0.64,
+        "moved": 0.62,
+        "target_joint_state": 0.5,
+        "settled_at_target": 0.46
+      }
+    },
+    {
+      "task": "stack_cubes",
+      "episodes": 50,
+      "execution_failures": 0,
+      "score_60000": 0.205,
+      "success_rate_60000": 0.1,
+      "score_30000": 0.2,
+      "success_rate_30000": 0.06,
+      "score_delta": 0.004999999999999977,
+      "success_delta_pp": 4.000000000000001,
+      "stage_success_rate": {
+        "first_pair_stacked": 0.44,
+        "first_three_stacked": 0.18,
+        "full_order_stacked": 0.1,
+        "settled_stack": 0.1
+      }
+    },
+    {
+      "task": "joint_direction",
+      "episodes": 50,
+      "execution_failures": 0,
+      "score_60000": 0.768,
+      "success_rate_60000": 0.56,
+      "score_30000": 0.716,
+      "success_rate_30000": 0.44,
+      "score_delta": 0.052000000000000046,
+      "success_delta_pp": 12.000000000000005,
+      "stage_success_rate": {
+        "reach": 0.96,
+        "contact": 0.74,
+        "moved": 0.92,
+        "target_joint_state": 0.56,
+        "settled_at_target": 0.56
+      }
+    }
+  ]
+}

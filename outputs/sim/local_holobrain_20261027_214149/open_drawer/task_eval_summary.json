@@ -1,0 +1,80 @@
+{
+  "task_name": "open_drawer",
+  "status": "ok",
+  "episodes": 1,
+  "successes": 0,
+  "success_rate": 0.0,
+  "avg_progress": 0.6,
+  "skipped_episodes": 0,
+  "stage_success_rate": {
+    "reach": 1.0,
+    "contact": 1.0,
+    "moved": 1.0,
+    "target_joint_state": 0.0,
+    "settled_at_target": 0.0
+  },
+  "error": null,
+  "configs": [
+    {
+      "group_id": "group_0000",
+      "config_index": 0,
+      "config_path": "/tmp/open_drawer_split_csqc559m/open_drawer.yaml",
+      "error": null,
+      "eval_result_json": "/home/users/wangmengfan/outputs/sim/local_holobrain_20261027_214149/open_drawer/group_0000/config_0000/eval_result.json",
+      "seed": 100000,
+      "episode_num": 1,
+      "success_count": 0,
+      "success_rate": 0.0,
+      "average_progress": 0.6,
+      "total": 1
+    }
+  ],
+  "configs_total": 1,
+  "configs_failed": 0,
+  "configs_succeeded": 1,
+  "shards": [
+    {
+      "shard": {
+        "shard_id": "open_drawer__group_0000__config_0000__shard_0000",
+        "task_name": "open_drawer",
+        "task_type": "open",
+        "group_id": "group_0000",
+        "config_index": 0,
+        "config_path": "/tmp/open_drawer_split_csqc559m/open_drawer.yaml",
+        "shard_index": 0,
+        "shard_count": 1,
+        "episode_offset": 0,
+        "episode_count": 1,
+        "seed_start": 100000,
+        "fallback_seed_start": 100001,
+        "fallback_seed_count": 2,
+        "episodes_per_scene": 1
+      },
+      "status": "ok",
+      "episodes": 1,
+      "successes": 0,
+      "success_rate": 0.0,
+      "avg_progress": 0.6,
+      "skipped_episodes": 0,
+      "stage_success_rate": {
+        "reach": 1.0,
+        "contact": 1.0,
+        "moved": 1.0,
+        "target_joint_state": 0.0,
+        "settled_at_target": 0.0
+      },
+      "error": null,
+      "configs": [
+        {
+          "group_id": "group_0000",
+          "config_index": 0,
+          "config_path": "/tmp/open_drawer_split_csqc559m/open_drawer.yaml",
+          "eval_result_json": "/home/users/wangmengfan/outputs/sim/local_holobrain_20261027_214149/open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/eval_result.json",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "task_type": "open",
+  "groups": 1
+}

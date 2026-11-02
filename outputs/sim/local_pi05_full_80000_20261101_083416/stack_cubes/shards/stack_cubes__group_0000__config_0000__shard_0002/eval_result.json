@@ -1,0 +1,1571 @@
+{
+  "episode_num": 12,
+  "seed_start": 100026,
+  "success_rate": 0.0,
+  "average_progress": 0.22916666666666666,
+  "episode_results": [
+    {
+      "seed": 100026,
+      "success": false,
+      "progress": 0.25,
+      "steps": 900,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "first_pair_stacked": true,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_reached": {
+          "first_pair_stacked": true,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/orange_cube",
+          "objects/magenta_cube",
+          "objects/purple_cube",
+          "objects/lime_cube"
+        ],
+        "unary": {
+          "stationary": {
+            "objects/orange_cube": true,
+            "objects/magenta_cube": true,
+            "objects/purple_cube": true,
+            "objects/lime_cube": true
+          },
+          "contacted": {
+            "objects/orange_cube": true,
+            "objects/magenta_cube": true,
+            "objects/purple_cube": true,
+            "objects/lime_cube": false
+          },
+          "grasped": {
+            "objects/orange_cube": false,
+            "objects/magenta_cube": true,
+            "objects/purple_cube": false,
+            "objects/lime_cube": false
+          }
+        },
+        "binary": {
+          "stack_alignment": [
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Stack the cubes bottom-to-top: orange, magenta, purple, lime.",
+      "stage_scores": {
+        "first_pair_stacked": 0.25,
+        "first_three_stacked": 0.0,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      }
+    },
+    {
+      "seed": 100027,
+      "success": false,
+      "progress": 0.5,
+      "steps": 900,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "first_pair_stacked": true,
+          "first_three_stacked": true,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_reached": {
+          "first_pair_stacked": true,
+          "first_three_stacked": true,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_met_now_count": 2,
+        "criteria_ever_reached": 2,
+        "criteria_total": 4,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/yellow_cube",
+          "objects/brown_cube",
+          "objects/lime_cube",
+          "objects/purple_cube"
+        ],
+        "unary": {
+          "stationary": {
+            "objects/yellow_cube": true,
+            "objects/brown_cube": true,
+            "objects/lime_cube": true,
+            "objects/purple_cube": true
+          },
+          "contacted": {
+            "objects/yellow_cube": false,
+            "objects/brown_cube": true,
+            "objects/lime_cube": true,
+            "objects/purple_cube": true
+          },
+          "grasped": {
+            "objects/yellow_cube": false,
+            "objects/brown_cube": false,
+            "objects/lime_cube": false,
+            "objects/purple_cube": false
+          }
+        },
+        "binary": {
+          "stack_alignment": [
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/brown_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/brown_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/brown_cube",
+              "object": "objects/lime_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/brown_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/brown_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/brown_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Stack the cubes bottom-to-top: yellow, brown, lime, purple.",
+      "stage_scores": {
+        "first_pair_stacked": 0.25,
+        "first_three_stacked": 0.25,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      }
+    },
+    {
+      "seed": 100028,
+      "success": false,
+      "progress": 0.25,
+      "steps": 900,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "first_pair_stacked": false,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_reached": {
+          "first_pair_stacked": true,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/yellow_cube",
+          "objects/lime_cube",
+          "objects/cyan_cube",
+          "objects/magenta_cube"
+        ],
+        "unary": {
+          "stationary": {
+            "objects/yellow_cube": true,
+            "objects/lime_cube": true,
+            "objects/cyan_cube": true,
+            "objects/magenta_cube": true
+          },
+          "contacted": {
+            "objects/yellow_cube": true,
+            "objects/lime_cube": true,
+            "objects/cyan_cube": true,
+            "objects/magenta_cube": false
+          },
+          "grasped": {
+            "objects/yellow_cube": false,
+            "objects/lime_cube": false,
+            "objects/cyan_cube": false,
+            "objects/magenta_cube": false
+          }
+        },
+        "binary": {
+          "stack_alignment": [
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/lime_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Stack the cubes bottom-to-top: yellow, lime, cyan, magenta.",
+      "stage_scores": {
+        "first_pair_stacked": 0.25,
+        "first_three_stacked": 0.0,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      }
+    },
+    {
+      "seed": 100029,
+      "success": false,
+      "progress": 0.0,
+      "steps": 900,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "first_pair_stacked": false,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_reached": {
+          "first_pair_stacked": false,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 4,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/red_cube",
+          "objects/purple_cube",
+          "objects/blue_cube",
+          "objects/cyan_cube"
+        ],
+        "unary": {
+          "stationary": {
+            "objects/red_cube": true,
+            "objects/purple_cube": true,
+            "objects/blue_cube": true,
+            "objects/cyan_cube": true
+          },
+          "contacted": {
+            "objects/red_cube": false,
+            "objects/purple_cube": true,
+            "objects/blue_cube": true,
+            "objects/cyan_cube": true
+          },
+          "grasped": {
+            "objects/red_cube": false,
+            "objects/purple_cube": true,
+            "objects/blue_cube": false,
+            "objects/cyan_cube": false
+          }
+        },
+        "binary": {
+          "stack_alignment": [
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/blue_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Stack the cubes bottom-to-top: red, purple, blue, cyan.",
+      "stage_scores": {
+        "first_pair_stacked": 0.0,
+        "first_three_stacked": 0.0,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      }
+    },
+    {
+      "seed": 100030,
+      "success": false,
+      "progress": 0.25,
+      "steps": 900,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "first_pair_stacked": true,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_reached": {
+          "first_pair_stacked": true,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/red_cube",
+          "objects/blue_cube",
+          "objects/magenta_cube",
+          "objects/green_cube"
+        ],
+        "unary": {
+          "stationary": {
+            "objects/red_cube": true,
+            "objects/blue_cube": true,
+            "objects/magenta_cube": true,
+            "objects/green_cube": true
+          },
+          "contacted": {
+            "objects/red_cube": false,
+            "objects/blue_cube": true,
+            "objects/magenta_cube": true,
+            "objects/green_cube": false
+          },
+          "grasped": {
+            "objects/red_cube": false,
+            "objects/blue_cube": true,
+            "objects/magenta_cube": false,
+            "objects/green_cube": false
+          }
+        },
+        "binary": {
+          "stack_alignment": [
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/blue_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/green_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/green_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/green_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/green_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/green_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/green_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Stack the cubes bottom-to-top: red, blue, magenta, green.",
+      "stage_scores": {
+        "first_pair_stacked": 0.25,
+        "first_three_stacked": 0.0,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      }
+    },
+    {
+      "seed": 100031,
+      "success": false,
+      "progress": 0.0,
+      "steps": 900,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "first_pair_stacked": false,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_reached": {
+          "first_pair_stacked": false,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 4,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/blue_cube",
+          "objects/orange_cube",
+          "objects/lime_cube",
+          "objects/yellow_cube"
+        ],
+        "unary": {
+          "stationary": {
+            "objects/blue_cube": true,
+            "objects/orange_cube": true,
+            "objects/lime_cube": true,
+            "objects/yellow_cube": true
+          },
+          "contacted": {
+            "objects/blue_cube": false,
+            "objects/orange_cube": true,
+            "objects/lime_cube": false,
+            "objects/yellow_cube": false
+          },
+          "grasped": {
+            "objects/blue_cube": false,
+            "objects/orange_cube": false,
+            "objects/lime_cube": false,
+            "objects/yellow_cube": false
+          }
+        },
+        "binary": {
+          "stack_alignment": [
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Stack the cubes bottom-to-top: blue, orange, lime, yellow.",
+      "stage_scores": {
+        "first_pair_stacked": 0.0,
+        "first_three_stacked": 0.0,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      }
+    },
+    {
+      "seed": 100032,
+      "success": false,
+      "progress": 0.0,
+      "steps": 900,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "first_pair_stacked": false,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_reached": {
+          "first_pair_stacked": false,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 4,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/blue_cube",
+          "objects/yellow_cube",
+          "objects/magenta_cube",
+          "objects/orange_cube"
+        ],
+        "unary": {
+          "stationary": {
+            "objects/blue_cube": true,
+            "objects/yellow_cube": true,
+            "objects/magenta_cube": true,
+            "objects/orange_cube": true
+          },
+          "contacted": {
+            "objects/blue_cube": false,
+            "objects/yellow_cube": true,
+            "objects/magenta_cube": true,
+            "objects/orange_cube": true
+          },
+          "grasped": {
+            "objects/blue_cube": false,
+            "objects/yellow_cube": true,
+            "objects/magenta_cube": true,
+            "objects/orange_cube": false
+          }
+        },
+        "binary": {
+          "stack_alignment": [
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Stack the cubes bottom-to-top: blue, yellow, magenta, orange.",
+      "stage_scores": {
+        "first_pair_stacked": 0.0,
+        "first_three_stacked": 0.0,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      }
+    },
+    {
+      "seed": 100033,
+      "success": false,
+      "progress": 0.5,
+      "steps": 900,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "first_pair_stacked": true,
+          "first_three_stacked": true,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_reached": {
+          "first_pair_stacked": true,
+          "first_three_stacked": true,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_met_now_count": 2,
+        "criteria_ever_reached": 2,
+        "criteria_total": 4,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/orange_cube",
+          "objects/green_cube",
+          "objects/cyan_cube",
+          "objects/blue_cube"
+        ],
+        "unary": {
+          "stationary": {
+            "objects/orange_cube": true,
+            "objects/green_cube": true,
+            "objects/cyan_cube": true,
+            "objects/blue_cube": true
+          },
+          "contacted": {
+            "objects/orange_cube": false,
+            "objects/green_cube": true,
+            "objects/cyan_cube": true,
+            "objects/blue_cube": true
+          },
+          "grasped": {
+            "objects/orange_cube": false,
+            "objects/green_cube": false,
+            "objects/cyan_cube": false,
+            "objects/blue_cube": false
+          }
+        },
+        "binary": {
+          "stack_alignment": [
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/green_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/green_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/green_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/green_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/green_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/blue_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/green_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Stack the cubes bottom-to-top: orange, green, cyan, blue.",
+      "stage_scores": {
+        "first_pair_stacked": 0.25,
+        "first_three_stacked": 0.25,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      }
+    },
+    {
+      "seed": 100034,
+      "success": false,
+      "progress": 0.25,
+      "steps": 900,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "first_pair_stacked": true,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_reached": {
+          "first_pair_stacked": true,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/purple_cube",
+          "objects/cyan_cube",
+          "objects/red_cube",
+          "objects/blue_cube"
+        ],
+        "unary": {
+          "stationary": {
+            "objects/purple_cube": true,
+            "objects/cyan_cube": true,
+            "objects/red_cube": true,
+            "objects/blue_cube": true
+          },
+          "contacted": {
+            "objects/purple_cube": true,
+            "objects/cyan_cube": true,
+            "objects/red_cube": true,
+            "objects/blue_cube": false
+          },
+          "grasped": {
+            "objects/purple_cube": false,
+            "objects/cyan_cube": false,
+            "objects/red_cube": false,
+            "objects/blue_cube": false
+          }
+        },
+        "binary": {
+          "stack_alignment": [
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Stack the cubes bottom-to-top: purple, cyan, red, blue.",
+      "stage_scores": {
+        "first_pair_stacked": 0.25,
+        "first_three_stacked": 0.0,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      }
+    },
+    {
+      "seed": 100035,
+      "success": false,
+      "progress": 0.25,
+      "steps": 900,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "first_pair_stacked": true,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_reached": {
+          "first_pair_stacked": true,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/yellow_cube",
+          "objects/red_cube",
+          "objects/orange_cube",
+          "objects/blue_cube"
+        ],
+        "unary": {
+          "stationary": {
+            "objects/yellow_cube": true,
+            "objects/red_cube": true,
+            "objects/orange_cube": true,
+            "objects/blue_cube": true
+          },
+          "contacted": {
+            "objects/yellow_cube": true,
+            "objects/red_cube": false,
+            "objects/orange_cube": true,
+            "objects/blue_cube": false
+          },
+          "grasped": {
+            "objects/yellow_cube": false,
+            "objects/red_cube": false,
+            "objects/orange_cube": true,
+            "objects/blue_cube": false
+          }
+        },
+        "binary": {
+          "stack_alignment": [
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/red_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Stack the cubes bottom-to-top: yellow, red, orange, blue.",
+      "stage_scores": {
+        "first_pair_stacked": 0.25,
+        "first_three_stacked": 0.0,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      }
+    },
+    {
+      "seed": 100036,
+      "success": false,
+      "progress": 0.0,
+      "steps": 900,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "first_pair_stacked": false,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_reached": {
+          "first_pair_stacked": false,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 4,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/red_cube",
+          "objects/brown_cube",
+          "objects/cyan_cube",
+          "objects/yellow_cube"
+        ],
+        "unary": {
+          "stationary": {
+            "objects/red_cube": true,
+            "objects/brown_cube": true,
+            "objects/cyan_cube": true,
+            "objects/yellow_cube": true
+          },
+          "contacted": {
+            "objects/red_cube": false,
+            "objects/brown_cube": true,
+            "objects/cyan_cube": false,
+            "objects/yellow_cube": false
+          },
+          "grasped": {
+            "objects/red_cube": false,
+            "objects/brown_cube": false,
+            "objects/cyan_cube": false,
+            "objects/yellow_cube": false
+          }
+        },
+        "binary": {
+          "stack_alignment": [
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/brown_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/red_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/brown_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/brown_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/brown_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/brown_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/cyan_cube",
+              "object": "objects/yellow_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/red_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/brown_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/yellow_cube",
+              "object": "objects/cyan_cube",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Stack the cubes bottom-to-top: red, brown, cyan, yellow.",
+      "stage_scores": {
+        "first_pair_stacked": 0.0,
+        "first_three_stacked": 0.0,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      }
+    },
+    {
+      "seed": 100037,
+      "success": false,
+      "progress": 0.5,
+      "steps": 900,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "first_pair_stacked": true,
+          "first_three_stacked": true,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_reached": {
+          "first_pair_stacked": true,
+          "first_three_stacked": true,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_met_now_count": 2,
+        "criteria_ever_reached": 2,
+        "criteria_total": 4,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/orange_cube",
+          "objects/blue_cube",
+          "objects/magenta_cube",
+          "objects/lime_cube"
+        ],
+        "unary": {
+          "stationary": {
+            "objects/orange_cube": true,
+            "objects/blue_cube": true,
+            "objects/magenta_cube": true,
+            "objects/lime_cube": true
+          },
+          "contacted": {
+            "objects/orange_cube": false,
+            "objects/blue_cube": true,
+            "objects/magenta_cube": true,
+            "objects/lime_cube": true
+          },
+          "grasped": {
+            "objects/orange_cube": false,
+            "objects/blue_cube": false,
+            "objects/magenta_cube": true,
+            "objects/lime_cube": false
+          }
+        },
+        "binary": {
+          "stack_alignment": [
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/blue_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/blue_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/magenta_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/blue_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/magenta_cube",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Stack the cubes bottom-to-top: orange, blue, magenta, lime.",
+      "stage_scores": {
+        "first_pair_stacked": 0.25,
+        "first_three_stacked": 0.25,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      }
+    }
+  ],
+  "skipped_episodes": [],
+  "attempted_scene_seeds": [
+    100026,
+    100027,
+    100028,
+    100029,
+    100030,
+    100031,
+    100032,
+    100033,
+    100034,
+    100035,
+    100036,
+    100037
+  ]
+}

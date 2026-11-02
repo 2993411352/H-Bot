@@ -1,0 +1,3813 @@
+{
+  "episode_num": 50,
+  "seed_start": 100000,
+  "success_rate": 0.34,
+  "average_progress": 0.535,
+  "episode_results": [
+    {
+      "seed": 100000,
+      "success": true,
+      "progress": 1.0,
+      "steps": 95,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4,
+        "record_dir": "/home/users/wangmengfan/outputs/sim/local_pi05_full_80000_parallel_20261101_083416/pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/records/spatial_directions_20261101_070258_961/scene_0000_seed_100000/episode_0000_seed_100000"
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the carrot to the left of the wine glass.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100001,
+      "success": false,
+      "progress": 0.5,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 2,
+        "criteria_ever_reached": 2,
+        "criteria_total": 4,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 4,
+        "record_dir": "/home/users/wangmengfan/outputs/sim/local_pi05_full_80000_parallel_20261101_083416/pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/records/spatial_directions_20261101_070258_961/scene_0001_seed_100001/episode_0001_seed_100001"
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the peeler to the right of the hand sanitizer.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100002,
+      "success": true,
+      "progress": 1.0,
+      "steps": 101,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the pear behind the notebook.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100003,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the chocolate in front of the stamp.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100004,
+      "success": false,
+      "progress": 0.75,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 3,
+        "criteria_total": 4,
+        "progress_criteria_reached": 3,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the vase to the right of the nail clipper.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100005,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the baby bottle to the left of the stapler.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100006,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the mouthwash cup in front of the razor.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100007,
+      "success": false,
+      "progress": 0.0,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 4,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the hex key to the right of the scissors.",
+      "stage_scores": {
+        "reach_pick": 0.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100008,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the vase in front of the chili.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100009,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the spoon to the left of the mug.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100010,
+      "success": true,
+      "progress": 1.0,
+      "steps": 83,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the juice to the right of the chili.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100011,
+      "success": false,
+      "progress": 0.5,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 2,
+        "criteria_ever_reached": 2,
+        "criteria_total": 4,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the mouthwash cup to the left of the soap dish.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100012,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the vase to the left of the spatula.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100013,
+      "success": false,
+      "progress": 0.0,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 4,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the staples box to the right of the screwdriver.",
+      "stage_scores": {
+        "reach_pick": 0.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100014,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the dental floss in front of the eraser.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100015,
+      "success": true,
+      "progress": 1.0,
+      "steps": 97,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the alarm clock in front of the baby bottle.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100016,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the dental floss to the left of the cutter knife.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100017,
+      "success": false,
+      "progress": 0.5,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 2,
+        "criteria_total": 4,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the mug in front of the thermos.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100018,
+      "success": false,
+      "progress": 0.5,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 2,
+        "criteria_total": 4,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the hand sanitizer to the left of the measuring tape.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100019,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the fruit knife to the right of the mouse.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100020,
+      "success": true,
+      "progress": 1.0,
+      "steps": 87,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the toothpaste to the right of the baby bottle.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100021,
+      "success": true,
+      "progress": 1.0,
+      "steps": 98,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the glue stick to the left of the lotion.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100022,
+      "success": false,
+      "progress": 0.5,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 2,
+        "criteria_total": 4,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the marker to the left of the gamepad.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100023,
+      "success": true,
+      "progress": 1.0,
+      "steps": 117,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "contacted": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the toothpaste behind the dental floss.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100024,
+      "success": false,
+      "progress": 0.0,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 4,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the candy behind the diffuser bottle.",
+      "stage_scores": {
+        "reach_pick": 0.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100025,
+      "success": false,
+      "progress": 0.5,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 2,
+        "criteria_total": 4,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the sponge behind the hex key.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100026,
+      "success": true,
+      "progress": 1.0,
+      "steps": 93,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the glasses case to the left of the wire cutters.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100027,
+      "success": true,
+      "progress": 1.0,
+      "steps": 96,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the measuring tape to the right of the diffuser bottle.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100028,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the pear behind the tv remote.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100029,
+      "success": true,
+      "progress": 1.0,
+      "steps": 131,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the vase in front of the eraser.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100030,
+      "success": true,
+      "progress": 1.0,
+      "steps": 108,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the carrot to the left of the spice jar.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100031,
+      "success": false,
+      "progress": 0.5,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 2,
+        "criteria_total": 4,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the peeler in front of the pear.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100032,
+      "success": true,
+      "progress": 1.0,
+      "steps": 87,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "contacted": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the pear behind the lotion.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100033,
+      "success": false,
+      "progress": 0.5,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 2,
+        "criteria_total": 4,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the pliers to the right of the phone stand.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100034,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the mug in front of the fruit knife.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100035,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the alarm clock to the right of the jewelry box.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100036,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the hex key to the left of the presenter clicker.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100037,
+      "success": true,
+      "progress": 1.0,
+      "steps": 100,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the basket behind the fruit knife.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100038,
+      "success": true,
+      "progress": 1.0,
+      "steps": 105,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the magnifier to the right of the cutter knife.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100039,
+      "success": true,
+      "progress": 1.0,
+      "steps": 105,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the glasses case to the left of the mouse.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100040,
+      "success": false,
+      "progress": 0.0,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 4,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the mouthwash cup in front of the tray.",
+      "stage_scores": {
+        "reach_pick": 0.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100041,
+      "success": true,
+      "progress": 1.0,
+      "steps": 152,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the basket to the left of the soap dish.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100042,
+      "success": false,
+      "progress": 0.0,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 4,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the facial cleanser in front of the scotch tape.",
+      "stage_scores": {
+        "reach_pick": 0.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100043,
+      "success": false,
+      "progress": 0.0,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 4,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the basket to the right of the magnifier.",
+      "stage_scores": {
+        "reach_pick": 0.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100044,
+      "success": true,
+      "progress": 1.0,
+      "steps": 106,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 4,
+        "criteria_total": 4,
+        "progress_criteria_reached": 4,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the chocolate behind the sharpener.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.25
+      }
+    },
+    {
+      "seed": 100045,
+      "success": false,
+      "progress": 0.75,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 3,
+        "criteria_ever_reached": 3,
+        "criteria_total": 4,
+        "progress_criteria_reached": 3,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "contacted": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": true,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the comb behind the scissors.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.25,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100046,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": true,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the hair clip in front of the baby bottle.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100047,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the toothbrush in front of the fork.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100048,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 1,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": true,
+            "objects/ref_0": false
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the beverage bottle to the right of the glasses case.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    },
+    {
+      "seed": 100049,
+      "success": false,
+      "progress": 0.25,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 4,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 4
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_behind",
+          "objects/pick_front",
+          "objects/pick_left",
+          "objects/pick_right",
+          "objects/ref_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_behind": false,
+            "objects/pick_front": true,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": true
+          },
+          "contacted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "grasped": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          },
+          "lifted": {
+            "objects/pick_behind": false,
+            "objects/pick_front": false,
+            "objects/pick_left": false,
+            "objects/pick_right": false,
+            "objects/ref_0": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Pick up the chopsticks in front of the mug.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    }
+  ],
+  "skipped_episodes": [],
+  "attempted_scene_seeds": [
+    100000,
+    100001,
+    100002,
+    100003,
+    100004,
+    100005,
+    100006,
+    100007,
+    100008,
+    100009,
+    100010,
+    100011,
+    100012,
+    100013,
+    100014,
+    100015,
+    100016,
+    100017,
+    100018,
+    100019,
+    100020,
+    100021,
+    100022,
+    100023,
+    100024,
+    100025,
+    100026,
+    100027,
+    100028,
+    100029,
+    100030,
+    100031,
+    100032,
+    100033,
+    100034,
+    100035,
+    100036,
+    100037,
+    100038,
+    100039,
+    100040,
+    100041,
+    100042,
+    100043,
+    100044,
+    100045,
+    100046,
+    100047,
+    100048,
+    100049
+  ]
+}

@@ -1,0 +1,4438 @@
+{
+  "episode_num": 25,
+  "seed_start": 100000,
+  "success_rate": 0.12,
+  "average_progress": 0.35333333333333333,
+  "episode_results": [
+    {
+      "seed": 100000,
+      "success": false,
+      "progress": 0.0,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 6,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 6,
+        "record_dir": "/home/users/wangmengfan/outputs/sim/local_pi05_full_80000_parallel_20261101_083416/place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/records/place_a2b_20261101_085512_823/scene_0000_seed_100000/episode_0000_seed_100000"
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": false,
+            "objects/dpick_0": true,
+            "objects/dpick_1": true,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": true,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Grab carrot and set in tray.",
+      "stage_scores": {
+        "reach_pick": 0.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100001,
+      "success": false,
+      "progress": 0.0,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 6,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 6,
+        "record_dir": "/home/users/wangmengfan/outputs/sim/local_pi05_full_80000_parallel_20261101_083416/place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/records/place_a2b_20261101_085512_823/scene_0001_seed_100001/episode_0001_seed_100001"
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": false,
+            "objects/dpick_0": true,
+            "objects/dpick_1": false,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": true,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Pick peeler and release it into basket.",
+      "stage_scores": {
+        "reach_pick": 0.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100002,
+      "success": false,
+      "progress": 0.3333333333333333,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 2,
+        "criteria_total": 6,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": true,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Pick pear up and place it in bowl.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.16666666666666666,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100003,
+      "success": false,
+      "progress": 0.0,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 6,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": false,
+            "objects/dpick_0": true,
+            "objects/dpick_1": true,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": true,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": true
+          },
+          "contacted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Pick chocolate and drop in bowl.",
+      "stage_scores": {
+        "reach_pick": 0.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100004,
+      "success": false,
+      "progress": 0.3333333333333333,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 2,
+        "criteria_total": 6,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": true,
+            "objects/place_object": true,
+            "objects/dplace_0": true
+          },
+          "contacted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": true
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Grab vase and release it into bowl.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.16666666666666666,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100005,
+      "success": false,
+      "progress": 0.8333333333333334,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true,
+          "reach_place": true,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true,
+          "reach_place": true,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 5,
+        "criteria_ever_reached": 5,
+        "criteria_total": 6,
+        "progress_criteria_reached": 5,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": true,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": true,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Lift baby bottle and set in tray.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.16666666666666666,
+        "grasp_pick": 0.16666666666666666,
+        "lift_pick": 0.16666666666666666,
+        "reach_place": 0.16666666666666666,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100006,
+      "success": false,
+      "progress": 0.3333333333333333,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 2,
+        "criteria_total": 6,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Pick up mouthwash cup and put in bowl.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.16666666666666666,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100007,
+      "success": true,
+      "progress": 1.0,
+      "steps": 212,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": true,
+          "place_within_xy": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true,
+          "reach_place": true,
+          "place_within_xy": true
+        },
+        "criteria_met_now_count": 3,
+        "criteria_ever_reached": 6,
+        "criteria_total": 6,
+        "progress_criteria_reached": 6,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": true,
+            "objects/dpick_2": true,
+            "objects/dpick_3": true,
+            "objects/dpick_4": true,
+            "objects/dpick_5": true,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": true,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Grasp hex key and set in tray.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.16666666666666666,
+        "grasp_pick": 0.16666666666666666,
+        "lift_pick": 0.16666666666666666,
+        "reach_place": 0.16666666666666666,
+        "place_within_xy": 0.16666666666666666
+      }
+    },
+    {
+      "seed": 100008,
+      "success": false,
+      "progress": 0.16666666666666666,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 6,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": true,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": true,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Pick up vase and put it in plate.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100009,
+      "success": false,
+      "progress": 0.0,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 6,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Grab spoon and drop into plate.",
+      "stage_scores": {
+        "reach_pick": 0.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100010,
+      "success": false,
+      "progress": 0.8333333333333334,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": false,
+          "reach_place": true,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true,
+          "reach_place": true,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 4,
+        "criteria_ever_reached": 5,
+        "criteria_total": 6,
+        "progress_criteria_reached": 5,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": true,
+            "objects/dpick_1": false,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Take juice and release it into plate.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.16666666666666666,
+        "grasp_pick": 0.16666666666666666,
+        "lift_pick": 0.16666666666666666,
+        "reach_place": 0.16666666666666666,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100011,
+      "success": false,
+      "progress": 0.5,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 3,
+        "criteria_total": 6,
+        "progress_criteria_reached": 3,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": true,
+            "objects/dpick_1": true,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": true,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": true
+          },
+          "contacted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Pick mouthwash cup and release it into tray.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.16666666666666666,
+        "grasp_pick": 0.16666666666666666,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100012,
+      "success": false,
+      "progress": 0.16666666666666666,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 6,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": true,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Grab vase and drop into plate.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100013,
+      "success": false,
+      "progress": 0.16666666666666666,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 6,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": true,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": true,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Pick staples box and set it into bowl.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100014,
+      "success": true,
+      "progress": 1.0,
+      "steps": 283,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": true,
+          "place_within_xy": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true,
+          "reach_place": true,
+          "place_within_xy": true
+        },
+        "criteria_met_now_count": 3,
+        "criteria_ever_reached": 6,
+        "criteria_total": 6,
+        "progress_criteria_reached": 6,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": true,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": true,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Pick dental floss and set it into plate.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.16666666666666666,
+        "grasp_pick": 0.16666666666666666,
+        "lift_pick": 0.16666666666666666,
+        "reach_place": 0.16666666666666666,
+        "place_within_xy": 0.16666666666666666
+      }
+    },
+    {
+      "seed": 100015,
+      "success": false,
+      "progress": 0.0,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 6,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": true,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Take alarm clock and place it inside tray.",
+      "stage_scores": {
+        "reach_pick": 0.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100016,
+      "success": false,
+      "progress": 0.16666666666666666,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 6,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": true,
+            "objects/dpick_1": false,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Grasp dental floss and place it inside basket.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100017,
+      "success": false,
+      "progress": 0.3333333333333333,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 2,
+        "criteria_total": 6,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Lift mug and drop it into basket.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.16666666666666666,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100018,
+      "success": false,
+      "progress": 0.0,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 6,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": true,
+            "objects/dpick_2": true,
+            "objects/dpick_3": true,
+            "objects/dpick_4": false,
+            "objects/dpick_5": true,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": true,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": true,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": true,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Hold hand sanitizer and release it into basket.",
+      "stage_scores": {
+        "reach_pick": 0.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100019,
+      "success": false,
+      "progress": 0.8333333333333334,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true,
+          "reach_place": true,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true,
+          "reach_place": true,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 5,
+        "criteria_ever_reached": 5,
+        "criteria_total": 6,
+        "progress_criteria_reached": 5,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": true,
+            "objects/dpick_1": true,
+            "objects/dpick_2": true,
+            "objects/dpick_3": true,
+            "objects/dpick_4": false,
+            "objects/dpick_5": true,
+            "objects/place_object": true,
+            "objects/dplace_0": true
+          },
+          "contacted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Grab fruit knife and drop into plate.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.16666666666666666,
+        "grasp_pick": 0.16666666666666666,
+        "lift_pick": 0.16666666666666666,
+        "reach_place": 0.16666666666666666,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100020,
+      "success": false,
+      "progress": 0.5,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 3,
+        "criteria_total": 6,
+        "progress_criteria_reached": 3,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": true,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Grab toothpaste and release it into bowl.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.16666666666666666,
+        "grasp_pick": 0.16666666666666666,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100021,
+      "success": false,
+      "progress": 0.16666666666666666,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 6,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": true,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Grasp glue stick and place it inside plate.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100022,
+      "success": false,
+      "progress": 0.16666666666666666,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 1,
+        "criteria_total": 6,
+        "progress_criteria_reached": 1,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": true,
+            "objects/dpick_1": true,
+            "objects/dpick_2": true,
+            "objects/dpick_3": false,
+            "objects/dpick_4": true,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": true,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Pick marker and drop into tray.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    },
+    {
+      "seed": 100023,
+      "success": true,
+      "progress": 1.0,
+      "steps": 210,
+      "stop_reason": "success",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": true,
+          "place_within_xy": true
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": true,
+          "lift_pick": true,
+          "reach_place": true,
+          "place_within_xy": true
+        },
+        "criteria_met_now_count": 3,
+        "criteria_ever_reached": 6,
+        "criteria_total": 6,
+        "progress_criteria_reached": 6,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/dpick_0": true,
+            "objects/dpick_1": true,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": true,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": true,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": true,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Grab toothpaste and drop into basket.",
+      "stage_scores": {
+        "reach_pick": 0.16666666666666666,
+        "contact_pick": 0.16666666666666666,
+        "grasp_pick": 0.16666666666666666,
+        "lift_pick": 0.16666666666666666,
+        "reach_place": 0.16666666666666666,
+        "place_within_xy": 0.16666666666666666
+      }
+    },
+    {
+      "seed": 100024,
+      "success": false,
+      "progress": 0.0,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_reached": {
+          "reach_pick": false,
+          "contact_pick": false,
+          "grasp_pick": false,
+          "lift_pick": false,
+          "reach_place": false,
+          "place_within_xy": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 6,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 6
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/dpick_0",
+          "objects/dpick_1",
+          "objects/dpick_2",
+          "objects/dpick_3",
+          "objects/dpick_4",
+          "objects/dpick_5",
+          "objects/place_object",
+          "objects/dplace_0"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "contacted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/dpick_0": false,
+            "objects/dpick_1": false,
+            "objects/dpick_2": false,
+            "objects/dpick_3": false,
+            "objects/dpick_4": false,
+            "objects/dpick_5": false,
+            "objects/place_object": false,
+            "objects/dplace_0": false
+          }
+        },
+        "binary": {
+          "within_xy": [
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/pick_object",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_0",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_1",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_2",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/place_object",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_3",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_4",
+              "object": "objects/dplace_0",
+              "ever_true": true
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/place_object",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/dpick_5",
+              "object": "objects/dplace_0",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Grasp candy and set it inside plate.",
+      "stage_scores": {
+        "reach_pick": 0.0,
+        "contact_pick": 0.0,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0,
+        "reach_place": 0.0,
+        "place_within_xy": 0.0
+      }
+    }
+  ],
+  "skipped_episodes": [],
+  "attempted_scene_seeds": [
+    100000,
+    100001,
+    100002,
+    100003,
+    100004,
+    100005,
+    100006,
+    100007,
+    100008,
+    100009,
+    100010,
+    100011,
+    100012,
+    100013,
+    100014,
+    100015,
+    100016,
+    100017,
+    100018,
+    100019,
+    100020,
+    100021,
+    100022,
+    100023,
+    100024
+  ]
+}

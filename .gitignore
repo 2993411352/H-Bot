@@ -29,7 +29,13 @@ datasets/
 models/
 checkpoints/
 logs/
-outputs/
+# Keep structured simulation results, but never commit bulky recordings.
+outputs/*
+!outputs/sim/
+!outputs/sim/**
+outputs/sim/**/*.[mM][pP]4
+outputs/sim/**/*.[mM][cC][aA][pP]
+outputs/sim/**/*.[mM][aA][cC][pP]
 docker/exports/
 docker/native-build-v1/
 docker/native-export-v1/

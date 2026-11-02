@@ -1,0 +1,142 @@
+{
+  "episode_num": 1,
+  "seed_start": 100000,
+  "success_rate": 0.0,
+  "average_progress": 0.0,
+  "episode_results": [
+    {
+      "seed": 100000,
+      "success": false,
+      "progress": 0.0,
+      "steps": 900,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "first_pair_stacked": false,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_reached": {
+          "first_pair_stacked": false,
+          "first_three_stacked": false,
+          "full_order_stacked": false,
+          "settled_stack": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 4,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 4,
+        "record_dir": "/home/users/wangmengfan/outputs/sim/local_holobrain_20261027_214149/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/records/stack_cubes_20261027_134203_285/scene_0000_seed_100000/episode_0000_seed_100000"
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/purple_cube",
+          "objects/green_cube",
+          "objects/lime_cube",
+          "objects/orange_cube"
+        ],
+        "unary": {
+          "stationary": {
+            "objects/purple_cube": true,
+            "objects/green_cube": true,
+            "objects/lime_cube": true,
+            "objects/orange_cube": true
+          },
+          "contacted": {
+            "objects/purple_cube": false,
+            "objects/green_cube": true,
+            "objects/lime_cube": false,
+            "objects/orange_cube": false
+          },
+          "grasped": {
+            "objects/purple_cube": false,
+            "objects/green_cube": false,
+            "objects/lime_cube": false,
+            "objects/orange_cube": false
+          }
+        },
+        "binary": {
+          "stack_alignment": [
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/green_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/purple_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/green_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/green_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/green_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/green_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/lime_cube",
+              "object": "objects/orange_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/purple_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/green_cube",
+              "ever_true": false
+            },
+            {
+              "subject": "objects/orange_cube",
+              "object": "objects/lime_cube",
+              "ever_true": false
+            }
+          ]
+        },
+        "global": {
+          "gripper_open": true
+        }
+      },
+      "instruction": "Stack the cubes bottom-to-top: purple, green, lime, orange.",
+      "stage_scores": {
+        "first_pair_stacked": 0.0,
+        "first_three_stacked": 0.0,
+        "full_order_stacked": 0.0,
+        "settled_stack": 0.0
+      }
+    }
+  ],
+  "skipped_episodes": [],
+  "attempted_scene_seeds": [
+    100000
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "policy_id": "server",
+  "run_id": "local_pi05_full_60000_20261031_141137",
+  "shards": [
+    {
+      "config_index": 0,
+      "config_path": "/tmp/pick_spatial_split_hbavdpjz/spatial_directions.yaml",
+      "episode_count": 50,
+      "episode_offset": 0,
+      "episodes_per_scene": 1,
+      "fallback_seed_count": 100,
+      "fallback_seed_start": 100050,
+      "group_id": "group_0000",
+      "seed_start": 100000,
+      "shard_count": 1,
+      "shard_id": "pick_spatial__group_0000__config_0000__shard_0000",
+      "shard_index": 0,
+      "task_name": "pick_spatial",
+      "task_type": "spatial_directions"
+    }
+  ],
+  "version": 2
+}

@@ -1,0 +1,2521 @@
+{
+  "wall_seconds": 7828.638595183147,
+  "note": "Inclusive wall times overlap; do not sum nested metrics.",
+  "settings": {
+    "HBOT_SIM_CPU_THREADS": "8",
+    "HBOT_EVAL_DEEP_PROFILE": "0",
+    "HBOT_SIM_WORKERS_PER_GPU": "2",
+    "CUDA_VISIBLE_DEVICES": "0"
+  },
+  "metrics": {
+    "render": {
+      "count": 12194,
+      "seconds": 1266.6089908860158,
+      "max_seconds": 0.2339924038387835
+    },
+    "env.reset": {
+      "count": 50,
+      "seconds": 9.391950396122411,
+      "max_seconds": 1.1914609491359442
+    },
+    "physics.step": {
+      "count": 241880,
+      "seconds": 3036.0603245119564,
+      "max_seconds": 0.04367866297252476
+    },
+    "env.step": {
+      "count": 12094,
+      "seconds": 7180.336289293366,
+      "max_seconds": 0.8853147970512509
+    },
+    "prepare_episode": {
+      "count": 50,
+      "seconds": 1797.250305985799,
+      "max_seconds": 128.73470766609535
+    },
+    "policy_input": {
+      "count": 8564,
+      "seconds": 1.1630689634475857,
+      "max_seconds": 0.0006370590999722481
+    },
+    "model_request": {
+      "count": 602,
+      "seconds": 197.10739653441124,
+      "max_seconds": 15.218211923027411
+    },
+    "policy.act": {
+      "count": 8564,
+      "seconds": 197.19676078902557,
+      "max_seconds": 15.218250290025026
+    },
+    "validator": {
+      "count": 8564,
+      "seconds": 126.90234952024184,
+      "max_seconds": 0.10034904698841274
+    },
+    "episode_loop": {
+      "count": 50,
+      "seconds": 5770.631524150725,
+      "max_seconds": 152.97534238686785
+    }
+  },
+  "episodes": [
+    {
+      "completed": true,
+      "steps": 93,
+      "stop_reason": "success",
+      "seconds": 81.36188372713514,
+      "metrics": {
+        "render": {
+          "count": 93,
+          "seconds": 8.957294180290774
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 1860,
+          "seconds": 24.528214615071192
+        },
+        "env.step": {
+          "count": 93,
+          "seconds": 61.51373684825376
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 93,
+          "seconds": 0.015176697401329875
+        },
+        "model_request": {
+          "count": 7,
+          "seconds": 17.273177389986813
+        },
+        "policy.act": {
+          "count": 93,
+          "seconds": 17.27428688504733
+        },
+        "validator": {
+          "count": 93,
+          "seconds": 2.3647941881790757
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 81.36188372713514
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 142.1136202630587,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.486477938946337
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 52.08740290184505
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 132.9741795673035
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.032134230714291334
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.2662056353874505
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.268501105718315
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 4.446037720656022
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 142.1136202630587
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 97,
+      "stop_reason": "success",
+      "seconds": 63.84061188204214,
+      "metrics": {
+        "render": {
+          "count": 97,
+          "seconds": 10.256608352763578
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 1940,
+          "seconds": 23.719357032561675
+        },
+        "env.step": {
+          "count": 97,
+          "seconds": 60.06787769845687
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 97,
+          "seconds": 0.01303959358483553
+        },
+        "model_request": {
+          "count": 7,
+          "seconds": 2.1729044241365045
+        },
+        "policy.act": {
+          "count": 97,
+          "seconds": 2.173908920958638
+        },
+        "validator": {
+          "count": 97,
+          "seconds": 1.4714095201343298
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 63.84061188204214
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 124.59924190607853,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 19.87352499854751
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 43.42527774069458
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 117.50239337491803
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.027059517102316022
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.18557307543233
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.187610742636025
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.679219397716224
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 124.59924190607853
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 134.02733370498754,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.77603497589007
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 52.01269152178429
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 126.90378962177783
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.02731236326508224
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.186681002844125
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.188621391542256
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.7054316953290254
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 134.02733370498754
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 128.1788714339491,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.52634924161248
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 43.55992809752934
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 120.67839418235235
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.026717518689110875
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.156348716467619
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.158432417083532
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 3.0771964602172375
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 128.1788714339491
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 133.5248670547735,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.02250444982201
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 49.64977816818282
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 126.00794748635963
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.026627670507878065
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.299497856758535
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.301575020188466
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.985570225864649
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 133.5248670547735
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 131.27022350393236,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.223349429434165
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 49.22978502744809
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 124.017853443278
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.02697566128335893
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.166901874123141
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.168834262760356
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.852835081750527
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 131.27022350393236
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 152.97534238686785,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.61054221331142
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 66.44290689751506
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 145.5549735755194
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.02727279858663678
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.25110535393469
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.253195493482053
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.9160303929820657
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 152.97534238686785
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 134.4382802869659,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.320037020603195
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 50.89771799673326
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 127.14943452598527
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.026930056046694517
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.412904356140643
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.414985553128645
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.6328838486224413
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 134.4382802869659
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 96,
+      "stop_reason": "success",
+      "seconds": 64.82378667290322,
+      "metrics": {
+        "render": {
+          "count": 96,
+          "seconds": 9.589113077148795
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 1920,
+          "seconds": 25.365646057995036
+        },
+        "env.step": {
+          "count": 96,
+          "seconds": 61.05258203949779
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 96,
+          "seconds": 0.013170915888622403
+        },
+        "model_request": {
+          "count": 7,
+          "seconds": 2.114221507217735
+        },
+        "policy.act": {
+          "count": 96,
+          "seconds": 2.1151823922991753
+        },
+        "validator": {
+          "count": 96,
+          "seconds": 1.5332646612077951
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 64.82378667290322
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 145.9743878771551,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.80046289274469
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 61.12082664249465
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 138.0520479294937
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.026830139104276896
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.3390609454363585
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.341072048060596
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 3.3330641333013773
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 145.9743878771551
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 129.64486699807458,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.67202878650278
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 47.06807333836332
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 122.32700377516448
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.026537453290075064
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.196981819346547
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.199035414494574
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.8787823105230927
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 129.64486699807458
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 138.70489683607593,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.89570525358431
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 50.5462259685155
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 130.98099576472305
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.027033872669562697
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.155323639977723
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.157501241425052
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 3.3279958367347717
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 138.70489683607593
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 139.43600508617237,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.71352066262625
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 51.42039801226929
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 131.86615214683115
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.0265908467117697
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.080850203987211
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.082850072532892
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 3.21956072608009
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 139.43600508617237
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 84,
+      "stop_reason": "success",
+      "seconds": 59.386938988929614,
+      "metrics": {
+        "render": {
+          "count": 84,
+          "seconds": 8.945315902587026
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 1680,
+          "seconds": 20.983538553351536
+        },
+        "env.step": {
+          "count": 84,
+          "seconds": 55.952188092749566
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 84,
+          "seconds": 0.011349128326401114
+        },
+        "model_request": {
+          "count": 6,
+          "seconds": 1.7797539460007101
+        },
+        "policy.act": {
+          "count": 84,
+          "seconds": 1.780600075609982
+        },
+        "validator": {
+          "count": 84,
+          "seconds": 1.5410291936714202
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 59.386938988929614
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 133.00109938997775,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.76717731775716
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 46.118707379559055
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 125.70582266105339
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.026892284397035837
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.084646362578496
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.086857304908335
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.978088000556454
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 133.00109938997775
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 133.5512704278808,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.35055142827332
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 48.559067792026326
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 125.75679383683018
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.02694802009500563
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.264238492352888
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.266335137654096
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 3.2623920312616974
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 133.5512704278808
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 139.08423384907655,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.81335428636521
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 52.398965967586264
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 131.5166771169752
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.026764538371935487
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.147946769604459
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.15009335312061
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 3.1837800431530923
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 139.08423384907655
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 132.96557003678754,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.562420734670013
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 51.24075744836591
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 125.93753252085298
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.026739775901660323
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.093488299753517
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.095530890394002
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.6981551551725715
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 132.96557003678754
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 137.32593189994805,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.429574972949922
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 52.545071977656335
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 129.2768853958696
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.025970627320930362
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.572236414300278
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.574289807816967
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 3.236987014999613
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 137.32593189994805
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 97,
+      "stop_reason": "success",
+      "seconds": 62.79607407795265,
+      "metrics": {
+        "render": {
+          "count": 97,
+          "seconds": 9.861913505475968
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 1940,
+          "seconds": 22.884502991801128
+        },
+        "env.step": {
+          "count": 97,
+          "seconds": 58.968630206771195
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 97,
+          "seconds": 0.012875430285930634
+        },
+        "model_request": {
+          "count": 7,
+          "seconds": 2.053584929322824
+        },
+        "policy.act": {
+          "count": 97,
+          "seconds": 2.054656566819176
+        },
+        "validator": {
+          "count": 97,
+          "seconds": 1.6654996906872839
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 62.79607407795265
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 131.2267880658619,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.162283844314516
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 49.89400734077208
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 124.00163225759752
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.026486394926905632
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.167163407662883
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.169248259160668
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.815436816541478
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 131.2267880658619
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 116,
+      "stop_reason": "success",
+      "seconds": 79.76306068012491,
+      "metrics": {
+        "render": {
+          "count": 116,
+          "seconds": 11.90090921614319
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 2320,
+          "seconds": 32.54632234061137
+        },
+        "env.step": {
+          "count": 116,
+          "seconds": 75.54369737673551
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 116,
+          "seconds": 0.015685889404267073
+        },
+        "model_request": {
+          "count": 8,
+          "seconds": 2.397416989086196
+        },
+        "policy.act": {
+          "count": 116,
+          "seconds": 2.398515367647633
+        },
+        "validator": {
+          "count": 116,
+          "seconds": 1.6714965987484902
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 79.76306068012491
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 134.04978699004278,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.41095161368139
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 50.76681196386926
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 126.84662317601033
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.0267490663100034
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.219827064080164
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.2220189068466425
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.719959242735058
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 134.04978699004278
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 126.20411206991412,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.39726331247948
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 45.18250742438249
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 119.21553485351615
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.02699120226316154
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.254666873486713
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.2567881003487855
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.4882457631174475
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 126.20411206991412
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 87,
+      "stop_reason": "success",
+      "seconds": 59.360191404121,
+      "metrics": {
+        "render": {
+          "count": 87,
+          "seconds": 9.086756422417238
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 1740,
+          "seconds": 21.986986184259877
+        },
+        "env.step": {
+          "count": 87,
+          "seconds": 56.09851281065494
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 87,
+          "seconds": 0.011935192160308361
+        },
+        "model_request": {
+          "count": 6,
+          "seconds": 1.8225445402786136
+        },
+        "policy.act": {
+          "count": 87,
+          "seconds": 1.8234492775518447
+        },
+        "validator": {
+          "count": 87,
+          "seconds": 1.3316031182184815
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 59.360191404121
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 92,
+      "stop_reason": "success",
+      "seconds": 61.55030722101219,
+      "metrics": {
+        "render": {
+          "count": 92,
+          "seconds": 9.436598041793332
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 1840,
+          "seconds": 22.403117107227445
+        },
+        "env.step": {
+          "count": 92,
+          "seconds": 57.829884476494044
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 92,
+          "seconds": 0.012177341151982546
+        },
+        "model_request": {
+          "count": 7,
+          "seconds": 2.1848354812245816
+        },
+        "policy.act": {
+          "count": 92,
+          "seconds": 2.185836829477921
+        },
+        "validator": {
+          "count": 92,
+          "seconds": 1.4109403772745281
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 61.55030722101219
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 137.85800416907296,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 21.66139152366668
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 52.1739797515329
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 130.46172247151844
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.026556474389508367
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.246320793638006
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.248444373486564
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.877006572438404
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 137.85800416907296
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 105,
+      "stop_reason": "success",
+      "seconds": 70.68645865889266,
+      "metrics": {
+        "render": {
+          "count": 105,
+          "seconds": 10.807033151155338
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 2100,
+          "seconds": 27.36558854323812
+        },
+        "env.step": {
+          "count": 105,
+          "seconds": 66.90882179746404
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 105,
+          "seconds": 0.014038664987310767
+        },
+        "model_request": {
+          "count": 7,
+          "seconds": 2.11294040014036
+        },
+        "policy.act": {
+          "count": 105,
+          "seconds": 2.1140592568553984
+        },
+        "validator": {
+          "count": 105,
+          "seconds": 1.5304485382512212
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 70.68645865889266
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 107,
+      "stop_reason": "success",
+      "seconds": 75.6241599470377,
+      "metrics": {
+        "render": {
+          "count": 107,
+          "seconds": 11.16339159826748
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 2140,
+          "seconds": 28.638641285477206
+        },
+        "env.step": {
+          "count": 107,
+          "seconds": 71.00395252392627
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 107,
+          "seconds": 0.014842033153399825
+        },
+        "model_request": {
+          "count": 8,
+          "seconds": 2.4499714460689574
+        },
+        "policy.act": {
+          "count": 107,
+          "seconds": 2.4511067115236074
+        },
+        "validator": {
+          "count": 107,
+          "seconds": 2.038714595604688
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 75.6241599470377
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 134.8950176090002,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.82230862416327
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 51.149629714433104
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 127.81871104403399
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.02695958805270493
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.296000540954992
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.2980814978946
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.5228819805197418
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 134.8950176090002
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 85,
+      "stop_reason": "success",
+      "seconds": 54.99063738505356,
+      "metrics": {
+        "render": {
+          "count": 85,
+          "seconds": 8.447510687168688
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 1700,
+          "seconds": 20.58584990957752
+        },
+        "env.step": {
+          "count": 85,
+          "seconds": 51.837128040380776
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 85,
+          "seconds": 0.011408221907913685
+        },
+        "model_request": {
+          "count": 6,
+          "seconds": 1.7940408531576395
+        },
+        "policy.act": {
+          "count": 85,
+          "seconds": 1.7949295747093856
+        },
+        "validator": {
+          "count": 85,
+          "seconds": 1.2328544694464654
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 54.99063738505356
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 133.5310524010565,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.60611880198121
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 50.78166596661322
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 126.30515723582357
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.026566595770418644
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.20059156161733
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.202613657806069
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.784010996343568
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 133.5310524010565
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 136.86565608694218,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.884512479184195
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 53.486355195520446
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 129.73512508440763
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.02641101274639368
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.388136151479557
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.390217536594719
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.512316005071625
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 136.86565608694218
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 129.73865393199958,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.613143287366256
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 45.98398598143831
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 122.4715446527116
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.02692650118842721
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.171265554614365
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.173246458638459
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.838505821302533
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 129.73865393199958
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 128.5623946969863,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.195187759120017
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 49.08379800571129
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 121.53026088373736
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.026169097749516368
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.331127232173458
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.3331718251574785
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.4223688521888107
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 128.5623946969863
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 134.01406657183543,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.582655486650765
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 50.19505860074423
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 126.7989897755906
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.02646253420971334
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.2502231758553535
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.252242392394692
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.709507593186572
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 134.01406657183543
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 106,
+      "stop_reason": "success",
+      "seconds": 72.63015108695254,
+      "metrics": {
+        "render": {
+          "count": 106,
+          "seconds": 11.202063973993063
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 2120,
+          "seconds": 27.3338915433269
+        },
+        "env.step": {
+          "count": 106,
+          "seconds": 68.38885991671123
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 106,
+          "seconds": 0.013904416467994452
+        },
+        "model_request": {
+          "count": 8,
+          "seconds": 2.5762912973295897
+        },
+        "policy.act": {
+          "count": 106,
+          "seconds": 2.577417738037184
+        },
+        "validator": {
+          "count": 106,
+          "seconds": 1.5313201702665538
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 72.63015108695254
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 127.8297285081353,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.728174298536032
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 45.62551447399892
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 120.64493745332584
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.02674371423199773
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.176208389224485
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.1782279051840305
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.747792789246887
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 127.8297285081353
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 151.09992308705114,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.62156432052143
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 66.43487692251801
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 143.3097351223696
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.027018525637686253
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.219121348345652
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.221187273040414
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 3.307520904345438
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 151.09992308705114
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 143,
+      "stop_reason": "success",
+      "seconds": 100.90432337205857,
+      "metrics": {
+        "render": {
+          "count": 143,
+          "seconds": 14.494616472395137
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 2860,
+          "seconds": 40.42818295257166
+        },
+        "env.step": {
+          "count": 143,
+          "seconds": 95.25957396719605
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 143,
+          "seconds": 0.01881023752503097
+        },
+        "model_request": {
+          "count": 10,
+          "seconds": 2.9258891397621483
+        },
+        "policy.act": {
+          "count": 143,
+          "seconds": 2.9272709689103067
+        },
+        "validator": {
+          "count": 143,
+          "seconds": 2.5200569096487015
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 100.90432337205857
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 134.75084655289538,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.42850013100542
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 52.583971759304404
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 127.39205719623715
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.026362639386206865
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.206667351769283
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.208621822996065
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.889368441188708
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 134.75084655289538
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 137.22260862588882,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.99358793674037
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 52.34351358842105
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 130.09676397405565
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.027462430065497756
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.176193313440308
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.178242175141349
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.685387918027118
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 137.22260862588882
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 113,
+      "stop_reason": "success",
+      "seconds": 74.36668981984258,
+      "metrics": {
+        "render": {
+          "count": 113,
+          "seconds": 11.66435323888436
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 2260,
+          "seconds": 26.435042652999982
+        },
+        "env.step": {
+          "count": 113,
+          "seconds": 69.79286345350556
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 113,
+          "seconds": 0.01601342554204166
+        },
+        "model_request": {
+          "count": 8,
+          "seconds": 2.7497152253054082
+        },
+        "policy.act": {
+          "count": 113,
+          "seconds": 2.7509410586208105
+        },
+        "validator": {
+          "count": 113,
+          "seconds": 1.6596258899662644
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 74.36668981984258
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 143,
+      "stop_reason": "success",
+      "seconds": 87.12693532509729,
+      "metrics": {
+        "render": {
+          "count": 143,
+          "seconds": 13.449342414969578
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 2860,
+          "seconds": 35.67954681511037
+        },
+        "env.step": {
+          "count": 143,
+          "seconds": 82.47639838187024
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 143,
+          "seconds": 0.019799570785835385
+        },
+        "model_request": {
+          "count": 10,
+          "seconds": 2.854521106928587
+        },
+        "policy.act": {
+          "count": 143,
+          "seconds": 2.8559423466213048
+        },
+        "validator": {
+          "count": 143,
+          "seconds": 1.621058865217492
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 87.12693532509729
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 128.54694420704618,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.29882684466429
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 49.33731474890374
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 121.4767618663609
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.0286779694724828
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.212295049102977
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.214532221434638
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.597233082400635
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 128.54694420704618
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 131.13455123710446,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.625379670178518
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 49.64449917641468
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 124.07233859971166
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.02874869992956519
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.141126219416037
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.1433767741546035
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.6202264686580747
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 131.13455123710446
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 121.26812566490844,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 20.26310338289477
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 41.425527377286926
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 114.02913368307054
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.02852841722778976
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.200804311549291
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.202979946043342
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 2.7642284519970417
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 121.26812566490844
+        }
+      }
+    },
+    {
+      "completed": true,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "seconds": 131.80501048406586,
+      "metrics": {
+        "render": {
+          "count": 200,
+          "seconds": 21.057727602077648
+        },
+        "env.reset": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "physics.step": {
+          "count": 4000,
+          "seconds": 46.44239367661066
+        },
+        "env.step": {
+          "count": 200,
+          "seconds": 124.28637002478354
+        },
+        "prepare_episode": {
+          "count": 0,
+          "seconds": 0.0
+        },
+        "policy_input": {
+          "count": 200,
+          "seconds": 0.027683967258781195
+        },
+        "model_request": {
+          "count": 14,
+          "seconds": 4.1278587016277015
+        },
+        "policy.act": {
+          "count": 200,
+          "seconds": 4.130094435065985
+        },
+        "validator": {
+          "count": 200,
+          "seconds": 3.062224959488958
+        },
+        "episode_loop": {
+          "count": 1,
+          "seconds": 131.80501048406586
+        }
+      }
+    }
+  ],
+  "runtime": {
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ],
+    "torch_threads": 8,
+    "carb_threads": 8,
+    "tbb_threads": 8,
+    "physics_threads": 8,
+    "viewport_active": false
+  }
+}

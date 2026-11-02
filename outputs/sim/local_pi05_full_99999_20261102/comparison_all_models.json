@@ -1,0 +1,577 @@
+{
+  "current": {
+    "label": "Full SFT 99999 (3+2 Clients, consolidated)",
+    "path": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_merged_20261102",
+    "complete": true,
+    "episodes": 300,
+    "successes": 117,
+    "mean_score": 0.5704444444444445,
+    "mean_success_rate": 0.38999999999999996,
+    "tasks": {
+      "place_a2b": {
+        "episodes": 50,
+        "successes": 13,
+        "score": 0.38666666666666677,
+        "success_rate": 0.26,
+        "validated": true,
+        "stage_success_rate": {
+          "reach_pick": 0.66,
+          "contact_pick": 0.5,
+          "grasp_pick": 0.3,
+          "lift_pick": 0.3,
+          "reach_place": 0.3,
+          "place_within_xy": 0.26
+        }
+      },
+      "pick_color": {
+        "episodes": 50,
+        "successes": 21,
+        "score": 0.58,
+        "success_rate": 0.42,
+        "validated": true,
+        "stage_success_rate": {
+          "reach_pick": 0.8,
+          "contact_pick": 0.64,
+          "grasp_pick": 0.46,
+          "lift_pick": 0.42
+        }
+      },
+      "pick_spatial": {
+        "episodes": 50,
+        "successes": 15,
+        "score": 0.55,
+        "success_rate": 0.3,
+        "validated": true,
+        "stage_success_rate": {
+          "reach_pick": 0.9,
+          "contact_pick": 0.64,
+          "grasp_pick": 0.36,
+          "lift_pick": 0.3
+        }
+      },
+      "open_drawer": {
+        "episodes": 50,
+        "successes": 28,
+        "score": 0.7720000000000001,
+        "success_rate": 0.56,
+        "validated": true,
+        "stage_success_rate": {
+          "reach": 1.0,
+          "contact": 0.82,
+          "moved": 0.82,
+          "target_joint_state": 0.6,
+          "settled_at_target": 0.56
+        }
+      },
+      "stack_cubes": {
+        "episodes": 50,
+        "successes": 11,
+        "score": 0.35,
+        "success_rate": 0.22,
+        "validated": true,
+        "stage_success_rate": {
+          "first_pair_stacked": 0.62,
+          "first_three_stacked": 0.34,
+          "full_order_stacked": 0.22,
+          "settled_stack": 0.22
+        }
+      },
+      "joint_direction": {
+        "episodes": 50,
+        "successes": 29,
+        "score": 0.7840000000000003,
+        "success_rate": 0.58,
+        "validated": true,
+        "stage_success_rate": {
+          "reach": 0.96,
+          "contact": 0.66,
+          "moved": 0.9,
+          "target_joint_state": 0.58,
+          "settled_at_target": 0.58
+        }
+      }
+    },
+    "problems": []
+  },
+  "references": [
+    {
+      "label": "LoRA 40k",
+      "path": "/study/wangmengfan/hbot/outputs/sim/local_pi05_lora_39999_20261028_140639_740492_10276",
+      "complete": true,
+      "episodes": 300,
+      "successes": 70,
+      "mean_score": 0.41244444444444445,
+      "mean_success_rate": 0.2333333333333333,
+      "tasks": {
+        "place_a2b": {
+          "episodes": 50,
+          "successes": 7,
+          "score": 0.24666666666666667,
+          "success_rate": 0.14,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.56,
+            "contact_pick": 0.32,
+            "grasp_pick": 0.18,
+            "lift_pick": 0.14,
+            "reach_place": 0.14,
+            "place_within_xy": 0.14
+          }
+        },
+        "pick_color": {
+          "episodes": 50,
+          "successes": 22,
+          "score": 0.595,
+          "success_rate": 0.44,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.78,
+            "contact_pick": 0.66,
+            "grasp_pick": 0.5,
+            "lift_pick": 0.44
+          }
+        },
+        "pick_spatial": {
+          "episodes": 50,
+          "successes": 10,
+          "score": 0.385,
+          "success_rate": 0.2,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.68,
+            "contact_pick": 0.42,
+            "grasp_pick": 0.24,
+            "lift_pick": 0.2
+          }
+        },
+        "open_drawer": {
+          "episodes": 50,
+          "successes": 2,
+          "score": 0.36399999999999993,
+          "success_rate": 0.04,
+          "validated": true,
+          "stage_success_rate": {
+            "reach": 1.0,
+            "contact": 0.34,
+            "moved": 0.34,
+            "target_joint_state": 0.08,
+            "settled_at_target": 0.04
+          }
+        },
+        "stack_cubes": {
+          "episodes": 50,
+          "successes": 4,
+          "score": 0.2,
+          "success_rate": 0.08,
+          "validated": true,
+          "stage_success_rate": {
+            "first_pair_stacked": 0.48,
+            "first_three_stacked": 0.16,
+            "full_order_stacked": 0.08,
+            "settled_stack": 0.08
+          }
+        },
+        "joint_direction": {
+          "episodes": 50,
+          "successes": 25,
+          "score": 0.6840000000000002,
+          "success_rate": 0.5,
+          "validated": true,
+          "stage_success_rate": {
+            "reach": 0.86,
+            "contact": 0.44,
+            "moved": 0.78,
+            "target_joint_state": 0.56,
+            "settled_at_target": 0.5
+          }
+        }
+      },
+      "problems": []
+    },
+    {
+      "label": "LoRA 60k",
+      "path": "/study/wangmengfan/hbot/outputs/sim/local_pi05_lora_59999_20261029_202633_3586617_17288",
+      "complete": true,
+      "episodes": 300,
+      "successes": 75,
+      "mean_score": 0.4124444444444444,
+      "mean_success_rate": 0.25,
+      "tasks": {
+        "place_a2b": {
+          "episodes": 50,
+          "successes": 11,
+          "score": 0.27666666666666667,
+          "success_rate": 0.22,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.52,
+            "contact_pick": 0.26,
+            "grasp_pick": 0.22,
+            "lift_pick": 0.22,
+            "reach_place": 0.22,
+            "place_within_xy": 0.22
+          }
+        },
+        "pick_color": {
+          "episodes": 50,
+          "successes": 20,
+          "score": 0.56,
+          "success_rate": 0.4,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.78,
+            "contact_pick": 0.6,
+            "grasp_pick": 0.46,
+            "lift_pick": 0.4
+          }
+        },
+        "pick_spatial": {
+          "episodes": 50,
+          "successes": 11,
+          "score": 0.395,
+          "success_rate": 0.22,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.66,
+            "contact_pick": 0.46,
+            "grasp_pick": 0.24,
+            "lift_pick": 0.22
+          }
+        },
+        "open_drawer": {
+          "episodes": 50,
+          "successes": 3,
+          "score": 0.36799999999999977,
+          "success_rate": 0.06,
+          "validated": true,
+          "stage_success_rate": {
+            "reach": 1.0,
+            "contact": 0.42,
+            "moved": 0.24,
+            "target_joint_state": 0.12,
+            "settled_at_target": 0.06
+          }
+        },
+        "stack_cubes": {
+          "episodes": 50,
+          "successes": 5,
+          "score": 0.195,
+          "success_rate": 0.1,
+          "validated": true,
+          "stage_success_rate": {
+            "first_pair_stacked": 0.44,
+            "first_three_stacked": 0.14,
+            "full_order_stacked": 0.1,
+            "settled_stack": 0.1
+          }
+        },
+        "joint_direction": {
+          "episodes": 50,
+          "successes": 25,
+          "score": 0.68,
+          "success_rate": 0.5,
+          "validated": true,
+          "stage_success_rate": {
+            "reach": 0.82,
+            "contact": 0.5,
+            "moved": 0.78,
+            "target_joint_state": 0.56,
+            "settled_at_target": 0.5
+          }
+        }
+      },
+      "problems": []
+    },
+    {
+      "label": "Full SFT 30k",
+      "path": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_30000_20261030_170853_3664253_7601",
+      "complete": true,
+      "episodes": 300,
+      "successes": 86,
+      "mean_score": 0.47750000000000004,
+      "mean_success_rate": 0.2866666666666667,
+      "tasks": {
+        "place_a2b": {
+          "episodes": 50,
+          "successes": 8,
+          "score": 0.28,
+          "success_rate": 0.16,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.6,
+            "contact_pick": 0.4,
+            "grasp_pick": 0.18,
+            "lift_pick": 0.18,
+            "reach_place": 0.16,
+            "place_within_xy": 0.16
+          }
+        },
+        "pick_color": {
+          "episodes": 50,
+          "successes": 20,
+          "score": 0.56,
+          "success_rate": 0.4,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.78,
+            "contact_pick": 0.62,
+            "grasp_pick": 0.44,
+            "lift_pick": 0.4
+          }
+        },
+        "pick_spatial": {
+          "episodes": 50,
+          "successes": 17,
+          "score": 0.525,
+          "success_rate": 0.34,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.8,
+            "contact_pick": 0.6,
+            "grasp_pick": 0.36,
+            "lift_pick": 0.34
+          }
+        },
+        "open_drawer": {
+          "episodes": 50,
+          "successes": 16,
+          "score": 0.5839999999999997,
+          "success_rate": 0.32,
+          "validated": true,
+          "stage_success_rate": {
+            "reach": 1.0,
+            "contact": 0.62,
+            "moved": 0.64,
+            "target_joint_state": 0.32,
+            "settled_at_target": 0.32
+          }
+        },
+        "stack_cubes": {
+          "episodes": 50,
+          "successes": 3,
+          "score": 0.2,
+          "success_rate": 0.06,
+          "validated": true,
+          "stage_success_rate": {
+            "first_pair_stacked": 0.52,
+            "first_three_stacked": 0.16,
+            "full_order_stacked": 0.06,
+            "settled_stack": 0.06
+          }
+        },
+        "joint_direction": {
+          "episodes": 50,
+          "successes": 22,
+          "score": 0.7160000000000002,
+          "success_rate": 0.44,
+          "validated": true,
+          "stage_success_rate": {
+            "reach": 0.9,
+            "contact": 0.64,
+            "moved": 0.9,
+            "target_joint_state": 0.44,
+            "settled_at_target": 0.44
+          }
+        }
+      },
+      "problems": []
+    },
+    {
+      "label": "Full SFT 60k",
+      "path": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_60000_20261031_141137",
+      "complete": true,
+      "episodes": 300,
+      "successes": 111,
+      "mean_score": 0.5265000000000001,
+      "mean_success_rate": 0.37000000000000005,
+      "tasks": {
+        "place_a2b": {
+          "episodes": 50,
+          "successes": 13,
+          "score": 0.37000000000000005,
+          "success_rate": 0.26,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.64,
+            "contact_pick": 0.46,
+            "grasp_pick": 0.32,
+            "lift_pick": 0.28,
+            "reach_place": 0.26,
+            "place_within_xy": 0.26
+          }
+        },
+        "pick_color": {
+          "episodes": 50,
+          "successes": 22,
+          "score": 0.565,
+          "success_rate": 0.44,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.76,
+            "contact_pick": 0.6,
+            "grasp_pick": 0.46,
+            "lift_pick": 0.44
+          }
+        },
+        "pick_spatial": {
+          "episodes": 50,
+          "successes": 20,
+          "score": 0.595,
+          "success_rate": 0.4,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.88,
+            "contact_pick": 0.66,
+            "grasp_pick": 0.44,
+            "lift_pick": 0.4
+          }
+        },
+        "open_drawer": {
+          "episodes": 50,
+          "successes": 23,
+          "score": 0.6559999999999999,
+          "success_rate": 0.46,
+          "validated": true,
+          "stage_success_rate": {
+            "reach": 1.0,
+            "contact": 0.64,
+            "moved": 0.62,
+            "target_joint_state": 0.5,
+            "settled_at_target": 0.46
+          }
+        },
+        "stack_cubes": {
+          "episodes": 50,
+          "successes": 5,
+          "score": 0.205,
+          "success_rate": 0.1,
+          "validated": true,
+          "stage_success_rate": {
+            "first_pair_stacked": 0.44,
+            "first_three_stacked": 0.18,
+            "full_order_stacked": 0.1,
+            "settled_stack": 0.1
+          }
+        },
+        "joint_direction": {
+          "episodes": 50,
+          "successes": 28,
+          "score": 0.7680000000000002,
+          "success_rate": 0.56,
+          "validated": true,
+          "stage_success_rate": {
+            "reach": 0.96,
+            "contact": 0.74,
+            "moved": 0.92,
+            "target_joint_state": 0.56,
+            "settled_at_target": 0.56
+          }
+        }
+      },
+      "problems": []
+    },
+    {
+      "label": "Full SFT 80k (2 Clients)",
+      "path": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_80000_parallel_20261101_083416",
+      "complete": true,
+      "episodes": 300,
+      "successes": 97,
+      "mean_score": 0.5152777777777777,
+      "mean_success_rate": 0.3233333333333333,
+      "tasks": {
+        "place_a2b": {
+          "episodes": 50,
+          "successes": 8,
+          "score": 0.32666666666666666,
+          "success_rate": 0.16,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.62,
+            "contact_pick": 0.44,
+            "grasp_pick": 0.28,
+            "lift_pick": 0.24,
+            "reach_place": 0.22,
+            "place_within_xy": 0.16
+          }
+        },
+        "pick_color": {
+          "episodes": 50,
+          "successes": 17,
+          "score": 0.53,
+          "success_rate": 0.34,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.76,
+            "contact_pick": 0.62,
+            "grasp_pick": 0.4,
+            "lift_pick": 0.34
+          }
+        },
+        "pick_spatial": {
+          "episodes": 50,
+          "successes": 17,
+          "score": 0.535,
+          "success_rate": 0.34,
+          "validated": true,
+          "stage_success_rate": {
+            "reach_pick": 0.88,
+            "contact_pick": 0.54,
+            "grasp_pick": 0.38,
+            "lift_pick": 0.34
+          }
+        },
+        "open_drawer": {
+          "episodes": 50,
+          "successes": 22,
+          "score": 0.6439999999999998,
+          "success_rate": 0.44,
+          "validated": true,
+          "stage_success_rate": {
+            "reach": 1.0,
+            "contact": 0.64,
+            "moved": 0.64,
+            "target_joint_state": 0.46,
+            "settled_at_target": 0.44
+          }
+        },
+        "stack_cubes": {
+          "episodes": 50,
+          "successes": 7,
+          "score": 0.3,
+          "success_rate": 0.14,
+          "validated": true,
+          "stage_success_rate": {
+            "first_pair_stacked": 0.66,
+            "first_three_stacked": 0.26,
+            "full_order_stacked": 0.14,
+            "settled_stack": 0.14
+          }
+        },
+        "joint_direction": {
+          "episodes": 50,
+          "successes": 26,
+          "score": 0.7560000000000003,
+          "success_rate": 0.52,
+          "validated": true,
+          "stage_success_rate": {
+            "reach": 0.98,
+            "contact": 0.68,
+            "moved": 0.88,
+            "target_joint_state": 0.52,
+            "settled_at_target": 0.52
+          }
+        }
+      },
+      "problems": []
+    }
+  ],
+  "source_runs": {
+    "place_a2b": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_merged_20261102/history/local_pi05_full_99999_supplement_20261102_112239",
+    "pick_color": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_merged_20261102/history/local_pi05_full_99999_supplement_20261102_112239",
+    "pick_spatial": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_merged_20261102/history/local_pi05_full_99999_supplement_20261102_112239",
+    "open_drawer": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_merged_20261102/history/local_pi05_full_99999_parallel_20261101_191358",
+    "stack_cubes": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_merged_20261102/history/local_pi05_full_99999_parallel_20261101_191358",
+    "joint_direction": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_merged_20261102/history/local_pi05_full_99999_parallel_20261101_191358"
+  },
+  "caveat": "Mixed 3/2-client local result, not a single uninterrupted evaluation or platform submission."
+}

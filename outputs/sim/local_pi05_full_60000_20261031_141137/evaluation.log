@@ -1,0 +1,98 @@
+DISPATCHER {"run": "local_pi05_full_60000_20261031_141137", "pid": 915790}
+[plan] work_items=6 gpus=['0'] concurrency=1
+[dispatch] task=stack_cubes shard=stack_cubes__group_0000__config_0000__shard_0000 gpu=0 -> /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/stdout.log
+[done] task=stack_cubes shard=stack_cubes__group_0000__config_0000__shard_0000 gpu=0 rc=0
+[dispatch] task=place_a2b shard=place_a2b__group_0000__config_0000__shard_0000 gpu=0 -> /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/stdout.log
+[done] task=place_a2b shard=place_a2b__group_0000__config_0000__shard_0000 gpu=0 rc=0
+[dispatch] task=open_drawer shard=open_drawer__group_0000__config_0000__shard_0000 gpu=0 -> /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/stdout.log
+[done] task=open_drawer shard=open_drawer__group_0000__config_0000__shard_0000 gpu=0 rc=0
+[dispatch] task=joint_direction shard=joint_direction__group_0000__config_0000__shard_0000 gpu=0 -> /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/stdout.log
+[done] task=joint_direction shard=joint_direction__group_0000__config_0000__shard_0000 gpu=0 rc=0
+[dispatch] task=pick_color shard=pick_color__group_0000__config_0000__shard_0000 gpu=0 -> /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/pick_color/shards/pick_color__group_0000__config_0000__shard_0000/stdout.log
+[done] task=pick_color shard=pick_color__group_0000__config_0000__shard_0000 gpu=0 rc=0
+[dispatch] task=pick_spatial shard=pick_spatial__group_0000__config_0000__shard_0000 gpu=0 -> /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/stdout.log
+[done] task=pick_spatial shard=pick_spatial__group_0000__config_0000__shard_0000 gpu=0 rc=0
+
+=== Summary written: /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/summary.json ===
+  [succeeded] pick_color: score=0.5650 episodes=50 failed_episodes=0
+  [succeeded] pick_spatial: score=0.5950 episodes=50 failed_episodes=0
+  [succeeded] place_a2b: score=0.3700 episodes=50 failed_episodes=0
+  [succeeded] stack_cubes: score=0.2050 episodes=50 failed_episodes=0
+  [succeeded] open_drawer: score=0.6560 episodes=50 failed_episodes=0
+  [succeeded] joint_direction: score=0.7680 episodes=50 failed_episodes=0
+
+=== Exporting MP4 videos and updating summary ===
+[warning] pick_color episode 2: no unique recording
+[warning] pick_color episode 3: no unique recording
+[warning] pick_color episode 4: no unique recording
+[warning] pick_color episode 5: no unique recording
+[warning] pick_color episode 6: no unique recording
+[warning] pick_color episode 7: no unique recording
+[warning] pick_color episode 8: no unique recording
+[warning] pick_color episode 9: no unique recording
+[warning] pick_spatial episode 2: no unique recording
+[warning] pick_spatial episode 3: no unique recording
+[warning] pick_spatial episode 4: no unique recording
+[warning] pick_spatial episode 5: no unique recording
+[warning] pick_spatial episode 6: no unique recording
+[warning] pick_spatial episode 7: no unique recording
+[warning] pick_spatial episode 8: no unique recording
+[warning] pick_spatial episode 9: no unique recording
+[warning] place_a2b episode 2: no unique recording
+[warning] place_a2b episode 3: no unique recording
+[warning] place_a2b episode 4: no unique recording
+[warning] place_a2b episode 5: no unique recording
+[warning] place_a2b episode 6: no unique recording
+[warning] place_a2b episode 7: no unique recording
+[warning] place_a2b episode 8: no unique recording
+[warning] place_a2b episode 9: no unique recording
+[warning] stack_cubes episode 2: no unique recording
+[warning] stack_cubes episode 3: no unique recording
+[warning] stack_cubes episode 4: no unique recording
+[warning] stack_cubes episode 5: no unique recording
+[warning] stack_cubes episode 6: no unique recording
+[warning] stack_cubes episode 7: no unique recording
+[warning] stack_cubes episode 8: no unique recording
+[warning] stack_cubes episode 9: no unique recording
+[warning] open_drawer episode 2: no unique recording
+[warning] open_drawer episode 3: no unique recording
+[warning] open_drawer episode 4: no unique recording
+[warning] open_drawer episode 5: no unique recording
+[warning] open_drawer episode 6: no unique recording
+[warning] open_drawer episode 7: no unique recording
+[warning] open_drawer episode 8: no unique recording
+[warning] open_drawer episode 9: no unique recording
+[warning] joint_direction episode 2: no unique recording
+[warning] joint_direction episode 3: no unique recording
+[warning] joint_direction episode 4: no unique recording
+[warning] joint_direction episode 5: no unique recording
+[warning] joint_direction episode 6: no unique recording
+[warning] joint_direction episode 7: no unique recording
+[warning] joint_direction episode 8: no unique recording
+[warning] joint_direction episode 9: no unique recording
+[1/12] /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/records/joint_direction_20261031_155241_975/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap
+  created: /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/videos/joint_direction/episode_0000_seed_100000.mp4
+[2/12] /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/records/joint_direction_20261031_155241_975/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap
+  created: /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/videos/joint_direction/episode_0001_seed_100001.mp4
+[3/12] /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/records/open_20261031_141600_788/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap
+  created: /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/videos/open_drawer/episode_0000_seed_100000.mp4
+[4/12] /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/records/open_20261031_141600_788/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap
+  created: /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/videos/open_drawer/episode_0001_seed_100001.mp4
+[5/12] /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/pick_color/shards/pick_color__group_0000__config_0000__shard_0000/records/pick_attribute_20261031_171625_362/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap
+  created: /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/videos/pick_color/episode_0000_seed_100000.mp4
+[6/12] /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/pick_color/shards/pick_color__group_0000__config_0000__shard_0000/records/pick_attribute_20261031_171625_362/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap
+  created: /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/videos/pick_color/episode_0001_seed_100001.mp4
+[7/12] /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/records/spatial_directions_20261031_183609_548/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap
+  created: /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/videos/pick_spatial/episode_0000_seed_100000.mp4
+[8/12] /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/records/spatial_directions_20261031_183609_548/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap
+  created: /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/videos/pick_spatial/episode_0001_seed_100001.mp4
+[9/12] /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/records/place_a2b_20261031_114841_422/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap
+  created: /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/videos/place_a2b/episode_0000_seed_100000.mp4
+[10/12] /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/records/place_a2b_20261031_114841_422/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap
+  created: /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/videos/place_a2b/episode_0001_seed_100001.mp4
+[11/12] /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/records/stack_cubes_20261031_061215_997/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap
+  created: /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/videos/stack_cubes/episode_0000_seed_100000.mp4
+[12/12] /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/records/stack_cubes_20261031_061215_997/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap
+  created: /home/users/wangmengfan/outputs/sim/local_pi05_full_60000_20261031_141137/videos/stack_cubes/episode_0001_seed_100001.mp4
+Created=12, reused=0, failed=0; preview videos updated=12, unresolved=48
+[error] Video export/backfill failed; evaluation status and scores are unchanged.

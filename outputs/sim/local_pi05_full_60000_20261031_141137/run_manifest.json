@@ -1,0 +1,20 @@
+{
+  "run": "local_pi05_full_60000_20261031_141137",
+  "output": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_60000_20261031_141137",
+  "checkpoint": "/study/wangmengfan/hbot/checkpoints/pi05_hbot_full/60000",
+  "started_at": "2026-10-31T14:11:37.591069+08:00",
+  "state": "evaluating",
+  "model_pid": 3776385,
+  "evaluation_pid": 3776570,
+  "evaluation_started_at": "2026-10-31T14:11:52.974853+08:00",
+  "reference": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_30000_20261030_170853_3664253_7601",
+  "gpu_model": 1,
+  "gpu_sim": 0,
+  "workers_per_gpu": 1,
+  "record_per_task": 2,
+  "original_eval_config_sha256": "c8422a3931936edf9e50f23541e72cde97aec0204de3d4c3c253f3054789d235",
+  "eval_config_sha256": "0379c76c6d7b6c139d134a01adbb429c0e6ea60d581a62f7fb30551eb6bf1556",
+  "model_config_sha256": "5277220d22f0517fd422ab9db1f9a0f5f45a6e498e89a3e517370906e2f64340",
+  "normalization_sha256": "48fc140c4306c12e57f991a1b75df7c1ae3071a78bcda69e983950c2ed389c8d",
+  "checkpoint_metadata_sha256": "f27d21952e602528615298c668b588ba14ae8268e03e94598ea0235eaea52a5f"
+}

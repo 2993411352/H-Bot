@@ -1,0 +1,142 @@
+# cmd: /usr/local/bin/python3 /home/users/wangmengfan/robo_orchard_sim/examples/manipulation-app/scripts/eval_policy.py --eval-config /home/users/wangmengfan/config/hbot-local.yaml --output-dir /home/users/wangmengfan/outputs/sim/local_holobrain_20261027_214149 --_shard-manifest /home/users/wangmengfan/outputs/sim/local_holobrain_20261027_214149/open_drawer/evaluation_manifest.json --_shard-id open_drawer__group_0000__config_0000__shard_0000 --enable-recording
+# CUDA_VISIBLE_DEVICES=0
+
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /usr/local/lib/python3.11/site-packages/isaaclab/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/usr/local/lib/python3.11/site-packages/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /usr/local/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20261027_135558.log
+2026-10-27T13:55:58Z [6ms] [Warning] [omni.ext.plugin] [ext: .agents] Extensions config 'extension.toml' doesn't exist '/home/users/wangmengfan/robo_orchard_sim/.agents' or '/home/users/wangmengfan/robo_orchard_sim/.agents/config'
+2026-10-27T13:55:58Z [6ms] [Warning] [omni.ext.plugin] [ext: .git] Extensions config 'extension.toml' doesn't exist '/home/users/wangmengfan/robo_orchard_sim/.git' or '/home/users/wangmengfan/robo_orchard_sim/.git/config'
+2026-10-27T13:55:58Z [6ms] [Warning] [omni.ext.plugin] [ext: examples] Extensions config 'extension.toml' doesn't exist '/home/users/wangmengfan/robo_orchard_sim/examples' or '/home/users/wangmengfan/robo_orchard_sim/examples/config'
+2026-10-27T13:55:58Z [6ms] [Warning] [omni.ext.plugin] [ext: docs] Extensions config 'extension.toml' doesn't exist '/home/users/wangmengfan/robo_orchard_sim/docs' or '/home/users/wangmengfan/robo_orchard_sim/docs/config'
+2026-10-27T13:55:58Z [6ms] [Warning] [omni.ext.plugin] [ext: docker] Extensions config 'extension.toml' doesn't exist '/home/users/wangmengfan/robo_orchard_sim/docker' or '/home/users/wangmengfan/robo_orchard_sim/docker/config'
+2026-10-27T13:55:58Z [6ms] [Warning] [omni.ext.plugin] [ext: patches] Extensions config 'extension.toml' doesn't exist '/home/users/wangmengfan/robo_orchard_sim/patches' or '/home/users/wangmengfan/robo_orchard_sim/patches/config'
+2026-10-27T13:55:58Z [6ms] [Warning] [omni.ext.plugin] [ext: robo_orchard_server] Extensions config 'extension.toml' doesn't exist '/home/users/wangmengfan/robo_orchard_sim/robo_orchard_server' or '/home/users/wangmengfan/robo_orchard_sim/robo_orchard_server/config'
+2026-10-27T13:55:58Z [6ms] [Warning] [omni.ext.plugin] [ext: robo_orchard_sim] Extensions config 'extension.toml' doesn't exist '/home/users/wangmengfan/robo_orchard_sim/robo_orchard_sim' or '/home/users/wangmengfan/robo_orchard_sim/robo_orchard_sim/config'
+2026-10-27T13:55:58Z [6ms] [Warning] [omni.ext.plugin] [ext: scm] Extensions config 'extension.toml' doesn't exist '/home/users/wangmengfan/robo_orchard_sim/scm' or '/home/users/wangmengfan/robo_orchard_sim/scm/config'
+2026-10-27T13:55:58Z [6ms] [Warning] [omni.ext.plugin] [ext: tools] Extensions config 'extension.toml' doesn't exist '/home/users/wangmengfan/robo_orchard_sim/tools' or '/home/users/wangmengfan/robo_orchard_sim/tools/config'
+2026-10-27T13:55:58Z [6ms] [Warning] [omni.ext.plugin] [ext: tests] Extensions config 'extension.toml' doesn't exist '/home/users/wangmengfan/robo_orchard_sim/tests' or '/home/users/wangmengfan/robo_orchard_sim/tests/config'
+2026-10-27T13:55:58Z [197ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-27T13:55:58Z [197ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-27T13:55:58Z [298ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2026-10-27T13:55:58Z [319ms] [Warning] [carb.cudainterop.plugin] CUDA_VISIBLE_DEVICES environment variable is set.
+2026-10-27T13:55:58Z [319ms] [Warning] [carb.cudainterop.plugin] Note CUDA device enumeration and Omniverse device enumeration are different.
+2026-10-27T13:55:58Z [319ms] [Warning] [carb.cudainterop.plugin] Setting CUDA_VISIBLE_DEVICES can lead to undesired behavior or crashes.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.133.20    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 3090          | Yes: 0 |     | 24822   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2204      | d32118cd.. |
+|     |                                  |        |     |            | 5e        |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 5.15.0-72-generic
+| Processor: Intel(R) Xeon(R) Gold 5220R CPU @ 2.20GHz
+| Cores: 48 | Logical Cores: 96
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 192020 | Free Memory: 184960
+| Total Page/Swap (MB): 8191 | Free Page/Swap: 17592186044415
+|---------------------------------------------------------------------------------------------|
+2026-10-27T13:55:59Z [1,204ms] [Warning] [gpu.foundation.plugin] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-10-27T13:56:00Z [2,131ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-27T13:56:00Z [2,131ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-27T13:56:00Z [2,158ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-27T13:56:00Z [2,158ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-27T13:56:00Z [2,168ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-27T13:56:00Z [2,168ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-27T13:56:00Z [2,181ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-27T13:56:00Z [2,181ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-27T13:56:00Z [2,183ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-27T13:56:00Z [2,183ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-27T13:56:00Z [2,184ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-27T13:56:00Z [2,184ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-27T13:56:01Z [2,892ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-10-27T13:56:01Z [3,058ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2026-10-27T13:56:01Z [3,150ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2026-10-27T13:56:02Z [4,147ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2026-10-27T13:56:02Z [4,491ms] [Warning] [omni.graph.core.plugin] Found duplicate of category 'Replicator' - was 'Annotators', adding 'Fabric Reader'
+2026-10-27T13:56:02Z [4,491ms] [Warning] [omni.graph.core.plugin] Category 'Replicator' not accepted on node type 'omni.replicator.core.FabricReader' in extension 'omni.replicator.core'
+2026-10-27T13:56:02Z [4,493ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2026-10-27T13:56:04Z [6,209ms] [Error] [rtx.optixdenoising.plugin] [Optix] [DISKCACHE] Failed to obtain username for current process, using cache directory without username as suffix.
+2026-10-27T13:56:07Z [8,585ms] [Warning] [omni.fabric.plugin] Warning: attribute viewportHandle not found for bucket id 7
+
+/usr/local/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:502: UserWarning: <built-in function callable> is not a Python type (it may be an instance of an object), Pydantic will allow any object with no validation since we cannot even enforce that the input is an instance of the given type. To get rid of this error wrap the type with `pydantic.SkipValidation`.
+  warn(
+2026-10-27T13:56:14Z [16,211ms] [Warning] [isaaclab.utils.sensors] Camera non square pixels are not supported by Omniverse. The average of f_x and f_y are used.
+2026-10-27T13:56:14Z [16,211ms] [Warning] [isaaclab.utils.sensors] Camera non square pixels are not supported by Omniverse. The average of f_x and f_y are used.
+2026-10-27T13:56:14Z [16,211ms] [Warning] [isaaclab.utils.sensors] Camera non square pixels are not supported by Omniverse. The average of f_x and f_y are used.
+2026-10-27T13:56:14Z [16,212ms] [Warning] [isaaclab.utils.sensors] Camera non square pixels are not supported by Omniverse. The average of f_x and f_y are used.
+
+[36m======================================================================================[0m
+[36m[1m[INFO][IsaacLab]: Logging to file: /tmp/isaaclab/logs/isaaclab_2026-10-27_13-56-14.log[0m
+[36m======================================================================================[0m
+
+2026-10-27T13:56:14Z [16,414ms] [Warning] [isaacsim.core.simulation_manager.impl.simulation_manager] CCD is not supported on GPU, ignoring request to enable it
+[33m13:56:14 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+2026-10-27T13:56:14Z [16,419ms] [Warning] [robo_orchard_sim.ext.envs.env_base] Seed not set for the environment. The environment creation may not be deterministic.
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.0016666666666666668
+	Rendering step-size   : 0.03333333333333333
+	Environment step-size : 0.03333333333333333
+/usr/local/lib/python3.11/site-packages/isaaclab/source/isaaclab/isaaclab/sensors/camera/camera.py:128: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  rot = torch.tensor(self.cfg.offset.rot, dtype=torch.float32, device="cpu").unsqueeze(0)
+[INFO]: Time taken for scene creation : 0.866277 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 2.5
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Scene assets: 
+	terrain
+	robots/panda_droid
+	objects/articulation
+	background/table
+	background/workbench
+	sensors/gripper_contact_0_0
+	sensors/gripper_contact_0_1
+	cameras/ext1_camera
+	cameras/ext2_camera
+	cameras/wrist_camera
+	background/room
+	background/light
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+2026-10-27T13:56:16Z [18,051ms] [Warning] [omni.physx.plugin] Restitution attribute is unsupported for articulation joints and will be ignored (/World/envs/env_0/panda_droid/panda_link5/panda_joint6).
+2026-10-27T13:56:16Z [18,053ms] [Error] [omni.physx.plugin] PhysicsUSD: CreateJoint - cannot create a joint between static bodies, joint prim: /World/envs/env_0/room/muwenmen/mumen002/RevoluteJoint
+2026-10-27T13:56:16Z [18,053ms] [Error] [omni.physx.plugin] PhysicsUSD: CreateJoint - cannot create a joint between static bodies, joint prim: /World/envs/env_0/room/muwenmen/bashou005/RevoluteJoint
+[33m13:56:17 [articulation.py] WARNING: Not all actuators are configured! Total number of actuated joints not equal to number of joints available: 8 != 13.[0m
+[33m13:56:17 [articulation.py] WARNING: Not all actuators are configured! Total number of actuated joints not equal to number of joints available: 0 != 4.[0m
+[INFO]: Time taken for simulation start : 4.706978 seconds
+2026-10-27 13:56:20,518 INFO | 71890 | MainThread | LoggerManager.robo_orchard_core.envs.managers.events.event_manager:L159 Registering event channel with topic reset with message type <class 'robo_orchard_sim.ext.envs.manager_based_env.ResetEvent'>
+2026-10-27 13:56:20,519 INFO | 71890 | MainThread | LoggerManager.robo_orchard_core.envs.managers.events.event_manager:L159 Registering event channel with topic step with message type <class 'robo_orchard_core.envs.manager_based_env.StepEvent'>
+2026-10-27 13:56:20,519 INFO | 71890 | MainThread | LoggerManager.robo_orchard_core.envs.managers.events.event_manager:L159 Registering event channel with topic start_up with message type <class 'robo_orchard_core.envs.managers.events.event_term.EventMsg'>
+No parent_frame and child_frame specified. Will use runtime frame data.
+No parent_frame and child_frame specified. Will use runtime frame data.
+No parent_frame and child_frame specified. Will use runtime frame data.
+No parent_frame and child_frame specified. Will use runtime frame data.
+No parent_frame and child_frame specified. Will use runtime frame data.
+Setting seed: 100000
+[JointStateResetTerm] asset=robots/panda_droid env_ids=[0] joint_pos before reset: tensor([[ 0.0000, -0.6283,  0.0000, -2.5133,  0.0000,  1.8850,  0.0000,  0.0000,
+          0.0000,  0.0000,  0.0000,  0.0000,  0.0000]], device='cuda:0')
+[JointStateResetTerm] asset=robots/panda_droid env_ids=[0] joint_pos after reset: tensor([[ 0.0159, -0.8697,  0.0499, -1.7866,  0.0019,  1.3228, -0.0043,  0.0000,
+          0.0607, -0.0175, -0.0283, -0.0457, -0.0032]], device='cuda:0')
+[JointStateResetTerm] asset=objects/articulation env_ids=[0] joint_pos before reset: tensor([[0.0006, 0.0000, 0.0000, 0.0000]], device='cuda:0')
+[JointStateResetTerm] asset=objects/articulation env_ids=[0] joint_pos after reset: tensor([[0., 0., 0., 0.]], device='cuda:0')
+2026-10-27T13:56:34Z [35,751ms] [Warning] [carb] Client gpu.foundation.plugin has acquired [gpu::unstable::IMemoryBudgetManagerFactory v0.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+instruction: Open the lower middle drawer of the desktop drawer.
+2026-10-27 13:56:37,863 INFO | 71890 | MainThread | LoggerManager.robo_orchard_sim.policy.server:L672 [client->127.0.0.1:8765] Connected to policy server at ws://127.0.0.1:8765
+[127.0.0.1:8765:holobrain_example] [step=0] validator_output=ValidatorOutput(success=False, progress=0.0, metrics={'criteria_met_now': {'reach': False, 'contact': False, 'moved': False, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_reached': {'reach': False, 'contact': False, 'moved': False, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_met_now_count': 0, 'criteria_ever_reached': 0, 'criteria_total': 5, 'progress_criteria_reached': 0, 'progress_criteria_total': 5, 'criteria_independent_met_now': {'reach': False, 'contact': False, 'moved': False, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_independent_reached': {'reach': False, 'contact': False, 'moved': False, 'target_joint_state': False, 'settled_at_target': False}}, stage_scores={'reach': 0.0, 'contact': 0.0, 'moved': 0.0, 'target_joint_state': 0.0, 'settled_at_target': 0.0})
+[127.0.0.1:8765:holobrain_example] [step=50] validator_output=ValidatorOutput(success=False, progress=0.4, metrics={'criteria_met_now': {'reach': True, 'contact': True, 'moved': False, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_reached': {'reach': True, 'contact': True, 'moved': False, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_met_now_count': 2, 'criteria_ever_reached': 2, 'criteria_total': 5, 'progress_criteria_reached': 2, 'progress_criteria_total': 5, 'criteria_independent_met_now': {'reach': True, 'contact': True, 'moved': False, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_independent_reached': {'reach': True, 'contact': True, 'moved': False, 'target_joint_state': False, 'settled_at_target': False}}, stage_scores={'reach': 0.2, 'contact': 0.2, 'moved': 0.0, 'target_joint_state': 0.0, 'settled_at_target': 0.0})
+[127.0.0.1:8765:holobrain_example] [step=100] validator_output=ValidatorOutput(success=False, progress=0.6, metrics={'criteria_met_now': {'reach': True, 'contact': False, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_reached': {'reach': True, 'contact': True, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_met_now_count': 2, 'criteria_ever_reached': 3, 'criteria_total': 5, 'progress_criteria_reached': 3, 'progress_criteria_total': 5, 'criteria_independent_met_now': {'reach': True, 'contact': False, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_independent_reached': {'reach': True, 'contact': True, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}}, stage_scores={'reach': 0.2, 'contact': 0.2, 'moved': 0.2, 'target_joint_state': 0.0, 'settled_at_target': 0.0})
+[127.0.0.1:8765:holobrain_example] [step=150] validator_output=ValidatorOutput(success=False, progress=0.6, metrics={'criteria_met_now': {'reach': False, 'contact': False, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_reached': {'reach': True, 'contact': True, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_met_now_count': 1, 'criteria_ever_reached': 3, 'criteria_total': 5, 'progress_criteria_reached': 3, 'progress_criteria_total': 5, 'criteria_independent_met_now': {'reach': False, 'contact': False, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_independent_reached': {'reach': True, 'contact': True, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}}, stage_scores={'reach': 0.2, 'contact': 0.2, 'moved': 0.2, 'target_joint_state': 0.0, 'settled_at_target': 0.0})
+[127.0.0.1:8765:holobrain_example] [step=200] validator_output=ValidatorOutput(success=False, progress=0.6, metrics={'criteria_met_now': {'reach': True, 'contact': False, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_reached': {'reach': True, 'contact': True, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_met_now_count': 2, 'criteria_ever_reached': 3, 'criteria_total': 5, 'progress_criteria_reached': 3, 'progress_criteria_total': 5, 'criteria_independent_met_now': {'reach': True, 'contact': False, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_independent_reached': {'reach': True, 'contact': True, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}}, stage_scores={'reach': 0.2, 'contact': 0.2, 'moved': 0.2, 'target_joint_state': 0.0, 'settled_at_target': 0.0})
+[127.0.0.1:8765:holobrain_example] [step=250] validator_output=ValidatorOutput(success=False, progress=0.6, metrics={'criteria_met_now': {'reach': True, 'contact': False, 'moved': False, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_reached': {'reach': True, 'contact': True, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_met_now_count': 1, 'criteria_ever_reached': 3, 'criteria_total': 5, 'progress_criteria_reached': 3, 'progress_criteria_total': 5, 'criteria_independent_met_now': {'reach': True, 'contact': False, 'moved': False, 'target_joint_state': False, 'settled_at_target': False}, 'criteria_independent_reached': {'reach': True, 'contact': True, 'moved': True, 'target_joint_state': False, 'settled_at_target': False}}, stage_scores={'reach': 0.2, 'contact': 0.2, 'moved': 0.2, 'target_joint_state': 0.0, 'settled_at_target': 0.0})
+Recording stopped: /home/users/wangmengfan/outputs/sim/local_holobrain_20261027_214149/open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/records/open_20261027_135608_339/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap
+Async recording statistics: enqueued=300, written=300, queue_drops=0, incomplete_cameras=0, max_queue=1/4, snapshot_ms=6.0, worker_ms=179.0
+exiting isaac app launcher...

@@ -1,0 +1,98 @@
+{
+  "episode_num": 1,
+  "seed_start": 100000,
+  "success_rate": 0.0,
+  "average_progress": 0.0,
+  "episode_results": [
+    {
+      "seed": 100000,
+      "success": false,
+      "progress": 0.0,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach": false,
+          "contact": false,
+          "moved": false,
+          "target_joint_state": false,
+          "settled_at_target": false
+        },
+        "criteria_reached": {
+          "reach": false,
+          "contact": false,
+          "moved": false,
+          "target_joint_state": false,
+          "settled_at_target": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 0,
+        "criteria_total": 5,
+        "progress_criteria_reached": 0,
+        "progress_criteria_total": 5,
+        "criteria_independent_met_now": {
+          "reach": false,
+          "contact": false,
+          "moved": false,
+          "target_joint_state": false,
+          "settled_at_target": false
+        },
+        "criteria_independent_reached": {
+          "reach": false,
+          "contact": false,
+          "moved": false,
+          "target_joint_state": false,
+          "settled_at_target": false
+        },
+        "record_dir": "/home/users/wangmengfan/outputs/sim/local_holobrain_20261027_214149/joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/records/joint_direction_20261027_135912_166/scene_0000_seed_100000/episode_0000_seed_100000"
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/articulation/body:Box002",
+          "objects/articulation/body:Box002_handle"
+        ],
+        "unary": {
+          "reached": {
+            "objects/articulation/body:Box002": true,
+            "objects/articulation/body:Box002_handle": false,
+            "objects/articulation/body:Box004": false,
+            "objects/articulation/body:Box005": false
+          },
+          "contacted": {
+            "objects/articulation/body:Box002": false,
+            "objects/articulation/body:Box002_handle": false,
+            "objects/articulation/body:Box004": false,
+            "objects/articulation/body:Box005": false
+          },
+          "grasped": {
+            "objects/articulation/body:Box002": false,
+            "objects/articulation/body:Box002_handle": false,
+            "objects/articulation/body:Box004": false,
+            "objects/articulation/body:Box005": false
+          },
+          "stationary": {
+            "objects/articulation/body:Box002": true,
+            "objects/articulation/body:Box002_handle": true,
+            "objects/articulation/body:Box004": true,
+            "objects/articulation/body:Box005": true
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Open the door of the microwave oven.",
+      "stage_scores": {
+        "reach": 0.0,
+        "contact": 0.0,
+        "moved": 0.0,
+        "target_joint_state": 0.0,
+        "settled_at_target": 0.0
+      }
+    }
+  ],
+  "skipped_episodes": [],
+  "attempted_scene_seeds": [
+    100000
+  ]
+}

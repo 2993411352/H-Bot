@@ -1,0 +1,78 @@
+{
+  "episode_num": 1,
+  "seed_start": 100000,
+  "success_rate": 0.0,
+  "average_progress": 0.5,
+  "episode_results": [
+    {
+      "seed": 100000,
+      "success": false,
+      "progress": 0.5,
+      "steps": 200,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_reached": {
+          "reach_pick": true,
+          "contact_pick": true,
+          "grasp_pick": false,
+          "lift_pick": false
+        },
+        "criteria_met_now_count": 2,
+        "criteria_ever_reached": 2,
+        "criteria_total": 4,
+        "progress_criteria_reached": 2,
+        "progress_criteria_total": 4,
+        "record_dir": "/home/users/wangmengfan/outputs/sim/local_holobrain_20261027_214149/pick_color/shards/pick_color__group_0000__config_0000__shard_0000/records/pick_attribute_20261027_140227_787/scene_0000_seed_100000/episode_0000_seed_100000"
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/pick_object",
+          "objects/distractor_0",
+          "objects/distractor_1"
+        ],
+        "unary": {
+          "reached": {
+            "objects/pick_object": true,
+            "objects/distractor_0": true,
+            "objects/distractor_1": true
+          },
+          "contacted": {
+            "objects/pick_object": true,
+            "objects/distractor_0": false,
+            "objects/distractor_1": true
+          },
+          "grasped": {
+            "objects/pick_object": false,
+            "objects/distractor_0": false,
+            "objects/distractor_1": false
+          },
+          "lifted": {
+            "objects/pick_object": false,
+            "objects/distractor_0": false,
+            "objects/distractor_1": false
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Grab orange carrot.",
+      "stage_scores": {
+        "reach_pick": 0.25,
+        "contact_pick": 0.25,
+        "grasp_pick": 0.0,
+        "lift_pick": 0.0
+      }
+    }
+  ],
+  "skipped_episodes": [],
+  "attempted_scene_seeds": [
+    100000
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "evaluation_id": "local_pi05_full_99999_merged_20261102",
+  "team_id": "contest-team",
+  "status": "succeeded",
+  "eval_average_score": 0.5704444444444444,
+  "eval_average_success_rate": 0.38999999999999996,
+  "task_results": {
+    "place_a2b": {
+      "episode_count": 50,
+      "failed_episode_count": 0,
+      "score": 0.38666666666666666,
+      "success_rate": 0.26,
+      "stage_success_rate": {
+        "reach_pick": 0.66,
+        "contact_pick": 0.5,
+        "grasp_pick": 0.3,
+        "lift_pick": 0.3,
+        "reach_place": 0.3,
+        "place_within_xy": 0.26
+      },
+      "preview_episodes": [
+        {
+          "episode_index": 0,
+          "seed": 100000,
+          "status": "succeeded",
+          "success": false,
+          "score": 0.0,
+          "steps": 300,
+          "stop_reason": "max_steps",
+          "instruction": "Grab carrot and set in tray.",
+          "stage_scores": {
+            "reach_pick": 0.0,
+            "contact_pick": 0.0,
+            "grasp_pick": 0.0,
+            "lift_pick": 0.0,
+            "reach_place": 0.0,
+            "place_within_xy": 0.0
+          },
+          "video": "videos/place_a2b/episode_0000_seed_100000.mp4"
+        },
+        {
+          "episode_index": 1,
+          "seed": 100001,
+          "status": "succeeded",
+          "success": false,
+          "score": 0.0,
+          "steps": 300,
+          "stop_reason": "max_steps",
+          "instruction": "Pick peeler and release it into basket.",
+          "stage_scores": {
+            "reach_pick": 0.0,
+            "contact_pick": 0.0,
+            "grasp_pick": 0.0,
+            "lift_pick": 0.0,
+            "reach_place": 0.0,
+            "place_within_xy": 0.0
+          },
+          "video": "videos/place_a2b/episode_0001_seed_100001.mp4"
+        }
+      ]
+    },
+    "pick_color": {
+      "episode_count": 50,
+      "failed_episode_count": 0,
+      "score": 0.58,
+      "success_rate": 0.42,
+      "stage_success_rate": {
+        "reach_pick": 0.8,
+        "contact_pick": 0.64,
+        "grasp_pick": 0.46,
+        "lift_pick": 0.42
+      },
+      "preview_episodes": [
+        {
+          "episode_index": 0,
+          "seed": 100000,
+          "status": "succeeded",
+          "success": false,
+          "score": 0.5,
+          "steps": 200,
+          "stop_reason": "max_steps",
+          "instruction": "Grab orange carrot.",
+          "stage_scores": {
+            "reach_pick": 0.25,
+            "contact_pick": 0.25,
+            "grasp_pick": 0.0,
+            "lift_pick": 0.0
+          },
+          "video": "videos/pick_color/episode_0000_seed_100000.mp4"
+        },
+        {
+          "episode_index": 1,
+          "seed": 100001,
+          "status": "succeeded",
+          "success": true,
+          "score": 1.0,
+          "steps": 100,
+          "stop_reason": "success",
+          "instruction": "Grasp blue peeler.",
+          "stage_scores": {
+            "reach_pick": 0.25,
+            "contact_pick": 0.25,
+            "grasp_pick": 0.25,
+            "lift_pick": 0.25
+          },
+          "video": "videos/pick_color/episode_0001_seed_100001.mp4"
+        }
+      ]
+    },
+    "pick_spatial": {
+      "episode_count": 50,
+      "failed_episode_count": 0,
+      "score": 0.55,
+      "success_rate": 0.3,
+      "stage_success_rate": {
+        "reach_pick": 0.9,
+        "contact_pick": 0.64,
+        "grasp_pick": 0.36,
+        "lift_pick": 0.3
+      },
+      "preview_episodes": [
+        {
+          "episode_index": 0,
+          "seed": 100000,
+          "status": "succeeded",
+          "success": true,
+          "score": 1.0,
+          "steps": 93,
+          "stop_reason": "success",
+          "instruction": "Pick up the carrot to the left of the wine glass.",
+          "stage_scores": {
+            "reach_pick": 0.25,
+            "contact_pick": 0.25,
+            "grasp_pick": 0.25,
+            "lift_pick": 0.25
+          },
+          "video": "videos/pick_spatial/episode_0000_seed_100000.mp4"
+        },
+        {
+          "episode_index": 1,
+          "seed": 100001,
+          "status": "succeeded",
+          "success": false,
+          "score": 0.5,
+          "steps": 200,
+          "stop_reason": "max_steps",
+          "instruction": "Pick up the peeler to the right of the hand sanitizer.",
+          "stage_scores": {
+            "reach_pick": 0.25,
+            "contact_pick": 0.25,
+            "grasp_pick": 0.0,
+            "lift_pick": 0.0
+          },
+          "video": "videos/pick_spatial/episode_0001_seed_100001.mp4"
+        }
+      ]
+    },
+    "open_drawer": {
+      "episode_count": 50,
+      "failed_episode_count": 0,
+      "score": 0.772,
+      "success_rate": 0.56,
+      "stage_success_rate": {
+        "reach": 1.0,
+        "contact": 0.82,
+        "moved": 0.82,
+        "target_joint_state": 0.6,
+        "settled_at_target": 0.56
+      },
+      "preview_episodes": [
+        {
+          "episode_index": 0,
+          "seed": 100000,
+          "status": "succeeded",
+          "success": true,
+          "score": 1.0,
+          "steps": 143,
+          "stop_reason": "success",
+          "instruction": "Open the lower middle drawer of the desktop drawer.",
+          "stage_scores": {
+            "reach": 0.2,
+            "contact": 0.2,
+            "moved": 0.2,
+            "target_joint_state": 0.2,
+            "settled_at_target": 0.2
+          },
+          "video": "videos/open_drawer/episode_0000_seed_100000.mp4"
+        },
+        {
+          "episode_index": 1,
+          "seed": 100001,
+          "status": "succeeded",
+          "success": false,
+          "score": 0.2,
+          "steps": 300,
+          "stop_reason": "max_steps",
+          "instruction": "Open the bottom drawer of the desktop drawer.",
+          "stage_scores": {
+            "reach": 0.2,
+            "contact": 0.0,
+            "moved": 0.0,
+            "target_joint_state": 0.0,
+            "settled_at_target": 0.0
+          },
+          "video": "videos/open_drawer/episode_0001_seed_100001.mp4"
+        }
+      ]
+    },
+    "stack_cubes": {
+      "episode_count": 50,
+      "failed_episode_count": 0,
+      "score": 0.35,
+      "success_rate": 0.22,
+      "stage_success_rate": {
+        "first_pair_stacked": 0.62,
+        "first_three_stacked": 0.34,
+        "full_order_stacked": 0.22,
+        "settled_stack": 0.22
+      },
+      "preview_episodes": [
+        {
+          "episode_index": 0,
+          "seed": 100000,
+          "status": "succeeded",
+          "success": false,
+          "score": 0.0,
+          "steps": 900,
+          "stop_reason": "max_steps",
+          "instruction": "Stack the cubes bottom-to-top: purple, green, lime, orange.",
+          "stage_scores": {
+            "first_pair_stacked": 0.0,
+            "first_three_stacked": 0.0,
+            "full_order_stacked": 0.0,
+            "settled_stack": 0.0
+          },
+          "video": "videos/stack_cubes/episode_0000_seed_100000.mp4"
+        },
+        {
+          "episode_index": 1,
+          "seed": 100001,
+          "status": "succeeded",
+          "success": false,
+          "score": 0.25,
+          "steps": 900,
+          "stop_reason": "max_steps",
+          "instruction": "Stack the cubes bottom-to-top: yellow, blue, lime, magenta.",
+          "stage_scores": {
+            "first_pair_stacked": 0.25,
+            "first_three_stacked": 0.0,
+            "full_order_stacked": 0.0,
+            "settled_stack": 0.0
+          },
+          "video": "videos/stack_cubes/episode_0001_seed_100001.mp4"
+        }
+      ]
+    },
+    "joint_direction": {
+      "episode_count": 50,
+      "failed_episode_count": 0,
+      "score": 0.784,
+      "success_rate": 0.58,
+      "stage_success_rate": {
+        "reach": 0.96,
+        "contact": 0.66,
+        "moved": 0.9,
+        "target_joint_state": 0.58,
+        "settled_at_target": 0.58
+      },
+      "preview_episodes": [
+        {
+          "episode_index": 0,
+          "seed": 100000,
+          "status": "succeeded",
+          "success": false,
+          "score": 0.2,
+          "steps": 300,
+          "stop_reason": "max_steps",
+          "instruction": "Open the door of the microwave oven.",
+          "stage_scores": {
+            "reach": 0.2,
+            "contact": 0.0,
+            "moved": 0.0,
+            "target_joint_state": 0.0,
+            "settled_at_target": 0.0
+          },
+          "video": "videos/joint_direction/episode_0000_seed_100000.mp4"
+        },
+        {
+          "episode_index": 1,
+          "seed": 100001,
+          "status": "succeeded",
+          "success": true,
+          "score": 1.0,
+          "steps": 43,
+          "stop_reason": "success",
+          "instruction": "Close the door of the oven.",
+          "stage_scores": {
+            "reach": 0.2,
+            "contact": 0.2,
+            "moved": 0.2,
+            "target_joint_state": 0.2,
+            "settled_at_target": 0.2
+          },
+          "video": "videos/joint_direction/episode_0001_seed_100001.mp4"
+        }
+      ]
+    }
+  },
+  "result_mode": "consolidated completed tasks from a 3-client interrupted run and 2-client supplement"
+}

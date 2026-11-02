@@ -1,0 +1,1065 @@
+{
+  "created_at": "2026-11-02T15:38:42.154494+08:00",
+  "phase": "completed",
+  "canonical": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_merged_20261102",
+  "source_inventories": {
+    "local_pi05_full_99999_parallel_20261101_191358": {
+      "comparison_all_models.json": {
+        "size": 15261,
+        "inode": 268238354,
+        "device": 2051,
+        "mtime_ns": 1793555999101916077,
+        "sha256": "99efa7d9323075d0e98cbcf8c5cd233fc33a21ceb00dc4a1e736619505e7f3d1"
+      },
+      "config_snapshot/hbot-eval-control.py": {
+        "size": 8805,
+        "inode": 268304063,
+        "device": 2051,
+        "mtime_ns": 1793493256077779843,
+        "sha256": "3718371925687fd29ec05c43b8e25c33e6b311f9a5ebe6d1578e7c5b7db5f5d8"
+      },
+      "config_snapshot/local_pi05_full_99999_parallel_20261101_191358-client.yaml": {
+        "size": 67,
+        "inode": 268304029,
+        "device": 2051,
+        "mtime_ns": 1793531638348558882,
+        "sha256": "670344c42fdcf5c453e30f12d0b070367df9c66f3265146e7c703bb97e2b2de7"
+      },
+      "config_snapshot/local_pi05_full_99999_parallel_20261101_191358-model.yaml": {
+        "size": 1933,
+        "inode": 268304022,
+        "device": 2051,
+        "mtime_ns": 1793531638348558882,
+        "sha256": "5277220d22f0517fd422ab9db1f9a0f5f45a6e498e89a3e517370906e2f64340"
+      },
+      "config_snapshot/local_pi05_full_99999_parallel_20261101_191358.yaml": {
+        "size": 1710,
+        "inode": 268304020,
+        "device": 2051,
+        "mtime_ns": 1793531638348558882,
+        "sha256": "887aed53cad28d6d3dbee35f51ce38ca56975575594262e2da06efd09dc949ed"
+      },
+      "config_snapshot/report-pi05-99999-comparison.py": {
+        "size": 7764,
+        "inode": 268304052,
+        "device": 2051,
+        "mtime_ns": 1793531606955399722,
+        "sha256": "9d8cef0dd43192f5c6658689bac3f567d94d822294cd91f2540b4c00c7d470ec"
+      },
+      "config_snapshot/run-full99999-eval.py": {
+        "size": 14342,
+        "inode": 268304049,
+        "device": 2051,
+        "mtime_ns": 1793531606947399426,
+        "sha256": "0377c78642aea6b80e357f9d67efef552af6e71214e6711deee75bedc79b1bdc"
+      },
+      "evaluation.log": {
+        "size": 3066,
+        "inode": 266859627,
+        "device": 2051,
+        "mtime_ns": 1793555998437891319,
+        "sha256": "9d5915ffe8c2790e30886cdf780212c65d90363cbe85b82b55de86537cc38904"
+      },
+      "joint_direction/evaluation_manifest.json": {
+        "size": 656,
+        "inode": 268303943,
+        "device": 2051,
+        "mtime_ns": 1793531656029211150,
+        "sha256": "697401168b8b7b2c6615eb24f512756d9cdf8650ba569b94a5dba8083bf55c4d"
+      },
+      "joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/config/joint_direction.yaml": {
+        "size": 1387,
+        "inode": 268304066,
+        "device": 2051,
+        "mtime_ns": 1793531656017210707,
+        "sha256": "6e9f993bcb5dfe0914bd8d88a849890b96499326521a883e7228730e0f232855"
+      },
+      "joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/eval_result.json": {
+        "size": 131380,
+        "inode": 268304095,
+        "device": 2051,
+        "mtime_ns": 1793541499126869845,
+        "sha256": "963df187b8f655c043d3092dfe13decd6286a22de6e55c24cf19d9b7d61f43c0"
+      },
+      "joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/performance.json": {
+        "size": 57531,
+        "inode": 268304098,
+        "device": 2051,
+        "mtime_ns": 1793541499142870612,
+        "sha256": "ea7f47b2e9c78d49abe41dee70c130dcf80eb30cb2a424000ee2abebd2b1d43d"
+      },
+      "joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/records/joint_direction_20261101_111730_481/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap": {
+        "size": 290213237,
+        "inode": 268369833,
+        "device": 2051,
+        "mtime_ns": 1793532197649052505
+      },
+      "joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/records/joint_direction_20261101_111730_481/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap": {
+        "size": 38074039,
+        "inode": 268369837,
+        "device": 2051,
+        "mtime_ns": 1793532272779790545
+      },
+      "joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/shard_summary.json": {
+        "size": 1329,
+        "inode": 268304097,
+        "device": 2051,
+        "mtime_ns": 1793541499126869845,
+        "sha256": "3b374777512922c17846d00223deb8c70f5a3aa25f72a6328996b1ab11b8c0be"
+      },
+      "joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/stdout.log": {
+        "size": 699388,
+        "inode": 268304015,
+        "device": 2051,
+        "mtime_ns": 1793541499142870612,
+        "sha256": "d582fb32643b18d068445a310b0cce4ae235eeded65a2108aeb07387ff2fc5f9"
+      },
+      "model_server.log": {
+        "size": 347,
+        "inode": 266859625,
+        "device": 2051,
+        "mtime_ns": 1793531643744757999,
+        "sha256": "471b0f1367379e29e95ce04c7abd8c839fb23e784e7354d7472894d5172e9216"
+      },
+      "open_drawer/evaluation_manifest.json": {
+        "size": 629,
+        "inode": 268238319,
+        "device": 2051,
+        "mtime_ns": 1793531656021210855,
+        "sha256": "c207316256ac137be3310e71fd99da1f8e4b1362cc2e43888833b9da52cd479e"
+      },
+      "open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/config/open_drawer.yaml": {
+        "size": 1350,
+        "inode": 268304091,
+        "device": 2051,
+        "mtime_ns": 1793531656009210412,
+        "sha256": "3cf1890a572684f908d36e64a56f04ee9bd8d2ee15e19b12c62d71c11700fa87"
+      },
+      "open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/eval_result.json": {
+        "size": 197527,
+        "inode": 268304096,
+        "device": 2051,
+        "mtime_ns": 1793542684968449836,
+        "sha256": "31709e13e0f5b402fad3e09ac5801cb2b413d2652705ae7cbe28f7b0eb51f0f8"
+      },
+      "open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/performance.json": {
+        "size": 57646,
+        "inode": 268304102,
+        "device": 2051,
+        "mtime_ns": 1793542684984450458,
+        "sha256": "2de1b9297743be9dd2035e6718defcdbf9f86c23d173924efbe3eed69fdb47a8"
+      },
+      "open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/records/open_20261101_111433_307/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap": {
+        "size": 129619525,
+        "inode": 268304093,
+        "device": 2051,
+        "mtime_ns": 1793531828351549680
+      },
+      "open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/records/open_20261101_111433_307/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap": {
+        "size": 265608055,
+        "inode": 268369831,
+        "device": 2051,
+        "mtime_ns": 1793532142071025468
+      },
+      "open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/shard_summary.json": {
+        "size": 1285,
+        "inode": 268304101,
+        "device": 2051,
+        "mtime_ns": 1793542684972449992,
+        "sha256": "01bbc7f68f2e678f0f5106812811dec3398818b373687cdbb1edc6583a09b2b6"
+      },
+      "open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/stdout.log": {
+        "size": 744369,
+        "inode": 268304005,
+        "device": 2051,
+        "mtime_ns": 1793542684984450458,
+        "sha256": "c6e92279221cb2d4209bdb10088d207fed7c6864f5b2e0bccbba63568ff2654d"
+      },
+      "pick_color/evaluation_manifest.json": {
+        "size": 635,
+        "inode": 268238289,
+        "device": 2051,
+        "mtime_ns": 1793531656017210707,
+        "sha256": "b889c2ef64269e067ce0803eb098f3a19364ddbf8930332878b0179a59900ccd"
+      },
+      "pick_color/shards/pick_color__group_0000__config_0000__shard_0000/config/pick_color.yaml": {
+        "size": 1135,
+        "inode": 268435685,
+        "device": 2051,
+        "mtime_ns": 1793531655981209379,
+        "sha256": "75c5aa0d51ee6d421dac3e1b0313c311ee98ebdb2ae1982f51ae4e5bd1c15bac"
+      },
+      "pick_color/shards/pick_color__group_0000__config_0000__shard_0000/performance.json": {
+        "size": 25483,
+        "inode": 268435674,
+        "device": 2051,
+        "mtime_ns": 1793555963704596963,
+        "sha256": "e18747adc66aeee7fac438dfe855ccdd3390cb726a17bd20f7794ea0652fd5f7"
+      },
+      "pick_color/shards/pick_color__group_0000__config_0000__shard_0000/records/pick_attribute_20261101_164457_819/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap": {
+        "size": 171190915,
+        "inode": 268435686,
+        "device": 2051,
+        "mtime_ns": 1793551743627159466
+      },
+      "pick_color/shards/pick_color__group_0000__config_0000__shard_0000/records/pick_attribute_20261101_164457_819/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap": {
+        "size": 82452430,
+        "inode": 268498232,
+        "device": 2051,
+        "mtime_ns": 1793551877271124711
+      },
+      "pick_color/shards/pick_color__group_0000__config_0000__shard_0000/stdout.log": {
+        "size": 272652,
+        "inode": 268435673,
+        "device": 2051,
+        "mtime_ns": 1793555994925760374,
+        "sha256": "67fd175f258ee374b669332031d76339a56c2ace5b988ff468ec95ac9a10a5df"
+      },
+      "pick_spatial/evaluation_manifest.json": {
+        "size": 653,
+        "inode": 268238313,
+        "device": 2051,
+        "mtime_ns": 1793531656017210707,
+        "sha256": "e5fafd431d47928319b5b28cc831ef9626e9e4e79901bd53a50367ce3c66e1dc"
+      },
+      "pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/config/spatial_directions.yaml": {
+        "size": 1615,
+        "inode": 268498339,
+        "device": 2051,
+        "mtime_ns": 1793531655993209822,
+        "sha256": "6686eb815b9be7fcec31c06133fba14eb2a88db664a5a6dd6a7d66143b7513a0"
+      },
+      "pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/performance.json": {
+        "size": 23264,
+        "inode": 268500793,
+        "device": 2051,
+        "mtime_ns": 1793555986073430391,
+        "sha256": "2e161bbae500982df773ff00b0475a1f8d2230d7b124ccca933336f76df13a55"
+      },
+      "pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/records/spatial_directions_20261101_165122_897/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap": {
+        "size": 77320172,
+        "inode": 268498521,
+        "device": 2051,
+        "mtime_ns": 1793552021199587721
+      },
+      "pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/records/spatial_directions_20261101_165122_897/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap": {
+        "size": 72111530,
+        "inode": 268500750,
+        "device": 2051,
+        "mtime_ns": 1793552159564021850
+      },
+      "pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/stdout.log": {
+        "size": 250064,
+        "inode": 268498325,
+        "device": 2051,
+        "mtime_ns": 1793555986073430391,
+        "sha256": "0b3aa72dbbfde6b12f20f1d0fad041315484294724d7261a8ac4bd31c0b67614"
+      },
+      "place_a2b/evaluation_manifest.json": {
+        "size": 1127,
+        "inode": 268238315,
+        "device": 2051,
+        "mtime_ns": 1793531656017210707,
+        "sha256": "1cd67ea4ee030ca0561bf910bfcf99375ed3a0458d8f5dae0300d439be45707f"
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/config/place_a2b.yaml": {
+        "size": 1431,
+        "inode": 268498453,
+        "device": 2051,
+        "mtime_ns": 1793531656001210117,
+        "sha256": "ebfd348b10b57dec9a8d4a19557267b9ad4d7e48aee736b3c46f2cc2d8c9d6f6"
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/performance.json": {
+        "size": 14401,
+        "inode": 268500795,
+        "device": 2051,
+        "mtime_ns": 1793555993629712058,
+        "sha256": "9d6c805c6e72c09d3de979c6875e30525b2801e2ff122f227be75dd06b604712"
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/records/place_a2b_20261101_165405_240/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap": {
+        "size": 291511861,
+        "inode": 268563404,
+        "device": 2051,
+        "mtime_ns": 1793552452605735266
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/records/place_a2b_20261101_165405_240/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap": {
+        "size": 275011876,
+        "inode": 268563531,
+        "device": 2051,
+        "mtime_ns": 1793552812834040656
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/stdout.log": {
+        "size": 204017,
+        "inode": 268498535,
+        "device": 2051,
+        "mtime_ns": 1793555993629712058,
+        "sha256": "a84ac87424f87dbc4045feac96b0971306a96241ac5cf9802c00732b6c87bd48"
+      },
+      "report_99999_comparison.md": {
+        "size": 2377,
+        "inode": 268238377,
+        "device": 2051,
+        "mtime_ns": 1793555999101916077,
+        "sha256": "9f9e83705c3d7682997f35483a73c6440ba0043d1881c86156180a8e61f60429"
+      },
+      "resource_samples.jsonl": {
+        "size": 473703,
+        "inode": 268238351,
+        "device": 2051,
+        "mtime_ns": 1793555994573747251,
+        "sha256": "5742cb08714843dc3146bac8e004ac21e981d7fbbf0c40a50fb6385b2826ac27"
+      },
+      "run_manifest.json": {
+        "size": 2378,
+        "inode": 268238327,
+        "device": 2051,
+        "mtime_ns": 1793531656677235049,
+        "sha256": "4bc73434ccb70a6efae772840009b36bc0f4970efbd6fac2e21e8c1c5d6f592e"
+      },
+      "run_status.json": {
+        "size": 625,
+        "inode": 268238381,
+        "device": 2051,
+        "mtime_ns": 1793555999101916077,
+        "sha256": "c3fc65931962ebf2b9488f49e7f2bd98dd51fcc57a2f54a4491cb56045091ed5"
+      },
+      "stack_cubes/evaluation_manifest.json": {
+        "size": 2283,
+        "inode": 268238317,
+        "device": 2051,
+        "mtime_ns": 1793531656017210707,
+        "sha256": "6e40444235836b5d6c58943d19decb604f647b02ae46bfdb62f2799595911f41"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/config/stack_cubes.yaml": {
+        "size": 1190,
+        "inode": 268304075,
+        "device": 2051,
+        "mtime_ns": 1792925625675795041,
+        "sha256": "941752b4da563c5f3c91de24e5a40df5e41db540b06e832b6df2fdb94d07209c"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/eval_result.json": {
+        "size": 50829,
+        "inode": 268304092,
+        "device": 2051,
+        "mtime_ns": 1793542199713255196,
+        "sha256": "b784ca3294a98d310829eeb5f0524067140881783b5cf43659787667be5660b3"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/performance.json": {
+        "size": 16653,
+        "inode": 268304100,
+        "device": 2051,
+        "mtime_ns": 1793542199717255358,
+        "sha256": "2220f0d204822a141b452f9d28f7b8c34142836528d1d773b1d8ae2fcb8c07ef"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/records/stack_cubes_20261101_111434_060/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap": {
+        "size": 739181919,
+        "inode": 268369800,
+        "device": 2051,
+        "mtime_ns": 1793532507084317036
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/records/stack_cubes_20261101_111434_060/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap": {
+        "size": 793863465,
+        "inode": 268369850,
+        "device": 2051,
+        "mtime_ns": 1793533394530786920
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/shard_summary.json": {
+        "size": 1424,
+        "inode": 268304099,
+        "device": 2051,
+        "mtime_ns": 1793542199713255196,
+        "sha256": "e08451f1fe62d0eaf33a2974b09bafe685d95ee81bf61debac0f5cb3254662b5"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/stdout.log": {
+        "size": 477407,
+        "inode": 268304002,
+        "device": 2051,
+        "mtime_ns": 1793542199721255520,
+        "sha256": "5f0de128d66c5b49cf8235c8d9a93b0ab67f0709825ff9541cca5bd401aa5358"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0001/config/stack_cubes.yaml": {
+        "size": 1190,
+        "inode": 268435472,
+        "device": 2051,
+        "mtime_ns": 1792925625675795041,
+        "sha256": "941752b4da563c5f3c91de24e5a40df5e41db540b06e832b6df2fdb94d07209c"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0001/eval_result.json": {
+        "size": 50348,
+        "inode": 268435701,
+        "device": 2051,
+        "mtime_ns": 1793551866218789590,
+        "sha256": "0802586ed639d07fdf9a7241ea5d5ee68ac5b34c3d2e6defe50bfab0e8aa0c30"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0001/performance.json": {
+        "size": 16645,
+        "inode": 268435717,
+        "device": 2051,
+        "mtime_ns": 1793551866222789711,
+        "sha256": "e47b68288a2b518a8b95ef4c0bf2d770f3023d880f185d23273ee11ceab9525a"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0001/shard_summary.json": {
+        "size": 1412,
+        "inode": 268435716,
+        "device": 2051,
+        "mtime_ns": 1793551866218789590,
+        "sha256": "b2520986a1979404c747c5ac392008425e7ec0c945849ddc9a0e2976a0ba7265"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0001/stdout.log": {
+        "size": 475835,
+        "inode": 268435457,
+        "device": 2051,
+        "mtime_ns": 1793551866222789711,
+        "sha256": "c84b993f1383a685b8e500a72010484774aedf6b45361b7f1471c6dc999eeb19"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0002/config/stack_cubes.yaml": {
+        "size": 1190,
+        "inode": 268435627,
+        "device": 2051,
+        "mtime_ns": 1792925625675795041,
+        "sha256": "941752b4da563c5f3c91de24e5a40df5e41db540b06e832b6df2fdb94d07209c"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0002/eval_result.json": {
+        "size": 46420,
+        "inode": 268435624,
+        "device": 2051,
+        "mtime_ns": 1793551481004085925,
+        "sha256": "8c2f7d041230b7e85f287ef2930d5b6b3d2bba45e8c9a09c32a89233d148c82b"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0002/performance.json": {
+        "size": 15524,
+        "inode": 268435678,
+        "device": 2051,
+        "mtime_ns": 1793551481012086123,
+        "sha256": "b549483c511b676710a6670fb11455662ede54d5ab4017d3c0ddae436e9b81e2"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0002/shard_summary.json": {
+        "size": 1392,
+        "inode": 268435676,
+        "device": 2051,
+        "mtime_ns": 1793551481004085925,
+        "sha256": "f186d1c42b64cdf007879d23e3a6d16022cdbb0abdff9f5310bc57948d298253"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0002/stdout.log": {
+        "size": 428434,
+        "inode": 268435626,
+        "device": 2051,
+        "mtime_ns": 1793551481012086123,
+        "sha256": "88995aa5e7a31b11741d3626001382ea73fcfebb428d266b6b10cbbd8a52a088"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0003/config/stack_cubes.yaml": {
+        "size": 1190,
+        "inode": 268435660,
+        "device": 2051,
+        "mtime_ns": 1792925625675795041,
+        "sha256": "941752b4da563c5f3c91de24e5a40df5e41db540b06e832b6df2fdb94d07209c"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0003/eval_result.json": {
+        "size": 46391,
+        "inode": 268435649,
+        "device": 2051,
+        "mtime_ns": 1793552027847797868,
+        "sha256": "4953a187a79a7ac8347c095f5d22528f120d3b658392a8ad6c871ae321b781b1"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0003/performance.json": {
+        "size": 15530,
+        "inode": 268435719,
+        "device": 2051,
+        "mtime_ns": 1793552027851797994,
+        "sha256": "aeeb1a43d3d79d5389d980b19f2651fa6c94ff6862962841aba0f69378c8be5d"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0003/shard_summary.json": {
+        "size": 1338,
+        "inode": 268435718,
+        "device": 2051,
+        "mtime_ns": 1793552027847797868,
+        "sha256": "e5aec7a7574986be6b26b4c622b17492426ef80fb7901e6ad7fc62be123ac401"
+      },
+      "stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0003/stdout.log": {
+        "size": 431783,
+        "inode": 268435650,
+        "device": 2051,
+        "mtime_ns": 1793552027851797994,
+        "sha256": "f31eeb795db0e83aa8420bc345808206869d7e97e19f6e3c67f9ead8f7c98e6a"
+      }
+    },
+    "local_pi05_full_99999_supplement_20261102_112239": {
+      "combined_results.json": {
+        "size": 20308,
+        "inode": 268565636,
+        "device": 2051,
+        "mtime_ns": 1793604085588141444,
+        "sha256": "646af0919abb5c38d1f99930681f5a6b0c3469a4d51bfaa6539a6dc7d323616b"
+      },
+      "config_snapshot/hbot-eval-control.py": {
+        "size": 8805,
+        "inode": 268632978,
+        "device": 2051,
+        "mtime_ns": 1793493256077779843,
+        "sha256": "3718371925687fd29ec05c43b8e25c33e6b311f9a5ebe6d1578e7c5b7db5f5d8"
+      },
+      "config_snapshot/local_pi05_full_99999_supplement_20261102_112239-client.yaml": {
+        "size": 67,
+        "inode": 268632935,
+        "device": 2051,
+        "mtime_ns": 1793589766362855068,
+        "sha256": "670344c42fdcf5c453e30f12d0b070367df9c66f3265146e7c703bb97e2b2de7"
+      },
+      "config_snapshot/local_pi05_full_99999_supplement_20261102_112239-model.yaml": {
+        "size": 1933,
+        "inode": 268632929,
+        "device": 2051,
+        "mtime_ns": 1793589766362855068,
+        "sha256": "5277220d22f0517fd422ab9db1f9a0f5f45a6e498e89a3e517370906e2f64340"
+      },
+      "config_snapshot/local_pi05_full_99999_supplement_20261102_112239.yaml": {
+        "size": 928,
+        "inode": 268632926,
+        "device": 2051,
+        "mtime_ns": 1793589766374855413,
+        "sha256": "7d9e9f53a40347da7e0c6bcf148125b47d81fac3d2b46f4368e427f1e2591a9d"
+      },
+      "config_snapshot/report-pi05-99999-comparison.py": {
+        "size": 7764,
+        "inode": 268632975,
+        "device": 2051,
+        "mtime_ns": 1793531606955399722,
+        "sha256": "9d8cef0dd43192f5c6658689bac3f567d94d822294cd91f2540b4c00c7d470ec"
+      },
+      "config_snapshot/report-pi05-99999-supplement.py": {
+        "size": 8897,
+        "inode": 268632946,
+        "device": 2051,
+        "mtime_ns": 1793589759098646485,
+        "sha256": "34bd8d8b3110ce58e7e329b3eef58fd855393ae54aa47f0e1997fa7c1ab516de"
+      },
+      "config_snapshot/run-full99999-eval.py": {
+        "size": 14342,
+        "inode": 268632973,
+        "device": 2051,
+        "mtime_ns": 1793531606947399426,
+        "sha256": "0377c78642aea6b80e357f9d67efef552af6e71214e6711deee75bedc79b1bdc"
+      },
+      "config_snapshot/run-full99999-supplement.py": {
+        "size": 15138,
+        "inode": 268632941,
+        "device": 2051,
+        "mtime_ns": 1793589759090646256,
+        "sha256": "51b9b7cafb18fca60beac53d732b76cc2af2715103f602482fdba46fb13664e1"
+      },
+      "config_snapshot/validate-99999-supplement.py": {
+        "size": 3023,
+        "inode": 268632943,
+        "device": 2051,
+        "mtime_ns": 1793589759102646601,
+        "sha256": "e7a604eb30f716dbf98829eadd1ccc760af182193962bfd3e152fce9d24d51f8"
+      },
+      "cpu_preflight.log": {
+        "size": 597,
+        "inode": 268565614,
+        "device": 2051,
+        "mtime_ns": 1793589799327801702,
+        "sha256": "d283da624a683b6baf5339c8d67abbf8b7a6b4e6c4e21ec35510220dad7fbdad"
+      },
+      "distributed_summary.json": {
+        "size": 8591,
+        "inode": 268565649,
+        "device": 2051,
+        "mtime_ns": 1793604014401397352,
+        "sha256": "1babe9b76c79487f2c3245ac449a20b00512853705a98e40057ee34a93ea8ad6"
+      },
+      "evaluation.log": {
+        "size": 1823,
+        "inode": 266859638,
+        "device": 2051,
+        "mtime_ns": 1793604014405397506,
+        "sha256": "42cc8f493c627fe265c4f7ef5ce44efac0d8bd6708afc99bb3d2f7c58a828956"
+      },
+      "model_server.log": {
+        "size": 347,
+        "inode": 266859636,
+        "device": 2051,
+        "mtime_ns": 1793589774555090307,
+        "sha256": "471b0f1367379e29e95ce04c7abd8c839fb23e784e7354d7472894d5172e9216"
+      },
+      "pick_color/evaluation_manifest.json": {
+        "size": 637,
+        "inode": 268565306,
+        "device": 2051,
+        "mtime_ns": 1793589798919789985,
+        "sha256": "86968f5a173525207cf2e2c89756c2f1245db2e26af1812caced99ecff90a68e"
+      },
+      "pick_color/group_0000/config_0000/eval_result.json": {
+        "size": 91505,
+        "inode": 268830293,
+        "device": 2051,
+        "mtime_ns": 1793604014281392742,
+        "sha256": "f3a20d0d2800ff737d4dfd2919b61eda41793d58a3bee2e47a0fcdd251e3cc44"
+      },
+      "pick_color/shards/pick_color__group_0000__config_0000__shard_0000/config/pick_color.yaml": {
+        "size": 1135,
+        "inode": 268632993,
+        "device": 2051,
+        "mtime_ns": 1793589798895789295,
+        "sha256": "75c5aa0d51ee6d421dac3e1b0313c311ee98ebdb2ae1982f51ae4e5bd1c15bac"
+      },
+      "pick_color/shards/pick_color__group_0000__config_0000__shard_0000/eval_result.json": {
+        "size": 91505,
+        "inode": 268565640,
+        "device": 2051,
+        "mtime_ns": 1793596921646092108,
+        "sha256": "f3a20d0d2800ff737d4dfd2919b61eda41793d58a3bee2e47a0fcdd251e3cc44"
+      },
+      "pick_color/shards/pick_color__group_0000__config_0000__shard_0000/performance.json": {
+        "size": 57665,
+        "inode": 268565644,
+        "device": 2051,
+        "mtime_ns": 1793596921658092443,
+        "sha256": "18d86ebe0331124a38aa71c229315b62b9822568bc2786d08bf0008d6120e1ee"
+      },
+      "pick_color/shards/pick_color__group_0000__config_0000__shard_0000/records/pick_attribute_20261102_032334_822/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap": {
+        "size": 171139283,
+        "inode": 268632995,
+        "device": 2051,
+        "mtime_ns": 1793590012873936932
+      },
+      "pick_color/shards/pick_color__group_0000__config_0000__shard_0000/records/pick_attribute_20261102_032334_822/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap": {
+        "size": 83259761,
+        "inode": 268632997,
+        "device": 2051,
+        "mtime_ns": 1793590115764894475
+      },
+      "pick_color/shards/pick_color__group_0000__config_0000__shard_0000/shard_summary.json": {
+        "size": 1253,
+        "inode": 268565643,
+        "device": 2051,
+        "mtime_ns": 1793596921646092108,
+        "sha256": "57a2b5e427fe4cecf361cc5586b7a3e1928119e1c7bf2921b21d21c383ace9bc"
+      },
+      "pick_color/shards/pick_color__group_0000__config_0000__shard_0000/stdout.log": {
+        "size": 598589,
+        "inode": 268565612,
+        "device": 2051,
+        "mtime_ns": 1793596921658092443,
+        "sha256": "9fe0017b8057867359eb5cbd195f6bd61f2e73c17895789463ed83f295d793ee"
+      },
+      "pick_color/task_eval_summary.json": {
+        "size": 2238,
+        "inode": 268565642,
+        "device": 2051,
+        "mtime_ns": 1793604014281392742,
+        "sha256": "c87b13aabaac0a1146e4c9d421129ab6aab5436f61a2b6e23acebcf92813dfd2"
+      },
+      "pick_spatial/evaluation_manifest.json": {
+        "size": 655,
+        "inode": 268565582,
+        "device": 2051,
+        "mtime_ns": 1793589798927790214,
+        "sha256": "474203beadfdc221b8ca21ffb10793ac3dc1b3b2409e64696bf888868133320f"
+      },
+      "pick_spatial/group_0000/config_0000/eval_result.json": {
+        "size": 109880,
+        "inode": 268830305,
+        "device": 2051,
+        "mtime_ns": 1793604014333394740,
+        "sha256": "dabe783c2822dfd5c4f32cfbb07925f3e629549db89108e5b76b8b8966650bc0"
+      },
+      "pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/config/spatial_directions.yaml": {
+        "size": 1615,
+        "inode": 268632987,
+        "device": 2051,
+        "mtime_ns": 1793589798907789640,
+        "sha256": "6686eb815b9be7fcec31c06133fba14eb2a88db664a5a6dd6a7d66143b7513a0"
+      },
+      "pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/eval_result.json": {
+        "size": 109880,
+        "inode": 268565641,
+        "device": 2051,
+        "mtime_ns": 1793597642753939166,
+        "sha256": "dabe783c2822dfd5c4f32cfbb07925f3e629549db89108e5b76b8b8966650bc0"
+      },
+      "pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/performance.json": {
+        "size": 57694,
+        "inode": 268565646,
+        "device": 2051,
+        "mtime_ns": 1793597642765939602,
+        "sha256": "2d8c3de8fc304bae8b5490c969717e8aaecf3933fd54b2f88e3410d11e423108"
+      },
+      "pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/records/spatial_directions_20261102_032335_415/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap": {
+        "size": 79847661,
+        "inode": 268632994,
+        "device": 2051,
+        "mtime_ns": 1793589938367795834
+      },
+      "pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/records/spatial_directions_20261102_032335_415/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap": {
+        "size": 173206024,
+        "inode": 268632996,
+        "device": 2051,
+        "mtime_ns": 1793590125681179554
+      },
+      "pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/shard_summary.json": {
+        "size": 1283,
+        "inode": 268565645,
+        "device": 2051,
+        "mtime_ns": 1793597642753939166,
+        "sha256": "2ed5e556add356210f28dca7ce53e7416915c46349f27a2183cd34c4b114dcb7"
+      },
+      "pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/stdout.log": {
+        "size": 631255,
+        "inode": 268565613,
+        "device": 2051,
+        "mtime_ns": 1793597642769939747,
+        "sha256": "de83f3074ced330a14346fba11b8d1121d6dee67f904a9729865c028fc134595"
+      },
+      "pick_spatial/task_eval_summary.json": {
+        "size": 2283,
+        "inode": 268565647,
+        "device": 2051,
+        "mtime_ns": 1793604014337394894,
+        "sha256": "626d3046ccd51a13654f0ca1cc2985532af1265c56b32d0e1a9d9f8d13090fac"
+      },
+      "place_a2b/evaluation_manifest.json": {
+        "size": 1129,
+        "inode": 268565599,
+        "device": 2051,
+        "mtime_ns": 1793589798931790329,
+        "sha256": "5337902b0e89917e97fff2b0301dca25eaabc9158491ffb00a135ab5310cf0e3"
+      },
+      "place_a2b/group_0000/config_0000/eval_result.json": {
+        "size": 268192,
+        "inode": 268830310,
+        "device": 2051,
+        "mtime_ns": 1793604014397397198,
+        "sha256": "71c3b1b7ae509af86868e5ac04deed76f225ac61cd3543456ccc95f9266c2ab6"
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/config/place_a2b.yaml": {
+        "size": 1431,
+        "inode": 268764711,
+        "device": 2051,
+        "mtime_ns": 1793589798915789869,
+        "sha256": "ebfd348b10b57dec9a8d4a19557267b9ad4d7e48aee736b3c46f2cc2d8c9d6f6"
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/eval_result.json": {
+        "size": 134659,
+        "inode": 268764779,
+        "device": 2051,
+        "mtime_ns": 1793603675320658381,
+        "sha256": "c4c64d9d902037d0d0ced6c6e20535a4b408d16a9dc3e7d4a89bd4027ae1cd38"
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/performance.json": {
+        "size": 29967,
+        "inode": 268764781,
+        "device": 2051,
+        "mtime_ns": 1793603675328658672,
+        "sha256": "69fad071fd5253a6ce5a7ae4df713c20a0fdae5721aaa5964081da273f2953d8"
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/records/place_a2b_20261102_052217_814/scene_0000_seed_100000/episode_0000_seed_100000/env0_data.mcap": {
+        "size": 291444587,
+        "inode": 268764724,
+        "device": 2051,
+        "mtime_ns": 1793597236587770140
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/records/place_a2b_20261102_052217_814/scene_0001_seed_100001/episode_0001_seed_100001/env0_data.mcap": {
+        "size": 275076327,
+        "inode": 268764773,
+        "device": 2051,
+        "mtime_ns": 1793597503840950763
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/shard_summary.json": {
+        "size": 1303,
+        "inode": 268764780,
+        "device": 2051,
+        "mtime_ns": 1793603675320658381,
+        "sha256": "48e0b46ac3ac841cb51f45f2e75f9f20428db0621e7bbfc86b27b65199839aa3"
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/stdout.log": {
+        "size": 445942,
+        "inode": 268764706,
+        "device": 2051,
+        "mtime_ns": 1793603675328658672,
+        "sha256": "2c60e29ee08f6dbe8beb5d51758d77e19bb0acae9c75526e847194149307975a"
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0001/config/place_a2b.yaml": {
+        "size": 1431,
+        "inode": 268764775,
+        "device": 2051,
+        "mtime_ns": 1793589798915789869,
+        "sha256": "ebfd348b10b57dec9a8d4a19557267b9ad4d7e48aee736b3c46f2cc2d8c9d6f6"
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0001/eval_result.json": {
+        "size": 133732,
+        "inode": 268764778,
+        "device": 2051,
+        "mtime_ns": 1793604013153349412,
+        "sha256": "e733e56cbe226d1150e7e1800923e4baca5d751f861ff676b07aa8c26930275c"
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0001/performance.json": {
+        "size": 29955,
+        "inode": 268764783,
+        "device": 2051,
+        "mtime_ns": 1793604013161349720,
+        "sha256": "47aa305d02db6699dbd96c63c13f2fe217b3d70ef286cf68750af34f78c0dd28"
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0001/shard_summary.json": {
+        "size": 1303,
+        "inode": 268764782,
+        "device": 2051,
+        "mtime_ns": 1793604013157349565,
+        "sha256": "15dcbd9da6f7ead95e0da14fd9e27892adfb0b231fb7272ef5252d171fd0ba70"
+      },
+      "place_a2b/shards/place_a2b__group_0000__config_0000__shard_0001/stdout.log": {
+        "size": 427268,
+        "inode": 268764774,
+        "device": 2051,
+        "mtime_ns": 1793604013161349720,
+        "sha256": "7b8bf402ab58f1970c6ae910827f786b9b6963055b16a8e708aca258bae479ec"
+      },
+      "place_a2b/task_eval_summary.json": {
+        "size": 3726,
+        "inode": 268565648,
+        "device": 2051,
+        "mtime_ns": 1793604014401397352,
+        "sha256": "5bf243ccf68634fcf52551be409a1563fe7e87ed67364ecb65b9d61106cfe5dd"
+      },
+      "report_99999_supplement_comparison.md": {
+        "size": 3020,
+        "inode": 268565637,
+        "device": 2051,
+        "mtime_ns": 1793604085588141444,
+        "sha256": "4f396f3bfa21a4a148a67680735c60628eb0158404018a6e932ef50d65c6d7f6"
+      },
+      "resource_samples.jsonl": {
+        "size": 276787,
+        "inode": 268565639,
+        "device": 2051,
+        "mtime_ns": 1793604014597404881,
+        "sha256": "c52a6388f1d528c7be685145c593fd8575719d4c9ff0ae13ccc323e4bb4d2903"
+      },
+      "run_manifest.json": {
+        "size": 10944,
+        "inode": 268565615,
+        "device": 2051,
+        "mtime_ns": 1793589799327801702,
+        "sha256": "0a4a175f91c58a77a02454eca3991473cc3184dd512ceadcc5a0ecbc4d5ecf62"
+      },
+      "run_status.json": {
+        "size": 1637,
+        "inode": 268565650,
+        "device": 2051,
+        "mtime_ns": 1793604085588141444,
+        "sha256": "e63d462b00d0cf38803fed756b26bbd0d30586343eaa031f7cdf163c8770a39f"
+      },
+      "summary.json": {
+        "size": 4521,
+        "inode": 268565652,
+        "device": 2051,
+        "mtime_ns": 1793604081607987536,
+        "sha256": "d70269ab5ccc7a3ca1abe855ca7bdfcec183b04a5e5e95ba50fc8e52b84feb40"
+      },
+      "summary_before_preview_limit.json": {
+        "size": 11340,
+        "inode": 268565651,
+        "device": 2051,
+        "mtime_ns": 1793604030306008800,
+        "sha256": "a71a0fdbf03db3b6061c1c6ddeba5e2db002479e960d0678282677c79dc11e20"
+      },
+      "video_export.log": {
+        "size": 2510,
+        "inode": 268565638,
+        "device": 2051,
+        "mtime_ns": 1793604081607987536,
+        "sha256": "7780cdd1f0bb0b2e5d200e26246ed20a248b8d3c1893497fd2f5c832cc5cd48a"
+      },
+      "videos/pick_color/episode_0000_seed_100000.mp4": {
+        "size": 2471408,
+        "inode": 268830317,
+        "device": 2051,
+        "mtime_ns": 1793604040690408548
+      },
+      "videos/pick_color/episode_0001_seed_100001.mp4": {
+        "size": 1531630,
+        "inode": 268830318,
+        "device": 2051,
+        "mtime_ns": 1793604045174581293
+      },
+      "videos/pick_spatial/episode_0000_seed_100000.mp4": {
+        "size": 1413090,
+        "inode": 268830323,
+        "device": 2051,
+        "mtime_ns": 1793604049374743164
+      },
+      "videos/pick_spatial/episode_0001_seed_100001.mp4": {
+        "size": 2544358,
+        "inode": 268830332,
+        "device": 2051,
+        "mtime_ns": 1793604056775028524
+      },
+      "videos/place_a2b/episode_0000_seed_100000.mp4": {
+        "size": 4918553,
+        "inode": 268830366,
+        "device": 2051,
+        "mtime_ns": 1793604068463479642
+      },
+      "videos/place_a2b/episode_0001_seed_100001.mp4": {
+        "size": 4766401,
+        "inode": 268830367,
+        "device": 2051,
+        "mtime_ns": 1793604080587948101
+      }
+    }
+  },
+  "task_sources": {
+    "place_a2b": "local_pi05_full_99999_supplement_20261102_112239",
+    "pick_color": "local_pi05_full_99999_supplement_20261102_112239",
+    "pick_spatial": "local_pi05_full_99999_supplement_20261102_112239",
+    "open_drawer": "local_pi05_full_99999_parallel_20261101_191358",
+    "stack_cubes": "local_pi05_full_99999_parallel_20261101_191358",
+    "joint_direction": "local_pi05_full_99999_parallel_20261101_191358"
+  },
+  "source_path_map": {
+    "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_merged_20261102/history/local_pi05_full_99999_parallel_20261101_191358",
+    "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_supplement_20261102_112239": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_merged_20261102/history/local_pi05_full_99999_supplement_20261102_112239"
+  },
+  "source_audits": {
+    "place_a2b": {
+      "task": "place_a2b",
+      "path": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_supplement_20261102_112239",
+      "complete": true,
+      "episodes": 50,
+      "successes": 13,
+      "score": 0.38666666666666677,
+      "success_rate": 0.26,
+      "stage_counts": {
+        "reach_pick": 33,
+        "contact_pick": 25,
+        "grasp_pick": 15,
+        "lift_pick": 15,
+        "reach_place": 15,
+        "place_within_xy": 13
+      },
+      "problems": [],
+      "raw_files": [
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_supplement_20261102_112239/place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/eval_result.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_supplement_20261102_112239/place_a2b/shards/place_a2b__group_0000__config_0000__shard_0000/shard_summary.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_supplement_20261102_112239/place_a2b/shards/place_a2b__group_0000__config_0000__shard_0001/eval_result.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_supplement_20261102_112239/place_a2b/shards/place_a2b__group_0000__config_0000__shard_0001/shard_summary.json"
+      ]
+    },
+    "pick_color": {
+      "task": "pick_color",
+      "path": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_supplement_20261102_112239",
+      "complete": true,
+      "episodes": 50,
+      "successes": 21,
+      "score": 0.58,
+      "success_rate": 0.42,
+      "stage_counts": {
+        "reach_pick": 40,
+        "contact_pick": 32,
+        "grasp_pick": 23,
+        "lift_pick": 21
+      },
+      "problems": [],
+      "raw_files": [
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_supplement_20261102_112239/pick_color/shards/pick_color__group_0000__config_0000__shard_0000/eval_result.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_supplement_20261102_112239/pick_color/shards/pick_color__group_0000__config_0000__shard_0000/shard_summary.json"
+      ]
+    },
+    "pick_spatial": {
+      "task": "pick_spatial",
+      "path": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_supplement_20261102_112239",
+      "complete": true,
+      "episodes": 50,
+      "successes": 15,
+      "score": 0.55,
+      "success_rate": 0.3,
+      "stage_counts": {
+        "reach_pick": 45,
+        "contact_pick": 32,
+        "grasp_pick": 18,
+        "lift_pick": 15
+      },
+      "problems": [],
+      "raw_files": [
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_supplement_20261102_112239/pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/eval_result.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_supplement_20261102_112239/pick_spatial/shards/pick_spatial__group_0000__config_0000__shard_0000/shard_summary.json"
+      ]
+    },
+    "open_drawer": {
+      "task": "open_drawer",
+      "path": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358",
+      "complete": true,
+      "episodes": 50,
+      "successes": 28,
+      "score": 0.7720000000000001,
+      "success_rate": 0.56,
+      "stage_counts": {
+        "reach": 50,
+        "contact": 41,
+        "moved": 41,
+        "target_joint_state": 30,
+        "settled_at_target": 28
+      },
+      "problems": [],
+      "raw_files": [
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358/open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/eval_result.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358/open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/shard_summary.json"
+      ]
+    },
+    "stack_cubes": {
+      "task": "stack_cubes",
+      "path": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358",
+      "complete": true,
+      "episodes": 50,
+      "successes": 11,
+      "score": 0.35,
+      "success_rate": 0.22,
+      "stage_counts": {
+        "first_pair_stacked": 31,
+        "first_three_stacked": 17,
+        "full_order_stacked": 11,
+        "settled_stack": 11
+      },
+      "problems": [],
+      "raw_files": [
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/eval_result.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/shard_summary.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0001/eval_result.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0001/shard_summary.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0002/eval_result.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0002/shard_summary.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0003/eval_result.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0003/shard_summary.json"
+      ]
+    },
+    "joint_direction": {
+      "task": "joint_direction",
+      "path": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358",
+      "complete": true,
+      "episodes": 50,
+      "successes": 29,
+      "score": 0.7840000000000003,
+      "success_rate": 0.58,
+      "stage_counts": {
+        "reach": 48,
+        "contact": 33,
+        "moved": 45,
+        "target_joint_state": 29,
+        "settled_at_target": 29
+      },
+      "problems": [],
+      "raw_files": [
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358/joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/eval_result.json",
+        "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_parallel_20261101_191358/joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/shard_summary.json"
+      ]
+    }
+  },
+  "immutable_media_storage": "hard links, no duplicate media allocation",
+  "verified_at": "2026-11-02T15:41:25.765983+08:00",
+  "audited_episodes": 300,
+  "audited_successes": 117,
+  "mean_score": 0.5704444444444445,
+  "mean_success_rate": 0.38999999999999996,
+  "finished_at": "2026-11-02T15:41:25.876565+08:00",
+  "archived_sources_verified": true
+}

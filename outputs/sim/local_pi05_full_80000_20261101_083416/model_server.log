@@ -1,0 +1,3 @@
+/study/wangmengfan/hbot/openpi/.venv/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loading /study/wangmengfan/hbot/checkpoints/pi05_hbot_full/80000; profile=hbot-full; physical GPU=1; port=8766

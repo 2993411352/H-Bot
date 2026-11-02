@@ -1,0 +1,13 @@
+{
+  "run": "local_pi05_full_60000_20261031_141137",
+  "output": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_60000_20261031_141137",
+  "checkpoint": "/study/wangmengfan/hbot/checkpoints/pi05_hbot_full/60000",
+  "started_at": "2026-10-31T14:11:37.591069+08:00",
+  "state": "evaluation_error",
+  "model_pid": 3776385,
+  "evaluation_pid": 3776570,
+  "evaluation_started_at": "2026-10-31T14:11:52.974853+08:00",
+  "evaluation_exit_code": 1,
+  "finished_at": "2026-11-01T04:03:11.786849+08:00",
+  "complete_300_episode_evaluation": true
+}

@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "run_id": "local_pi05_full_99999_parallel_20261101_191358",
+  "policy_id": "server",
+  "shard": {
+    "shard_id": "joint_direction__group_0000__config_0000__shard_0000",
+    "task_name": "joint_direction",
+    "task_type": "joint_direction",
+    "group_id": "group_0000",
+    "config_index": 0,
+    "config_path": "/tmp/joint_direction_split_4oe7mbom/joint_direction.yaml",
+    "shard_index": 0,
+    "shard_count": 1,
+    "episode_offset": 0,
+    "episode_count": 50,
+    "seed_start": 100000,
+    "fallback_seed_start": 100050,
+    "fallback_seed_count": 100,
+    "episodes_per_scene": 1
+  },
+  "status": "ok",
+  "episodes": 50,
+  "successes": 29,
+  "success_rate": 0.58,
+  "avg_progress": 0.7840000000000003,
+  "skipped_episodes": 0,
+  "stage_success_rate": {
+    "reach": 0.96,
+    "contact": 0.66,
+    "moved": 0.9,
+    "target_joint_state": 0.58,
+    "settled_at_target": 0.58
+  },
+  "error": null,
+  "configs": [
+    {
+      "group_id": "group_0000",
+      "config_index": 0,
+      "config_path": "/tmp/joint_direction_split_4oe7mbom/joint_direction.yaml",
+      "eval_result_json": "/home/users/wangmengfan/outputs/sim/local_pi05_full_99999_merged_20261102/joint_direction/shards/joint_direction__group_0000__config_0000__shard_0000/eval_result.json",
+      "error": null
+    }
+  ]
+}

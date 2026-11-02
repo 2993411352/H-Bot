@@ -1,0 +1,120 @@
+{
+  "episode_num": 1,
+  "seed_start": 100000,
+  "success_rate": 0.0,
+  "average_progress": 0.6,
+  "episode_results": [
+    {
+      "seed": 100000,
+      "success": false,
+      "progress": 0.6,
+      "steps": 300,
+      "stop_reason": "max_steps",
+      "metrics": {
+        "criteria_met_now": {
+          "reach": false,
+          "contact": false,
+          "moved": false,
+          "target_joint_state": false,
+          "settled_at_target": false
+        },
+        "criteria_reached": {
+          "reach": true,
+          "contact": true,
+          "moved": true,
+          "target_joint_state": false,
+          "settled_at_target": false
+        },
+        "criteria_met_now_count": 0,
+        "criteria_ever_reached": 3,
+        "criteria_total": 5,
+        "progress_criteria_reached": 3,
+        "progress_criteria_total": 5,
+        "criteria_independent_met_now": {
+          "reach": false,
+          "contact": false,
+          "moved": false,
+          "target_joint_state": false,
+          "settled_at_target": false
+        },
+        "criteria_independent_reached": {
+          "reach": true,
+          "contact": true,
+          "moved": true,
+          "target_joint_state": false,
+          "settled_at_target": false
+        },
+        "record_dir": "/home/users/wangmengfan/outputs/sim/local_holobrain_20261027_214149/open_drawer/shards/open_drawer__group_0000__config_0000__shard_0000/records/open_20261027_135608_339/scene_0000_seed_100000/episode_0000_seed_100000"
+      },
+      "checker_summary": {
+        "aggregation": "any_step_before_criteria_dwell",
+        "scope": [
+          "objects/articulation/body:desktop_drawer_2_1_handle",
+          "objects/articulation/body:desktop_drawer_2_1",
+          "objects/articulation/body:desktop_drawer_2_2_handle",
+          "objects/articulation/body:desktop_drawer_2_2",
+          "objects/articulation/body:desktop_drawer_2_3_handle",
+          "objects/articulation/body:desktop_drawer_2_3",
+          "objects/articulation/body:desktop_drawer_2_4_handle",
+          "objects/articulation/body:desktop_drawer_2_4"
+        ],
+        "unary": {
+          "reached": {
+            "objects/articulation/body:desktop_drawer_2_1_handle": true,
+            "objects/articulation/body:desktop_drawer_2_1": true,
+            "objects/articulation/body:desktop_drawer_2_2_handle": true,
+            "objects/articulation/body:desktop_drawer_2_2": true,
+            "objects/articulation/body:desktop_drawer_2_3_handle": true,
+            "objects/articulation/body:desktop_drawer_2_3": true,
+            "objects/articulation/body:desktop_drawer_2_4_handle": true,
+            "objects/articulation/body:desktop_drawer_2_4": true
+          },
+          "contacted": {
+            "objects/articulation/body:desktop_drawer_2_1_handle": false,
+            "objects/articulation/body:desktop_drawer_2_1": false,
+            "objects/articulation/body:desktop_drawer_2_2_handle": false,
+            "objects/articulation/body:desktop_drawer_2_2": true,
+            "objects/articulation/body:desktop_drawer_2_3_handle": true,
+            "objects/articulation/body:desktop_drawer_2_3": true,
+            "objects/articulation/body:desktop_drawer_2_4_handle": false,
+            "objects/articulation/body:desktop_drawer_2_4": false
+          },
+          "grasped": {
+            "objects/articulation/body:desktop_drawer_2_1_handle": false,
+            "objects/articulation/body:desktop_drawer_2_1": false,
+            "objects/articulation/body:desktop_drawer_2_2_handle": false,
+            "objects/articulation/body:desktop_drawer_2_2": false,
+            "objects/articulation/body:desktop_drawer_2_3_handle": false,
+            "objects/articulation/body:desktop_drawer_2_3": false,
+            "objects/articulation/body:desktop_drawer_2_4_handle": false,
+            "objects/articulation/body:desktop_drawer_2_4": false
+          },
+          "stationary": {
+            "objects/articulation/body:desktop_drawer_2_1_handle": true,
+            "objects/articulation/body:desktop_drawer_2_1": true,
+            "objects/articulation/body:desktop_drawer_2_2_handle": true,
+            "objects/articulation/body:desktop_drawer_2_2": true,
+            "objects/articulation/body:desktop_drawer_2_3_handle": true,
+            "objects/articulation/body:desktop_drawer_2_3": true,
+            "objects/articulation/body:desktop_drawer_2_4_handle": true,
+            "objects/articulation/body:desktop_drawer_2_4": true
+          }
+        },
+        "binary": {},
+        "global": {}
+      },
+      "instruction": "Open the lower middle drawer of the desktop drawer.",
+      "stage_scores": {
+        "reach": 0.2,
+        "contact": 0.2,
+        "moved": 0.2,
+        "target_joint_state": 0.0,
+        "settled_at_target": 0.0
+      }
+    }
+  ],
+  "skipped_episodes": [],
+  "attempted_scene_seeds": [
+    100000
+  ]
+}

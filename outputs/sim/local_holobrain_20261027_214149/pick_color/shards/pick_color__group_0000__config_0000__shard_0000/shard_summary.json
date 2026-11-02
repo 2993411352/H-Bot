@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+  "run_id": "local_holobrain_20261027_214149",
+  "policy_id": "server",
+  "shard": {
+    "shard_id": "pick_color__group_0000__config_0000__shard_0000",
+    "task_name": "pick_color",
+    "task_type": "pick_attribute",
+    "group_id": "group_0000",
+    "config_index": 0,
+    "config_path": "/tmp/pick_color_split_cnny9z_d/pick_color.yaml",
+    "shard_index": 0,
+    "shard_count": 1,
+    "episode_offset": 0,
+    "episode_count": 1,
+    "seed_start": 100000,
+    "fallback_seed_start": 100001,
+    "fallback_seed_count": 2,
+    "episodes_per_scene": 1
+  },
+  "status": "ok",
+  "episodes": 1,
+  "successes": 0,
+  "success_rate": 0.0,
+  "avg_progress": 0.5,
+  "skipped_episodes": 0,
+  "stage_success_rate": {
+    "reach_pick": 1.0,
+    "contact_pick": 1.0,
+    "grasp_pick": 0.0,
+    "lift_pick": 0.0
+  },
+  "error": null,
+  "configs": [
+    {
+      "group_id": "group_0000",
+      "config_index": 0,
+      "config_path": "/tmp/pick_color_split_cnny9z_d/pick_color.yaml",
+      "eval_result_json": "/home/users/wangmengfan/outputs/sim/local_holobrain_20261027_214149/pick_color/shards/pick_color__group_0000__config_0000__shard_0000/eval_result.json",
+      "error": null
+    }
+  ]
+}

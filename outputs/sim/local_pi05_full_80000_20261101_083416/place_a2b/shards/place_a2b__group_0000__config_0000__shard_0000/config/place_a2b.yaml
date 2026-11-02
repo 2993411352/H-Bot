@@ -1,0 +1,82 @@
+scene:
+  type: room_table
+  num_envs: 1
+  env_spacing: 2.5
+  physics_fps: 600
+  render_fps: 30
+  step_fps: 30
+embodiment:
+  type: panda_droid
+  initial_pos:
+  - 0.0
+  - 0.0
+  - 0.0
+  init_joint_noise_std: 0.05
+instruction:
+  template: place_a2b_default
+  template_mode: variants
+  actor_description_mode: raw
+task:
+  params:
+    pose_reset:
+      mode: random_non_overlap
+      min_separation: 0.03
+      pose_range:
+        x:
+        - 0.25
+        - 0.6
+        y:
+        - -0.45
+        - 0.45
+        z:
+        - 0.0
+        - 0.0
+        roll:
+        - 0.0
+        - 0.0
+        pitch:
+        - 0.0
+        - 0.0
+        yaw:
+        - -3.141592653589793
+        - 3.141592653589793
+    light_reset:
+      enabled: false
+      preset: default_distant_light
+    texture_reset:
+      enabled: false
+      preset: default_table_texture
+asset_configs:
+  pick:
+    filter:
+      tags:
+      - has_interactive_poses
+    prim_name: pick_object
+    split: seen
+  place:
+    filter:
+      tags:
+      - is_container
+    prim_name: place_object
+    split: seen
+  distractors_pick:
+    anchor: pick
+    differ:
+    - category
+    filter:
+      tags:
+      - has_interactive_poses
+    min_count: 6
+    max_count: 6
+    prim_name_prefix: dpick
+  distractors_place:
+    anchor: place
+    differ:
+    - category
+    split: seen
+    filter:
+      tags:
+      - is_container
+    min_count: 1
+    max_count: 1
+    prim_name_prefix: dplace

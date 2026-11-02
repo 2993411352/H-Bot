@@ -1,0 +1,15 @@
+{
+  "state": "completed",
+  "completion_kind": "consolidated_results",
+  "checkpoint": "/study/wangmengfan/hbot/checkpoints/pi05_hbot_full/99999",
+  "output": "/study/wangmengfan/hbot/outputs/sim/local_pi05_full_99999_merged_20261102",
+  "complete_300_episode_evaluation": true,
+  "single_uninterrupted_run": false,
+  "episodes": 300,
+  "successes": 117,
+  "source_runs_preserved": true,
+  "preview_count": 12,
+  "video_export_exit_code": 0,
+  "finished_at": "2026-11-02T15:41:25.877683+08:00",
+  "note": "Result collection completed; historical original run remains failed in history/."
+}

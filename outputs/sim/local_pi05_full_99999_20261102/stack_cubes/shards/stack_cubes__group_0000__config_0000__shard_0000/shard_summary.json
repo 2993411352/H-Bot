@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+  "run_id": "local_pi05_full_99999_parallel_20261101_191358",
+  "policy_id": "server",
+  "shard": {
+    "shard_id": "stack_cubes__group_0000__config_0000__shard_0000",
+    "task_name": "stack_cubes",
+    "task_type": "stack_cubes",
+    "group_id": "group_0000",
+    "config_index": 0,
+    "config_path": "robo_orchard_sim/benchmark/manipulation/stack_cubes/configs/stack_cubes.yaml",
+    "shard_index": 0,
+    "shard_count": 4,
+    "episode_offset": 0,
+    "episode_count": 13,
+    "seed_start": 100000,
+    "fallback_seed_start": 100050,
+    "fallback_seed_count": 26,
+    "episodes_per_scene": 1
+  },
+  "status": "ok",
+  "episodes": 13,
+  "successes": 2,
+  "success_rate": 0.15384615384615385,
+  "avg_progress": 0.3076923076923077,
+  "skipped_episodes": 0,
+  "stage_success_rate": {
+    "first_pair_stacked": 0.5384615384615384,
+    "first_three_stacked": 0.38461538461538464,
+    "full_order_stacked": 0.15384615384615385,
+    "settled_stack": 0.15384615384615385
+  },
+  "error": null,
+  "configs": [
+    {
+      "group_id": "group_0000",
+      "config_index": 0,
+      "config_path": "robo_orchard_sim/benchmark/manipulation/stack_cubes/configs/stack_cubes.yaml",
+      "eval_result_json": "/home/users/wangmengfan/outputs/sim/local_pi05_full_99999_merged_20261102/stack_cubes/shards/stack_cubes__group_0000__config_0000__shard_0000/eval_result.json",
+      "error": null
+    }
+  ]
+}

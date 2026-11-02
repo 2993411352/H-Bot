@@ -1,0 +1,39 @@
+{
+  "policy_id": "server",
+  "run_id": "local_pi05_full_99999_supplement_20261102_112239",
+  "shards": [
+    {
+      "config_index": 0,
+      "config_path": "/tmp/place_a2b_split_o1coyqha/place_a2b.yaml",
+      "episode_count": 25,
+      "episode_offset": 0,
+      "episodes_per_scene": 1,
+      "fallback_seed_count": 50,
+      "fallback_seed_start": 100050,
+      "group_id": "group_0000",
+      "seed_start": 100000,
+      "shard_count": 2,
+      "shard_id": "place_a2b__group_0000__config_0000__shard_0000",
+      "shard_index": 0,
+      "task_name": "place_a2b",
+      "task_type": "place_a2b"
+    },
+    {
+      "config_index": 0,
+      "config_path": "/tmp/place_a2b_split_o1coyqha/place_a2b.yaml",
+      "episode_count": 25,
+      "episode_offset": 25,
+      "episodes_per_scene": 1,
+      "fallback_seed_count": 50,
+      "fallback_seed_start": 100100,
+      "group_id": "group_0000",
+      "seed_start": 100025,
+      "shard_count": 2,
+      "shard_id": "place_a2b__group_0000__config_0000__shard_0001",
+      "shard_index": 1,
+      "task_name": "place_a2b",
+      "task_type": "place_a2b"
+    }
+  ],
+  "version": 2
+}

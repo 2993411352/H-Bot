@@ -1,0 +1,48 @@
+# LOCAL SIMULATION ONLY. base-experimental is not an official H-Bot baseline.
+base-experimental:
+  config_name: pi05_hbot_base_smoke
+  camera_paths:
+    ext1_camera: [observation/exterior_image_1_left]
+    wrist_camera: [observation/wrist_image_left]
+  state_path: [hbot_state]
+  prompt_path: [prompt]
+  # Official DROID uses one exterior view + wrist; do not insert ext2 into
+  # the masked second-wrist slot without a matching fine-tuned model.
+  model_hz: 15
+  sim_hz: 30
+  action_steps: 15
+
+  # Approximate normalized velocity command -> rad/s, NOT the real DROID
+  # controller calibration. Conservative gain for a communication smoke test.
+  velocity_gain_rad_s: 0.25
+  command_clip: 1.0
+  max_chunk_displacement_rad: 0.15
+  joint_limit_margin_rad: 0.01
+  urdf: models/HoloBrain_v0.5_sim/robo_orchard_sim_contest_six_tasks/urdf/franka_droid.pruned.urdf
+
+# For checkpoints from the separately prepared pi05_hbot.py LoRA trainer.
+# This profile uses ALL THREE cameras and the checkpoint's own H-Bot stats.
+# Training joint deltas are restored to absolute targets by OpenPI transforms;
+# no velocity integration is applied here.
+hbot-lora:
+  config_name: pi05_hbot_lora
+  camera_paths:
+    ext1_camera: [observation.images.ext1_camera]
+    wrist_camera: [observation.images.wrist_camera]
+    ext2_camera: [observation.images.ext2_camera]
+  state_path: [observation.state]
+  prompt_path: [prompt]
+  action_steps: 15
+
+# Full/merged non-LoRA parameter tree with the SAME H-Bot training semantics:
+# three cameras, horizon 15, 7 joint deltas + absolute gripper, own checkpoint stats.
+# This does not select the experimental DROID velocity adapter.
+hbot-full:
+  config_name: pi05_hbot_full
+  camera_paths:
+    ext1_camera: [observation.images.ext1_camera]
+    wrist_camera: [observation.images.wrist_camera]
+    ext2_camera: [observation.images.ext2_camera]
+  state_path: [observation.state]
+  prompt_path: [prompt]
+  action_steps: 15
