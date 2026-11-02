@@ -1,0 +1,3 @@
+Default empty cache seed. Optional HBOT_UV_CACHE_SEED points at a trusted local
+uv cache. It is mounted read-only and copied into a BuildKit-only cache mount;
+neither cache is included in the exported image. uv.lock remains authoritative.

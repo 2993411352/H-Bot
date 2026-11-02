@@ -1,0 +1,23 @@
+[Unit]
+Description=H-Bot pi05 LoRA 40k to 60k steps (GPU0 280W, 90C guard)
+
+[Service]
+Type=exec
+User=wangmengfan
+Group=wangmengfan
+WorkingDirectory=/study/wangmengfan/hbot
+Environment=HBOT_HOME=/study/wangmengfan/hbot
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+EnvironmentFile=/run/hbot-pi05-continue-60k/job.env
+ExecStartPre=/study/wangmengfan/hbot/openpi/.venv/bin/python /study/wangmengfan/hbot/scripts/train/supervise-pi05-continue.py --preflight --mode=${HBOT_LONGTRAIN_MODE}
+ExecStartPre=+/usr/bin/bash /run/hbot-pi05-continue-60k/power.sh start
+ExecStart=/study/wangmengfan/hbot/openpi/.venv/bin/python -u /study/wangmengfan/hbot/scripts/train/supervise-pi05-continue.py --mode=${HBOT_LONGTRAIN_MODE}
+ExecStopPost=+/usr/bin/bash /run/hbot-pi05-continue-60k/power.sh restore
+KillMode=control-group
+TimeoutStopSec=90s
+RuntimeMaxSec=20h
+Restart=no
+UMask=0002
+StandardOutput=journal
+StandardError=journal

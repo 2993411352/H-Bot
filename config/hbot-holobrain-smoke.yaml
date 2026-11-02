@@ -1,0 +1,17 @@
+# First real-model episode; hbot-local.yaml retains the full six-task run.
+evaluation_id: contest-evaluation
+team_id: contest-team
+policy:
+  model_type: server
+  model_yaml: /home/users/wangmengfan/config/local_server.yaml
+defaults:
+  asset_root: ${ORCHARD_ASSET}/OBJECTS_v2
+  splits: ${ORCHARD_ASSET}/OBJECTS_v2/splits/hbot_panda_droid_split_seen.yaml
+  episode_num: 1
+  seed: 100000
+tasks:
+  pick_color:
+    task_type: pick_attribute
+    yaml: robo_orchard_sim/benchmark/manipulation/semantic_pick/configs/pick_color.yaml
+    split_type: seen
+    max_steps: 200

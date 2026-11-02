@@ -1,0 +1,50 @@
+{
+  "datasets": [
+    "panda_droid-joint_direction-20261013",
+    "panda_droid-open_drawer-20261013",
+    "panda_droid-pick_color-20261013",
+    "panda_droid-place_a2b-20261013",
+    "panda_droid-spatial_pick-20261013",
+    "panda_droid-stack_cubes-20261013"
+  ],
+  "action_horizon": 15,
+  "episodes": 600,
+  "frames": 156867,
+  "tasks": [
+    {
+      "name": "panda_droid-joint_direction-20261013",
+      "episodes": 100,
+      "frames": 9488
+    },
+    {
+      "name": "panda_droid-open_drawer-20261013",
+      "episodes": 100,
+      "frames": 19298
+    },
+    {
+      "name": "panda_droid-pick_color-20261013",
+      "episodes": 100,
+      "frames": 13510
+    },
+    {
+      "name": "panda_droid-place_a2b-20261013",
+      "episodes": 100,
+      "frames": 27920
+    },
+    {
+      "name": "panda_droid-spatial_pick-20261013",
+      "episodes": 100,
+      "frames": 13512
+    },
+    {
+      "name": "panda_droid-stack_cubes-20261013",
+      "episodes": 100,
+      "frames": 73139
+    }
+  ],
+  "action_representation": "7 joint deltas relative to current state; absolute gripper",
+  "sampling": "uniform_frames_all_600_episodes_no_holdout",
+  "checkpoint_files_verified": 29,
+  "source": "HorizonRobotics/InstructMove-Dataset@44e8964b83fbcf7575f66dddbfc36c3a8d06ec06",
+  "norm_stats_sha256": "48fc140c4306c12e57f991a1b75df7c1ae3071a78bcda69e983950c2ed389c8d"
+}

@@ -1,0 +1,50 @@
+# Secrets and host-local identity
+.ssh/
+.gnupg/
+.gitconfig
+.config/
+.copilot/
+
+# Editors and machine-local tooling
+.vscode-server/
+.vscode/
+.nv/
+.nvidia-omniverse/
+bin/
+python/
+tools/
+
+# Reproducible caches and scratch space
+.cache/
+cache/
+tmp/
+**/__pycache__/
+*.py[cod]
+*.bak
+*.bak-*
+scripts/.backups/
+
+# Large/runtime artifacts: keep on the compute host, never in Git
+datasets/
+models/
+checkpoints/
+logs/
+outputs/
+docker/exports/
+docker/native-build-v1/
+docker/native-export-v1/
+docker/*.tar
+docker/*.tar.gz
+docker/pi05-full-sft/validation/*.log
+
+# Upstream checkouts are pinned in docs/upstreams.md; local changes are patches.
+openpi/
+robo_orchard_lab/
+robo_orchard_sim/
+
+# Machine-derived environment inventory
+config/holobrain-installed.txt
+
+# OS noise
+.DS_Store
+Thumbs.db

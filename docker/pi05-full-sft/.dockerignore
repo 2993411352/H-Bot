@@ -1,0 +1,15 @@
+*
+!Dockerfile
+!vendor/
+!vendor/**
+!resources/
+!resources/**
+!assets/
+!assets/**
+!scripts/
+!scripts/**
+!tests/
+!tests/**
+!PROVENANCE.json
+**/__pycache__
+**/*.pyc

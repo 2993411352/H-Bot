@@ -1,0 +1,16 @@
+# PERFORMANCE PROBE ONLY: one full-length episode; not a benchmark score.
+evaluation_id: local-performance-probe
+team_id: contest-team
+policy:
+  model_type: server
+  model_yaml: /home/users/wangmengfan/config/local_server_pi05.yaml
+defaults:
+  asset_root: ${ORCHARD_ASSET}/OBJECTS_v2
+  splits: ${ORCHARD_ASSET}/OBJECTS_v2/splits/hbot_panda_droid_split_seen.yaml
+  episode_num: 1
+  seed: 100000
+tasks:
+  stack_cubes:
+    task_type: stack_cubes
+    yaml: robo_orchard_sim/benchmark/manipulation/stack_cubes/configs/stack_cubes.yaml
+    max_steps: 900

@@ -1,0 +1,2 @@
+# PyPI does not publish a compatible Linux PyTorch3D wheel: build official source.
+pytorch3d @ git+https://github.com/facebookresearch/pytorch3d.git@33824be3cbc87a7dd1db0f6a9a9de9ac81b2d0ba

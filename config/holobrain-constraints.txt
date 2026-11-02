@@ -1,0 +1,10 @@
+# Project-local tested HoloBrain 0.5 dependencies.
+torch==2.8.0
+torchvision==0.23.0
+transformers==5.10.2
+numpy==1.26.4
+# PyArrow 21 supports NumPy 1 and the installed datasets 5.0.1.
+pyarrow==21.0.0
+nvidia-ml-py==12.570.172
+opencv-python==4.11.0.86
+setuptools>=77.0.3,<80

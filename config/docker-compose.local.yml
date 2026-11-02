@@ -1,0 +1,5 @@
+# Runtime-only index overlay: downloaded asset index remains unmodified.
+services:
+  robo-orchard-sim:
+    volumes:
+      - /study/wangmengfan/hbot/cache/sim-asset-index:/assets/OBJECTS_v2/asset_indexes:rw

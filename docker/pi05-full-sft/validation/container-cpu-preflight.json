@@ -1,0 +1,92 @@
+{
+  "status": "CPU_PREFLIGHT_PASSED",
+  "versions": {
+    "jax": "0.5.3",
+    "jaxlib": "0.5.3",
+    "flax": "0.10.2",
+    "torch": "2.7.1",
+    "pyarrow": "20.0.0",
+    "av": "17.0.0",
+    "polars": "1.30.0",
+    "orbax-checkpoint": "0.11.13",
+    "lerobot": "0.1.0"
+  },
+  "total_parameters": 3353433872,
+  "trainable_parameters": 3353433872,
+  "frozen_parameters": 0,
+  "lora_parameters": 0,
+  "parameter_tensors": 51,
+  "ema_enabled": false,
+  "input_fingerprint": "832cf969e77d33402ae5d05f9e511e7b9a4ec8ee7e15fb5da93e10a32e05d4ea",
+  "files": 2483,
+  "manifest_sha256": "b347af8e739958286a81be0d41fccc75c55ed30f37e376de9132b3b9572c279a",
+  "frames": 156867,
+  "episodes": 600,
+  "samples": [
+    {
+      "dataset": "panda_droid-joint_direction-20261013",
+      "index": 0,
+      "prompt": "open the door of the microwave oven"
+    },
+    {
+      "dataset": "panda_droid-joint_direction-20261013",
+      "index": 9487,
+      "prompt": "close the door of the oven"
+    },
+    {
+      "dataset": "panda_droid-open_drawer-20261013",
+      "index": 0,
+      "prompt": "open the top drawer of the cabinet"
+    },
+    {
+      "dataset": "panda_droid-open_drawer-20261013",
+      "index": 19297,
+      "prompt": "open the lower-middle drawer of the cabinet"
+    },
+    {
+      "dataset": "panda_droid-pick_color-20261013",
+      "index": 0,
+      "prompt": "Take white charging head."
+    },
+    {
+      "dataset": "panda_droid-pick_color-20261013",
+      "index": 13509,
+      "prompt": "Lift the gray tv remote."
+    },
+    {
+      "dataset": "panda_droid-place_a2b-20261013",
+      "index": 0,
+      "prompt": "Pick bottle opener and place in bowl."
+    },
+    {
+      "dataset": "panda_droid-place_a2b-20261013",
+      "index": 27919,
+      "prompt": "Pick tomato and release it into basket."
+    },
+    {
+      "dataset": "panda_droid-spatial_pick-20261013",
+      "index": 0,
+      "prompt": "Pick up the ballpoint pen behind the spice jar."
+    },
+    {
+      "dataset": "panda_droid-spatial_pick-20261013",
+      "index": 13511,
+      "prompt": "Pick up the scotch tape to the right of the beverage bottle."
+    },
+    {
+      "dataset": "panda_droid-stack_cubes-20261013",
+      "index": 0,
+      "prompt": "Stack the cubes bottom-to-top: red, yellow, lime, cyan."
+    },
+    {
+      "dataset": "panda_droid-stack_cubes-20261013",
+      "index": 73138,
+      "prompt": "Stack the cubes bottom-to-top: green, orange, purple, yellow."
+    }
+  ],
+  "norm_sha256": "48fc140c4306c12e57f991a1b75df7c1ae3071a78bcda69e983950c2ed389c8d",
+  "validation_split": "none",
+  "checked_at": 1793188294.7547274,
+  "trainer_sha256": "7e33d924ba439537ebc9fb6f401ae06a4ccac8744f0ce368a227a092bd71be62",
+  "adapter_sha256": "a33869642850d4725571dba18333c8abc20118f0ee0ca180bfb8830cb365ed8a"
+}

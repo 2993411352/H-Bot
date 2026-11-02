@@ -1,0 +1,317 @@
+diff --git a/examples/manipulation-app/scripts/eval_policy.py b/examples/manipulation-app/scripts/eval_policy.py
+index 65a6e7d..51e3ac8 100644
+--- a/examples/manipulation-app/scripts/eval_policy.py
++++ b/examples/manipulation-app/scripts/eval_policy.py
+@@ -1209,7 +1209,10 @@ def _write_summary(
+                 "model_type": eval_cfg.policy.model_type,
+                 "model_yaml": str(_resolve_model_yaml(eval_cfg.policy)),
+             },
+-            "execution": {"gpus": list(execution.gpus)},
++            "execution": {
++                "gpus": list(execution.gpus),
++                "workers_per_gpu": execution.workers_per_gpu,
++            },
+             **distributed.to_payload(),
+             "elapsed_seconds": round(time.time() - started_at, 2),
+         },
+@@ -1298,7 +1301,10 @@ def _dispatch_work_items(
+         allocate_task_shards,
+     )
+ 
+-    execution = EvaluationExecutionConfig(gpus=tuple(gpus))
++    execution = EvaluationExecutionConfig(
++        gpus=tuple(gpus),
++        workers_per_gpu=int(os.environ.get("HBOT_SIM_WORKERS_PER_GPU", "1")),
++    )
+     plans = [_build_plan(task) for task in eval_cfg.tasks]
+     shard_counts = allocate_task_shards(
+         [
+@@ -1313,7 +1319,7 @@ def _dispatch_work_items(
+             )
+             for task, plan in zip(eval_cfg.tasks, plans, strict=True)
+         ],
+-        len(gpus),
++        len(execution.gpu_slots()),
+     )
+     task_manifests = {}
+     jobs = []
+diff --git a/robo_orchard_sim/pipeline/evaluator/distributed/scheduling.py b/robo_orchard_sim/pipeline/evaluator/distributed/scheduling.py
+index 8842f62..c747826 100644
+--- a/robo_orchard_sim/pipeline/evaluator/distributed/scheduling.py
++++ b/robo_orchard_sim/pipeline/evaluator/distributed/scheduling.py
+@@ -25,16 +25,22 @@ class EvaluationExecutionConfig:
+     """Map evaluator work items onto the configured GPU worker slots."""
+ 
+     gpus: tuple[str, ...]
++    workers_per_gpu: int = 1
+ 
+     def __post_init__(self) -> None:
+         if not self.gpus:
+             raise ValueError("at least one evaluator GPU is required")
+         if len(set(self.gpus)) != len(self.gpus):
+             raise ValueError("evaluator GPUs must be unique")
++        if (
++            type(self.workers_per_gpu) is not int
++            or not 1 <= self.workers_per_gpu <= 4
++        ):
++            raise ValueError("workers_per_gpu must be an integer from 1 to 4")
+ 
+     def gpu_slots(self) -> tuple[str, ...]:
+         """Return one GPU id for every available worker process slot."""
+-        return self.gpus
++        return self.gpus * self.workers_per_gpu
+ 
+     def concurrency(self, work_item_count: int) -> int:
+         """Return the number of work items that may execute concurrently."""
+diff --git a/robo_orchard_sim/pipeline/evaluator/evaluator.py b/robo_orchard_sim/pipeline/evaluator/evaluator.py
+index a121c27..23f0d8d 100644
+--- a/robo_orchard_sim/pipeline/evaluator/evaluator.py
++++ b/robo_orchard_sim/pipeline/evaluator/evaluator.py
+@@ -168,11 +168,16 @@ def evaluation_runtime(
+     the process (stage-transition deadlock plus the launcher watchdog), so any
+     result that must survive has to be written inside the block.
+     """
++    from robo_orchard_sim.pipeline.evaluator.performance import (
++        launcher_overrides,
++    )
++
+     launch = launch or LaunchConfig()
+     launcher = _create_launcher(
+         headless=launch.headless,
+         enable_cameras=launch.enable_cameras,
+         virtual_display=launch.virtual_display,
++        **launcher_overrides(os.environ),
+     )
+     try:
+         yield EvaluationRuntime(sim_app=launcher.app)
+diff --git a/robo_orchard_sim/pipeline/evaluator/execution.py b/robo_orchard_sim/pipeline/evaluator/execution.py
+index 6537579..fd2f732 100644
+--- a/robo_orchard_sim/pipeline/evaluator/execution.py
++++ b/robo_orchard_sim/pipeline/evaluator/execution.py
+@@ -30,6 +30,8 @@ from dataclasses import asdict
+ from pathlib import Path
+ from typing import TYPE_CHECKING, Any
+ 
++from robo_orchard_sim.pipeline.evaluator.performance import evaluation_profile
++
+ if TYPE_CHECKING:
+     from robo_orchard_sim.pipeline.evaluator.distributed import (
+         EvaluationManifest,
+@@ -128,7 +130,7 @@ def run_shard(
+         )
+ 
+     # Persist before closing Isaac: its shutdown watchdog can force-exit.
+-    with evaluation_runtime() as runtime:
++    with evaluation_runtime() as runtime, evaluation_profile(shard_out):
+         policy = None
+         try:
+             configured = create_policy_from_model_cfg(policy_config)
+diff --git a/robo_orchard_sim/pipeline/evaluator/performance.py b/robo_orchard_sim/pipeline/evaluator/performance.py
+new file mode 100644
+index 0000000..98b768c
+--- /dev/null
++++ b/robo_orchard_sim/pipeline/evaluator/performance.py
+@@ -0,0 +1,203 @@
++# Project RoboOrchard
++#
++# Copyright (c) 2026 Horizon Robotics. All Rights Reserved.
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#       http://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
++# implied. See the License for the specific language governing
++# permissions and limitations under the License.
++"""Opt-in wall-clock profiling; does not change simulation or policy logic."""
++
++from __future__ import annotations
++
++import functools
++import json
++import os
++import time
++from contextlib import contextmanager
++from pathlib import Path
++
++
++def launcher_overrides(environ):
++    """Opt-in per-process thread tuning, without host governor changes."""
++    value = environ.get("HBOT_SIM_CPU_THREADS")
++    if value is None:
++        return {}
++    threads = int(value)
++    if not 1 <= threads <= 32:
++        raise ValueError("HBOT_SIM_CPU_THREADS must be between 1 and 32")
++    return {"kit_args": " ".join((
++        f"--/plugins/carb.tasking.plugin/threadCount={threads}",
++        f"--/plugins/omni.tbb.globalcontrol/maxThreadCount={threads}",
++        f"--/persistent/physics/numThreads={threads}",
++    ))}
++
++
++class WallProfile:
++    """Collect inclusive elapsed time without forcing CUDA synchronization."""
++
++    def __init__(self, output: Path):
++        self.output = output
++        self.started = time.perf_counter()
++        self.metrics = {}
++        self.episodes = []
++        self.originals = []
++        self.runtime = {}
++        self.instrumented = set()
++
++    def instrument_environment(self, env):
++        """Time public manager operations without altering their outputs."""
++        for instance, method, label in (
++            (env.action_manager, "apply", "action.apply"),
++            (env.scene, "write_data_to_sim", "scene.write"),
++            (env.scene, "update", "scene.update"),
++            (env.event_manager, "notify", "events.notify"),
++            (env.observation_manager, "get_observations", "observations"),
++            (env.record_manager, "record_step", "record.step"),
++        ):
++            identity = (type(instance), method)
++            if identity not in self.instrumented:
++                self.instrumented.add(identity)
++                self.wrap(type(instance), method, label)
++
++    def summary(self):
++        return {
++            "wall_seconds": time.perf_counter() - self.started,
++            "note": "Inclusive wall times overlap; do not sum nested metrics.",
++            "settings": {
++                k: os.environ.get(k)
++                for k in (
++                    "HBOT_SIM_CPU_THREADS", "HBOT_EVAL_DEEP_PROFILE",
++                    "HBOT_SIM_WORKERS_PER_GPU", "CUDA_VISIBLE_DEVICES",
++                )
++            },
++            "metrics": self.metrics,
++            "episodes": self.episodes,
++            "runtime": self.runtime,
++        }
++
++    def flush(self):
++        payload = self.summary()
++        temporary = self.output.with_suffix(".tmp")
++        temporary.write_text(json.dumps(payload, indent=2) + "\n")
++        os.replace(temporary, self.output)
++        print("[hbot-perf] " + json.dumps({
++            "wall_seconds": round(payload["wall_seconds"], 3),
++            "metrics": self.metrics,
++        }), flush=True)
++
++    def wrap(self, owner, method, label, *, episode=False):
++        original = getattr(owner, method)
++        self.originals.append((owner, method, original))
++
++        @functools.wraps(original)
++        def timed(*args, **kwargs):
++            if (
++                label == "prepare_episode"
++                and os.environ.get("HBOT_EVAL_DEEP_PROFILE") == "1"
++            ):
++                env = kwargs["env"] if "env" in kwargs else args[1]
++                self.instrument_environment(env)
++            before = {
++                k: dict(v) for k, v in self.metrics.items()
++            } if episode else None
++            started = time.perf_counter()
++            result = None
++            completed = False
++            try:
++                result = original(*args, **kwargs)
++                completed = True
++                return result
++            finally:
++                elapsed = time.perf_counter() - started
++                metric = self.metrics.setdefault(label, {
++                    "count": 0, "seconds": 0.0, "max_seconds": 0.0,
++                })
++                metric["count"] += 1
++                metric["seconds"] += elapsed
++                metric["max_seconds"] = max(metric["max_seconds"], elapsed)
++                if episode:
++                    delta = {
++                        k: {
++                            "count": v["count"]
++                            - before.get(k, {}).get("count", 0),
++                            "seconds": v["seconds"]
++                            - before.get(k, {}).get("seconds", 0.0),
++                        }
++                        for k, v in self.metrics.items()
++                    }
++                    self.episodes.append({
++                        "completed": completed,
++                        "steps": result[0] if completed else None,
++                        "stop_reason": result[1] if completed else None,
++                        "seconds": elapsed,
++                        "metrics": delta,
++                    })
++                    self.flush()
++                elif label == "env.step" and metric["count"] % 50 == 0:
++                    self.flush()
++
++        setattr(owner, method, timed)
++
++    def restore(self):
++        for owner, method, original in reversed(self.originals):
++            setattr(owner, method, original)
++
++
++@contextmanager
++def evaluation_profile(directory: Path):
++    """Install profiling only inside the opted-in Isaac worker lifetime."""
++    if os.environ.get("HBOT_EVAL_PROFILE") != "1":
++        yield
++        return
++
++    import carb
++    import torch
++
++    from robo_orchard_sim.ext.envs.manager_based_env import (
++        IsaacManagerBasedEnv,
++    )
++    from robo_orchard_sim.ext.sim.context import SimulationContext
++    from robo_orchard_sim.pipeline.evaluator.evaluator import Evaluator
++    from robo_orchard_sim.policy.server import PolicyClient, ServerPolicy
++    from robo_orchard_sim.task_components.validators.base import Validator
++
++    profile = WallProfile(directory / "performance.json")
++    settings = carb.settings.get_settings()
++    profile.runtime = {
++        "cpu_affinity": sorted(os.sched_getaffinity(0)),
++        "torch_threads": torch.get_num_threads(),
++        "carb_threads": settings.get(
++            "/plugins/carb.tasking.plugin/threadCount"
++        ),
++        "tbb_threads": settings.get(
++            "/plugins/omni.tbb.globalcontrol/maxThreadCount"
++        ),
++        "physics_threads": settings.get("/persistent/physics/numThreads"),
++        "viewport_active": settings.get("/isaaclab/render/active_viewport"),
++    }
++    try:
++        for owner, method, label in (
++            (IsaacManagerBasedEnv, "step", "env.step"),
++            (IsaacManagerBasedEnv, "reset", "env.reset"),
++            (SimulationContext, "step", "physics.step"),
++            (SimulationContext, "render", "render"),
++            (Evaluator, "_prepare_episode", "prepare_episode"),
++            (Evaluator, "_build_policy_input", "policy_input"),
++            (ServerPolicy, "act", "policy.act"),
++            (PolicyClient, "request_action_sequence", "model_request"),
++            (Validator, "evaluate", "validator"),
++        ):
++            profile.wrap(owner, method, label)
++        profile.wrap(Evaluator, "_step_episode", "episode_loop", episode=True)
++        yield
++    finally:
++        profile.restore()
++        profile.flush()

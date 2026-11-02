@@ -1,0 +1,12 @@
+FROM horizonrobotics/robo_orchard_sim:ubuntu22.04-py3.11-cuda12.8-isaacsim5.1-isaac_lab-v2.3.2-v0.1
+
+USER root
+COPY . /opt/robo_orchard_sim
+WORKDIR /opt/robo_orchard_sim
+
+RUN python3 -m pip install --no-cache-dir --no-build-isolation . \
+    && python3 -m pip install --no-cache-dir --no-deps \
+        -r scm/install_constraints.txt \
+    && python3 -c "from importlib.metadata import version; import robo_orchard_core; import robo_orchard_schemas; import robo_orchard_sim; print('robo_orchard_sim=' + version('robo_orchard_sim')); print('robo_orchard_core=' + version('robo_orchard_core')); print('robo_orchard_schemas=' + version('robo_orchard_schemas'))"
+
+USER 1115021724:1115021724

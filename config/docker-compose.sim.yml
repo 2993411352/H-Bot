@@ -1,0 +1,37 @@
+services:
+  robo-orchard-sim:
+    image: hbot/robo_orchard_sim:track1-f2e041e
+    network_mode: host
+    ipc: host
+    shm_size: 16gb
+    runtime: nvidia
+    cap_add:
+      - ALL
+    stdin_open: true
+    tty: true
+    user: "${HBOT_UID:-1013}:${HBOT_GID:-1013}"
+    environment:
+      ACCEPT_EULA: "Y"
+      PRIVACY_CONSENT: "Y"
+      OMNI_KIT_ACCEPT_EULA: "YES"
+      HOME: /home/users/wangmengfan
+      ORCHARD_ASSET: /assets
+      ASSETS_DIR: /assets/OBJECTS_v2
+      NV_ASSET_ROOT_DIR: /assets/NVIDIA/Assets/Isaac/4.1
+      NVIDIA_VISIBLE_DEVICES: "${HBOT_SIM_GPU:-0}"
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility,graphics,video,display,ngx
+      # Use NVIDIA EGL for offscreen rendering on this headless host.
+      VK_ICD_FILENAMES: /etc/vulkan/icd.d/nvidia_headless.json
+      __EGL_VENDOR_LIBRARY_FILENAMES: /etc/vulkan/icd.d/nvidia_headless.json
+      XDG_RUNTIME_DIR: /home/users/wangmengfan/tmp/xdg-runtime
+    volumes:
+      # Host NVIDIA manifests live under /usr/share, not /etc.
+      - /usr/share/vulkan/icd.d/nvidia_icd.json:/etc/vulkan/icd.d/nvidia_icd.json:ro
+      - /usr/share/vulkan/implicit_layer.d/nvidia_layers.json:/etc/vulkan/implicit_layer.d/nvidia_layers.json:ro
+      - /study/wangmengfan/hbot/config/nvidia-egl-icd.json:/etc/vulkan/icd.d/nvidia_headless.json:ro
+      # Headless camera rendering does not require a desktop/X11 socket.
+      - /study/wangmengfan/hbot:/home/users/wangmengfan:rw
+      - /study/wangmengfan/hbot/cache/isaac:/home/linuxbrew/.cache:rw
+      - /study/wangmengfan/hbot/datasets/robo_orchard_sim_assets:/assets:rw
+    working_dir: /home/users/wangmengfan/robo_orchard_sim
+

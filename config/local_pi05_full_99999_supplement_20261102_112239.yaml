@@ -1,0 +1,29 @@
+evaluation_id: local-pi05-parallel
+team_id: contest-team
+policy:
+  model_type: server
+  model_yaml: /home/users/wangmengfan/config/local_pi05_full_99999_supplement_20261102_112239-client.yaml
+defaults:
+  asset_root: ${ORCHARD_ASSET}/OBJECTS_v2
+  splits: ${ORCHARD_ASSET}/OBJECTS_v2/splits/hbot_panda_droid_split_seen.yaml
+  episode_num: 50
+  seed: 100000
+tasks:
+  pick_color:
+    task_type: pick_attribute
+    yaml: robo_orchard_sim/benchmark/manipulation/semantic_pick/configs/pick_color.yaml
+    split_type: seen
+    max_steps: 200
+  pick_spatial:
+    task_type: spatial_directions
+    yaml: robo_orchard_sim/benchmark/manipulation/spatial_relation/configs/spatial_directions.yaml
+    split_type: seen
+    max_steps: 200
+    swap:
+      enabled: true
+  place_a2b:
+    task_type: place_a2b
+    yaml: robo_orchard_sim/benchmark/manipulation/place_a2b/configs/place_a2b.yaml
+    split_type: seen
+    max_steps: 300
+    shards: 2

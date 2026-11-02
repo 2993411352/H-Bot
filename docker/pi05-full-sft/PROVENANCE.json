@@ -1,0 +1,23 @@
+{
+  "package": "hbot-pi05-full-sft-a800-v2",
+  "default_training_steps": 100000,
+  "default_batch_size_candidate": 16,
+  "gradient_accumulation": false,
+  "capacity_gate": "Matching batch/GPU type/code/inputs/schedule 20-step smoke must pass before long training",
+  "created_date": "2026-10-28",
+  "openpi_repo": "https://github.com/Physical-Intelligence/openpi",
+  "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "openpi_uv_lock_sha256": "793488b5a55bb87200db90a61fd0af51922b686d94e1da4f4c587ab119b37d74",
+  "openpi_source_changes": "none; model/data adapter and launcher live outside the official source tree",
+  "lerobot_commit": "0cf864870cf29f4738d3ade893e6fd13fbd7cdb5",
+  "python": "3.11.17",
+  "uv": "0.13.5",
+  "dataset_revision": "44e8964b83fbcf7575f66dddbfc36c3a8d06ec06",
+  "adapter_origin_sha256": "328eaad8755d620335a25fb596c2fa980d86e6be5de35f4b193044e1d6a5e449",
+  "norm_stats_sha256": "48fc140c4306c12e57f991a1b75df7c1ae3071a78bcda69e983950c2ed389c8d",
+  "tokenizer_source": "gs://big_vision/paligemma_tokenizer.model",
+  "tokenizer_sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6",
+  "precision_note": "Official JAX mixed precision: bf16 compute; trainable master parameters and Adam states are not all bf16.",
+  "training_scope": "All model parameters, including vision, language, action expert and projections. No LoRA, no EMA.",
+  "sampling": "uniform frames over all 600 episodes; no validation split; horizon=15; current-state joint deltas plus absolute gripper"
+}

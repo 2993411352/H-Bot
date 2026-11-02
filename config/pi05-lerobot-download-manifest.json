@@ -1,0 +1,258 @@
+{
+  "created_at": "2026-10-27T07:46:38.269390+00:00",
+  "jobs": [
+    {
+      "name": "lerobot",
+      "destination": "/study/wangmengfan/hbot/datasets/InstructMove_hbot/lerobot",
+      "source": "HorizonRobotics/InstructMove-Dataset@44e8964b83fbcf7575f66dddbfc36c3a8d06ec06",
+      "files": [
+        {
+          "path": "panda_droid-joint_direction-20261013.zip",
+          "size": 210788514,
+          "sha256": "1477b3ef735716cd374f2e748113e785f8bed766595a6ed9aecb9de086aacf6b",
+          "url": "https://huggingface.co/datasets/HorizonRobotics/InstructMove-Dataset/resolve/44e8964b83fbcf7575f66dddbfc36c3a8d06ec06/horizon_isaac/lerobot/panda_droid-joint_direction-20261013.zip"
+        },
+        {
+          "path": "panda_droid-pick_color-20261013.zip",
+          "size": 241441691,
+          "sha256": "ec0e5ea05d9ec1c9d380eba0f606f7b22a6c5b6efdd8c3ab454609e7643444af",
+          "url": "https://huggingface.co/datasets/HorizonRobotics/InstructMove-Dataset/resolve/44e8964b83fbcf7575f66dddbfc36c3a8d06ec06/horizon_isaac/lerobot/panda_droid-pick_color-20261013.zip"
+        },
+        {
+          "path": "panda_droid-spatial_pick-20261013.zip",
+          "size": 248625533,
+          "sha256": "9e965e0d1885c5976c0bb12548bc0f4b1a226fd2b1fa92d95eefa359164e3af0",
+          "url": "https://huggingface.co/datasets/HorizonRobotics/InstructMove-Dataset/resolve/44e8964b83fbcf7575f66dddbfc36c3a8d06ec06/horizon_isaac/lerobot/panda_droid-spatial_pick-20261013.zip"
+        },
+        {
+          "path": "panda_droid-open_drawer-20261013.zip",
+          "size": 416348268,
+          "sha256": "48f799cfc8a0bea6962e421fa45fe94ca7cd180db4110e461d125c268aefbcce",
+          "url": "https://huggingface.co/datasets/HorizonRobotics/InstructMove-Dataset/resolve/44e8964b83fbcf7575f66dddbfc36c3a8d06ec06/horizon_isaac/lerobot/panda_droid-open_drawer-20261013.zip"
+        },
+        {
+          "path": "panda_droid-place_a2b-20261013.zip",
+          "size": 640458129,
+          "sha256": "eed629e16c21f6dc3e55ce52a0af13bfca7ccab62a25f30dcb23cb911e2255d1",
+          "url": "https://huggingface.co/datasets/HorizonRobotics/InstructMove-Dataset/resolve/44e8964b83fbcf7575f66dddbfc36c3a8d06ec06/horizon_isaac/lerobot/panda_droid-place_a2b-20261013.zip"
+        },
+        {
+          "path": "panda_droid-stack_cubes-20261013.zip",
+          "size": 1241781703,
+          "sha256": "1d7be745b1361e68c01c4875f2544d2c86783721b31b2274069174ef28059d11",
+          "url": "https://huggingface.co/datasets/HorizonRobotics/InstructMove-Dataset/resolve/44e8964b83fbcf7575f66dddbfc36c3a8d06ec06/horizon_isaac/lerobot/panda_droid-stack_cubes-20261013.zip"
+        }
+      ]
+    },
+    {
+      "name": "pi05",
+      "destination": "/study/wangmengfan/hbot/models/pi05_base",
+      "source": "gs://openpi-assets/checkpoints/pi05_base",
+      "files": [
+        {
+          "path": "params/commit_success.txt",
+          "size": 0,
+          "crc32c": "AAAAAA==",
+          "generation": "1757354310089792",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Fcommit_success.txt?alt=media&generation=1757354310089792"
+        },
+        {
+          "path": "params/manifest.ocdbt",
+          "size": 117,
+          "crc32c": "SGdLxw==",
+          "generation": "1757354310086335",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Fmanifest.ocdbt?alt=media&generation=1757354310086335"
+        },
+        {
+          "path": "params/_CHECKPOINT_METADATA",
+          "size": 258,
+          "crc32c": "3q5lUQ==",
+          "generation": "1757354310086279",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2F_CHECKPOINT_METADATA?alt=media&generation=1757354310086279"
+        },
+        {
+          "path": "params/ocdbt.process_0/manifest.ocdbt",
+          "size": 458,
+          "crc32c": "SGdLxw==",
+          "generation": "1757354310097331",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fmanifest.ocdbt?alt=media&generation=1757354310097331"
+        },
+        {
+          "path": "params/ocdbt.process_0/d/828bee85475e37c61e1cc19e32d1c5ef",
+          "size": 929,
+          "crc32c": "SGdLxw==",
+          "generation": "1757354310090811",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2F828bee85475e37c61e1cc19e32d1c5ef?alt=media&generation=1757354310090811"
+        },
+        {
+          "path": "assets/ur5e/norm_stats.json",
+          "size": 1851,
+          "crc32c": "o9bKwg==",
+          "generation": "1757354310089361",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fassets%2Fur5e%2Fnorm_stats.json?alt=media&generation=1757354310089361"
+        },
+        {
+          "path": "assets/droid/norm_stats.json",
+          "size": 2062,
+          "crc32c": "sr4eWw==",
+          "generation": "1757354310090122",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fassets%2Fdroid%2Fnorm_stats.json?alt=media&generation=1757354310090122"
+        },
+        {
+          "path": "assets/franka/norm_stats.json",
+          "size": 2081,
+          "crc32c": "LDm8qg==",
+          "generation": "1757354310090331",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fassets%2Ffranka%2Fnorm_stats.json?alt=media&generation=1757354310090331"
+        },
+        {
+          "path": "params/d/1c4302d2d2000b5f3eb4fa1350fdef9a",
+          "size": 2132,
+          "crc32c": "SGdLxw==",
+          "generation": "1757354310119002",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Fd%2F1c4302d2d2000b5f3eb4fa1350fdef9a?alt=media&generation=1757354310119002"
+        },
+        {
+          "path": "assets/trossen/norm_stats.json",
+          "size": 3394,
+          "crc32c": "ej6a+A==",
+          "generation": "1757354310095901",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fassets%2Ftrossen%2Fnorm_stats.json?alt=media&generation=1757354310095901"
+        },
+        {
+          "path": "assets/ur5e_dual/norm_stats.json",
+          "size": 3459,
+          "crc32c": "X5QwQA==",
+          "generation": "1757354310089903",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fassets%2Fur5e_dual%2Fnorm_stats.json?alt=media&generation=1757354310089903"
+        },
+        {
+          "path": "assets/arx/norm_stats.json",
+          "size": 3476,
+          "crc32c": "6nyXHA==",
+          "generation": "1757354310096104",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fassets%2Farx%2Fnorm_stats.json?alt=media&generation=1757354310096104"
+        },
+        {
+          "path": "assets/arx_mobile/norm_stats.json",
+          "size": 3677,
+          "crc32c": "3XZHoA==",
+          "generation": "1757354310086315",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fassets%2Farx_mobile%2Fnorm_stats.json?alt=media&generation=1757354310086315"
+        },
+        {
+          "path": "assets/trossen_mobile/norm_stats.json",
+          "size": 3699,
+          "crc32c": "l2F3EA==",
+          "generation": "1757354310090749",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fassets%2Ftrossen_mobile%2Fnorm_stats.json?alt=media&generation=1757354310090749"
+        },
+        {
+          "path": "assets/fibocom_mobile/norm_stats.json",
+          "size": 3951,
+          "crc32c": "Fh5IlA==",
+          "generation": "1757354310088094",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fassets%2Ffibocom_mobile%2Fnorm_stats.json?alt=media&generation=1757354310088094"
+        },
+        {
+          "path": "params/array_metadatas/process_0",
+          "size": 8856,
+          "crc32c": "CS/yRg==",
+          "generation": "1757354310090622",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Farray_metadatas%2Fprocess_0?alt=media&generation=1757354310090622"
+        },
+        {
+          "path": "params/_sharding",
+          "size": 11420,
+          "crc32c": "4PKBJg==",
+          "generation": "1757354310089508",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2F_sharding?alt=media&generation=1757354310089508"
+        },
+        {
+          "path": "params/_METADATA",
+          "size": 21402,
+          "crc32c": "frXw2w==",
+          "generation": "1757354310086139",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2F_METADATA?alt=media&generation=1757354310086139"
+        },
+        {
+          "path": "params/ocdbt.process_0/d/7d78f38c5d8be1eea31406644dde9bd6",
+          "size": 133821,
+          "crc32c": "3ljcDg==",
+          "generation": "1757354310097613",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2F7d78f38c5d8be1eea31406644dde9bd6?alt=media&generation=1757354310097613"
+        },
+        {
+          "path": "params/ocdbt.process_0/d/73bbae8a4deba6498bf07d96b215a574",
+          "size": 2935855,
+          "crc32c": "2IEHcA==",
+          "generation": "1757354310087457",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2F73bbae8a4deba6498bf07d96b215a574?alt=media&generation=1757354310087457"
+        },
+        {
+          "path": "params/ocdbt.process_0/d/caf01a82962cbd4651563d2ac1063e0b",
+          "size": 27445152,
+          "crc32c": "Yosa6g==",
+          "generation": "1757354310098105",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2Fcaf01a82962cbd4651563d2ac1063e0b?alt=media&generation=1757354310098105"
+        },
+        {
+          "path": "params/ocdbt.process_0/d/247d4b7c814d8b1a23fa8a20f36a88f7",
+          "size": 34945019,
+          "crc32c": "ceM1dg==",
+          "generation": "1757354310092980",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2F247d4b7c814d8b1a23fa8a20f36a88f7?alt=media&generation=1757354310092980"
+        },
+        {
+          "path": "params/ocdbt.process_0/d/35a545f74995e511808d4f94dfbef3b6",
+          "size": 70041571,
+          "crc32c": "Iq8YUA==",
+          "generation": "1757354310090576",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2F35a545f74995e511808d4f94dfbef3b6?alt=media&generation=1757354310090576"
+        },
+        {
+          "path": "params/ocdbt.process_0/d/b4349aaadb7dfa45c3a53fc67c04b8f6",
+          "size": 1120156687,
+          "crc32c": "FlwBrA==",
+          "generation": "1757354310188883",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2Fb4349aaadb7dfa45c3a53fc67c04b8f6?alt=media&generation=1757354310188883"
+        },
+        {
+          "path": "params/ocdbt.process_0/d/ec484cf8f02dcf59e1892180f0862e40",
+          "size": 1234292390,
+          "crc32c": "TP2sFA==",
+          "generation": "1757354310192419",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2Fec484cf8f02dcf59e1892180f0862e40?alt=media&generation=1757354310192419"
+        },
+        {
+          "path": "params/ocdbt.process_0/d/7bc9d3296d23a6fb83a6b3778ac6e964",
+          "size": 2240315383,
+          "crc32c": "R6AiOQ==",
+          "generation": "1757354310232242",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2F7bc9d3296d23a6fb83a6b3778ac6e964?alt=media&generation=1757354310232242"
+        },
+        {
+          "path": "params/ocdbt.process_0/d/0832cad6c37f82d4eedd897dcbb8da9d",
+          "size": 2240590484,
+          "crc32c": "4YAIHA==",
+          "generation": "1757354310220587",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2F0832cad6c37f82d4eedd897dcbb8da9d?alt=media&generation=1757354310220587"
+        },
+        {
+          "path": "params/ocdbt.process_0/d/deefd3c43390a50472cbcd317b0fff58",
+          "size": 2393670849,
+          "crc32c": "JyiHIA==",
+          "generation": "1757354310196805",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2Fdeefd3c43390a50472cbcd317b0fff58?alt=media&generation=1757354310196805"
+        },
+        {
+          "path": "params/ocdbt.process_0/d/8c5d7070ea57bdce2f0a19f95b8a21b4",
+          "size": 3077149148,
+          "crc32c": "gQSvJQ==",
+          "generation": "1757354310234847",
+          "url": "https://storage.googleapis.com/download/storage/v1/b/openpi-assets/o/checkpoints%2Fpi05_base%2Fparams%2Focdbt.process_0%2Fd%2F8c5d7070ea57bdce2f0a19f95b8a21b4?alt=media&generation=1757354310234847"
+        }
+      ]
+    }
+  ]
+}
