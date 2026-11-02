@@ -97,6 +97,9 @@ def main():
         raise RuntimeError('hbot-sim-b32-20000 not running')
     if json.loads(sp.check_output(['docker', 'exec', 'hbot-sim-b32-20000', 'python3', controller, 'status'], text=True, timeout=30)):
         raise RuntimeError('Other evaluation active')
+    if json.loads(sp.check_output(['docker', 'exec', 'hbot-sim', 'python3',
+        str(INSIDE / 'scripts/hbot-eval-control.py'), 'status'], text=True, timeout=30)):
+        raise RuntimeError('Other evaluation active in the original container')
     with socket.socket() as probe:
         probe.bind(('127.0.0.1', 8766))
     for p in (output, config, model_yaml, client_yaml, server_log, eval_log, state_path):

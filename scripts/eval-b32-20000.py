@@ -1,6 +1,7 @@
 """Run-local heterogeneous slot adapter; original workers stay unmodified."""
 import importlib.util
 import json
+import os
 from pathlib import Path
 import sys
 
@@ -70,10 +71,39 @@ def main():
         print(json.dumps(validate(Path(sys.argv[2])), indent=2))
         return
     entry = load_entry()
+    if '--_shard-id' in sys.argv:
+        # CUDA ordinal 0 is the worker's masked physical GPU. Vulkan ignores
+        # CUDA_VISIBLE_DEVICES, so pin its physical adapter separately.
+        physical = os.environ.get('CUDA_VISIBLE_DEVICES')
+        if physical not in ('0', '1'):
+            raise ValueError('Expected exactly one physical GPU per worker')
+        import robo_orchard_sim.launcher as launcher
+        original = launcher.AppLauncher
+
+        class PinnedAppLauncher(original):
+            def _create_app(self):
+                self._sim_app_config.update(active_gpu=int(physical),
+                                            physics_gpu=0, multi_gpu=False)
+                print('[device-pin] CUDA logical=0 physical=' + physical +
+                      ' Vulkan adapter=' + physical + ' multi_gpu=False',
+                      flush=True)
+                super()._create_app()
+
+        launcher.AppLauncher = PinnedAppLauncher
+        entry.main()
+        return
     import robo_orchard_sim.pipeline.evaluator.distributed as distributed
-    # This binding changes ONLY this dispatcher process. Worker subprocesses
-    # execute the official entry path and never import this wrapper.
+    # This binding changes ONLY this dispatcher process. Workers use the
+    # official evaluator, with their launch device pinned by this wrapper.
     distributed.EvaluationExecutionConfig = MixedExecution
+    build_command = entry._build_shard_worker_cmd
+
+    def worker_command(**kwargs):
+        command = build_command(**kwargs)
+        command[1] = str(Path(__file__).resolve())
+        return command
+
+    entry._build_shard_worker_cmd = worker_command
     print('[mixed-slots] GPU0=1 GPU1=2 model=GPU0 concurrency=3', flush=True)
     entry.main()
 
