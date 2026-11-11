@@ -1,0 +1,32 @@
+{
+  "sha256": {
+    "official_server.py": "b5eb2039739951c5287a30013877aac495e6037c80ab44309788f8de39a8a43c",
+    "backends.py": "ad4630e477c8050e25f8b0c6beb9924b75fa3473ac926e051aab63335c6d8b26",
+    "legacy_server.py": "898b213a36469b6179e45cc1bccdc15b69898c090e356d3b36bdffa2790cff42",
+    "pi05_server_config.py": "5f6a9a44dfc1d5d4914f0ea0479ad84eb12926832877d83dea44b91c3bf386a0",
+    "pi05_hbot.py": "666953ca15f9e14ced37493a7dd401e547df37f92ee9ca5e5025c7b9d92cad01",
+    "model.yaml": "0900bb2c6095f1597f285237602d6663eb47a5c38097a4fb552dff30202174e2",
+    "smoke_wss.py": "38d60ec5103b9191c8d3b674cd14ad7cf39424cb2dfe8670ecbf74732f9fc518",
+    "loongforge_backend/hbot_inference.py": "8e8d1c3125fcf73bfe3bf46501090752db35e9b0d00c155414839ee6a5bcc379",
+    "loongforge_backend/model_runtime.py": "a10105efb8d3c012ad0899f36ff9730d86fe319a2503548beb19e0a3eb5fdbcd",
+    "loongforge_backend/provenance.json": "f1d481a7aeb7e53d20a800c53e04506fb20728e13a2b210ab3bfeb1273f45097",
+    "loongforge_backend/fixtures/checkpoint_header.json": "43157930dee67bda03bf21aed2b257c0950c00068818f2356d865f49ea742d36",
+    "loongforge_backend/fixtures/hbot_contract.json": "97b921e9b71d6ad87cfd099f8a83e64409334d197251700a909aeafacb18958c",
+    "loongforge_backend/fixtures/model_config.json": "5c1f75fb9f558d0dde6381eb8e9f291cc7d890b551b6ec1597938d882cb41a24",
+    "loongforge_backend/fixtures/norm_stats.json": "9a03add59ed3904ef741db4e31472326ff15e5251fff0fe3062a8e02eba6c693",
+    "loongforge_backend/fixtures/processor_config.json": "5121e3005c69cb13fd55c2c0d595fc7df7c3688c34d46872c153f0a5a44e3811",
+    "loongforge_backend/fixtures/training_transform_reference.py": "2b5a6115f5312556907df4bea780b29b8b1860d4154333bf909442c502633f86",
+    "loongforge_backend/vendor/lerobot/__init__.py": "1b11b90d3d9411274e3708fff80c8e7130a4bb76ef22659a86dbd79519e83dde",
+    "loongforge_backend/vendor/loongforge/__init__.py": "479dab08ebcdc1ac0997eff96b4af9183c2ee2c3f65b0f0e908af1bf6fdb9196",
+    "loongforge_backend/vendor/loongforge/embodied/__init__.py": "b9f99a622a5dba1af4a51507538c8bea4c30bf4adec236e80acf7c1ee11b441f",
+    "loongforge_backend/vendor/loongforge/embodied/model/registry.py": "8940062d05f2394a94e3c0d2cc65d66ef44b5d69867b4cb4c5ed60656bd1215f",
+    "loongforge_backend/vendor/loongforge/embodied/model/__init__.py": "218985649f3735d044d12dbaf1da2bd53aebc4a7359527dedaa8e9ae5c0444fd",
+    "loongforge_backend/vendor/loongforge/embodied/model/pi05/modeling_pi05.py": "c35448842e2b9043fc1929fd906205ae0125be5becab54287670e8f4023e2527",
+    "loongforge_backend/vendor/loongforge/embodied/model/pi05/model_configuration_pi05.py": "0328f7a700c582623cae9730ebc118d4b26fa06d09d85b1ac0e689370a4d778d",
+    "loongforge_backend/vendor/loongforge/embodied/model/pi05/__init__.py": "25fe4f758447023359294ad8492184cc5dca3a03867a00ace7d91fedadf6d3bc",
+    "loongforge_backend/vendor/lerobot/policies/pi_gemma.py": "fe287aa89ad2c826093306a89b6752ec00d19eea52a5f2b4b4d463246e294722",
+    "loongforge_backend/vendor/lerobot/policies/__init__.py": "24c0ea6ce85004d7fbd5f2234fc2e439be87c80aa033907b0397de52d6304fd3",
+    "loongforge_backend/vendor/lerobot/utils/import_utils.py": "e18703fc04659c6dc95c4170c20fb7b05c258f4e3df370db7a3361f3ef409dce",
+    "loongforge_backend/vendor/lerobot/utils/__init__.py": "24c0ea6ce85004d7fbd5f2234fc2e439be87c80aa033907b0397de52d6304fd3"
+  }
+}

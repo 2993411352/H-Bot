@@ -1,0 +1,9 @@
+hbot-full:
+  config_name: pi05_hbot_full
+  camera_paths:
+    ext1_camera: [observation.images.ext1_camera]
+    wrist_camera: [observation.images.wrist_camera]
+    ext2_camera: [observation.images.ext2_camera]
+  state_path: [observation.state]
+  prompt_path: [prompt]
+  action_steps: 15

@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "bundle_checksums_sha256": "828bd313bf0bf5b9fdeb98f7210fcb8126c83e898c36d77ea142ab7282d3b7a5",
+  "sampler_sha256": "36e909a6b1aa9fadd23bb0036a6ae7d0d24c4268940fb53d4b8e2254d44d1c6d",
+  "normalization_sha256": "9a03add59ed3904ef741db4e31472326ff15e5251fff0fe3062a8e02eba6c693",
+  "seed": 20261106,
+  "profile": "stage",
+  "camera_order": [
+    "observation.images.ext1_camera",
+    "observation.images.wrist_camera",
+    "observation.images.ext2_camera"
+  ],
+  "slots": [
+    "base_0_rgb",
+    "left_wrist_0_rgb",
+    "right_wrist_0_rgb"
+  ],
+  "state_dim": 8,
+  "action_dim": 8,
+  "padded_action_dim": 32,
+  "horizon": 15,
+  "joint_delta_dims": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "gripper": "absolute",
+  "normalization": "q01/q99, denominator +1e-6, no clipping",
+  "state_tokens": "8 normalized values, 256 bins, before padding",
+  "image_resize": "PIL bilinear aspect-preserving zero pad 224",
+  "task_labels_in_prompt": false,
+  "loss_dims": 8,
+  "microbatch": 16,
+  "accumulation": 4,
+  "effective_batch": 64,
+  "sampler_address": "optimizer_step -> global_batch(effective_batch), then split",
+  "parameter_storage": "float32",
+  "optimizer_moments": "float32",
+  "compute": "bf16 autocast",
+  "augmentation": "none; source RGB only",
+  "world_size": 1,
+  "compile_model": true,
+  "compile_mode": "default",
+  "compile_scope": "multi_group",
+  "activation_checkpoint_policy": "bypass_outer_joint_backbone_only_keep_inner_and_vision_checkpoints",
+  "formal_plan_sha256": "25778aef23f1aaf8a02b9bb4b13f5319c8ecae51be905362a98d88413b596568",
+  "implementation_sha256": {
+    "train_main_v1.py": "ad29be9ce72956a21211d8b43646644c77d32fa2cb570997e79d73e99020b6a4",
+    "checkpoint_store_v1.py": "2ad69fa96a00c5cc0b588864e10cf28daf2c086179dd96e35889387f72a77370",
+    "data_adapter.py": "2b5a6115f5312556907df4bea780b29b8b1860d4154333bf909442c502633f86",
+    "train_acceptance.py": "e8cae660508127ee81be7aa694ccacb9c5a235bee30cebdd95b1a8001c8762c4",
+    "denested_probe.py": "11807dc98debff518738c5036ed7a5270b66d2e96aa31e7b3c8ebd9453ab30de",
+    "microbatch_sweep_probe.py": "36004a30d85d6210cf6ed3c50d29f1c3db321f566c7026026c621b0787e0e02e"
+  }
+}

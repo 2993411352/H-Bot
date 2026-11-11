@@ -1,0 +1,29 @@
+{
+  "upstream": "https://github.com/HorizonRobotics/RoboOrchardSim",
+  "upstream_commit": "f2e041e5fabe354c1398ea97c934f603bb65d14d",
+  "note": "Includes H-Bot Pi05 adapter and session-local RNG modifications; see THIRD_PARTY.md.",
+  "sha256": {
+    "robo_orchard_server/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "robo_orchard_server/__init__.py": "f8b1148a114434f6b409e198155c324bc610977ad7c29910e6cbbc4d467c2442",
+    "robo_orchard_server/policy/embodiments.py": "fdcacab27de56aedd2259455c764d5c6aaa8b3871ca6b4d1ebeed26d13ee60cd",
+    "robo_orchard_server/policy/__init__.py": "92ca6baeacf150dcc9533980c43e29e908989c07d87f792ba345cdb1d196a87d",
+    "robo_orchard_server/policy/holobrain/policy.py": "6d2644577420c950d7097574a8189f63e5cecda1e9fd42669623a030a454e758",
+    "robo_orchard_server/policy/holobrain/config.yaml": "619a9e282546476c4b4ae32c40b1af7d50fd9938b268ea62e19956c72f8041dc",
+    "robo_orchard_server/policy/holobrain/adapter.py": "7d650272227919f15cd1fa7ae5c4c1b02f642a952347bccf4ddda5a67101b93a",
+    "robo_orchard_server/policy/holobrain/start_holobrain.sh": "58f315a23a9010e9261315ef25184a1bc570088290e040021efb366bb2959ea4",
+    "robo_orchard_server/policy/holobrain/__init__.py": "350eb03625896acc7e18e2f9f2025a8dd35217a9b3f197a14edfdc6c915a4880",
+    "robo_orchard_server/policy/holobrain/main.py": "324f4ee3b5d996c99e770230f1f7dd58e17cfece382563d8a920f52fd678042f",
+    "robo_orchard_server/policy/dummy/main.py": "07dc06a1997e15ec1d28e00712871986e966488a58de92d0a3a958b2232cf67d",
+    "robo_orchard_server/policy/pi05/policy.py": "8e8ec890a0c9d6a0be5e11e312eb4524b2f166f3e2b68c5b0df3832345222d8c",
+    "robo_orchard_server/policy/pi05/loader.py": "931903d8bcfcf4a82c5e979da87cdef7f4a5418f11faab38b7a644852e21db2e",
+    "robo_orchard_server/policy/pi05/adapter.py": "45c818b11e251f2c134351e9a1cd57c3aeae8c6f12d715fe0f6cbebf6ad15de5",
+    "robo_orchard_server/policy/pi05/__init__.py": "1a565c3652a629d560c0848270095311189e9bdc019c20e44219a082b5fc2ec0",
+    "robo_orchard_server/policy/pi05/main.py": "1e3e934e5b79b988fe0e7e681aead89461b804b7996992fcfff06db9b066bf95",
+    "robo_orchard_server/server/policy.py": "d6c499a217a7ae0425a86bb4c9509f435cb8086dd088c565ce7cb5c31cd4d023",
+    "robo_orchard_server/server/multiplex.py": "a48ae5ed0c196029779f1662b3e6b6c59a14a159ea86eb283bedd1915ccdfcda",
+    "robo_orchard_server/server/cli.py": "4eee3584068ec7d809274bcfeab104c8322a5dcc4d1213f7117a01898569cb31",
+    "robo_orchard_server/server/types.py": "20a7b5bd29265228b53b0ba4bfd2f79f267ecb9c7b804c7d03a3e04357f75af2",
+    "robo_orchard_server/server/policy_server.py": "5ebdc2a9c3e69512c002d56f22a6e47f25316f7f07cce8726ab1b03bf2215ce9",
+    "robo_orchard_server/server/__init__.py": "cf9a3ffb312ef52eba268becaaa3ef6a2d728d71c20bb59ea8987e202e8dd7d9"
+  }
+}

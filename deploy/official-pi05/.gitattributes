@@ -1,0 +1,3 @@
+* text eol=lf
+# Preserve the hash-pinned upstream source verbatim, including its whitespace.
+loongforge_backend/vendor/** whitespace=-blank-at-eol

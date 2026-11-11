@@ -2,7 +2,23 @@
 
 本仓库用于管理 H-Bot 机器人比赛的训练、评测、配置与成绩记录。服务器上的模型、数据集、检查点、视频和运行日志属于本地运行资产，不进入 Git。
 
-## 当前最佳本地结果
+## 新机器部署正式测评
+
+使用 [`deploy/official-pi05/`](deploy/official-pi05/README.md)：包含 B16 · 100k（JAX）和 LoongForge reviewed-v3（PyTorch）的正式 WSS 服务、固定依赖安装脚本、环境配置模板，以及原有 CPU 检查和真实权重 WSS 自测。正式仿真由平台运行，模型机器无需安装 Isaac Sim 或下载仿真资产。
+
+```bash
+cd deploy/official-pi05
+cp local.env.example local.env  # 编辑后端、权重绝对路径、GPU 和可选代理
+bash setup.sh
+bash test.sh --check
+bash test.sh --self-test
+# 完成检查后，在 tmux 内运行；提示时再粘贴新申请的 WSS 链接
+bash run-official.sh --gpu 0
+```
+
+通过 `HBOT_BACKEND=jax` 或 `loongforge` 选择对应环境与适配；模板默认 LoongForge。两种 checkpoint 不做格式转换，也不能混用归一化。完整安装、权重目录、断线处理和日志说明见部署文档。
+
+## 历史本地结果（2026-11-02）
 
 | 模型 | 回合数 | 平均分 | 成功率 |
 | --- | ---: | ---: | ---: |

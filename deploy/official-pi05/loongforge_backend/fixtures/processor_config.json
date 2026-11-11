@@ -1,0 +1,26 @@
+{
+  "processor_kwargs": {
+    "image_size": 224,
+    "image_normalize_mode": "identity",
+    "image_resize_strategy": "resize_with_pad",
+    "num_images": 3,
+    "image_mask": [
+      true,
+      true,
+      true
+    ],
+    "max_token_len": 200,
+    "normalization_mode": "q99",
+    "use_image_transform": true,
+    "use_action_transform": true,
+    "action_apply_to": [
+      "action"
+    ],
+    "action_use_statistics": true,
+    "action_padding_strategy": "zero",
+    "action_transform_horizon": null,
+    "action_transform_max_action_dim": null,
+    "observation_delta_indices": null,
+    "use_aloha_pi_delta_actions": false
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "vendor/loongforge/__init__.py": {
+    "sha256": "479dab08ebcdc1ac0997eff96b4af9183c2ee2c3f65b0f0e908af1bf6fdb9196",
+    "size": 106
+  },
+  "vendor/loongforge/embodied/__init__.py": {
+    "sha256": "b9f99a622a5dba1af4a51507538c8bea4c30bf4adec236e80acf7c1ee11b441f",
+    "size": 121
+  },
+  "vendor/loongforge/embodied/model/__init__.py": {
+    "sha256": "218985649f3735d044d12dbaf1da2bd53aebc4a7359527dedaa8e9ae5c0444fd",
+    "size": 306
+  },
+  "vendor/loongforge/embodied/model/registry.py": {
+    "sha256": "8940062d05f2394a94e3c0d2cc65d66ef44b5d69867b4cb4c5ed60656bd1215f",
+    "size": 2873
+  },
+  "vendor/loongforge/embodied/model/pi05/__init__.py": {
+    "sha256": "25fe4f758447023359294ad8492184cc5dca3a03867a00ace7d91fedadf6d3bc",
+    "size": 180
+  },
+  "vendor/loongforge/embodied/model/pi05/modeling_pi05.py": {
+    "sha256": "c35448842e2b9043fc1929fd906205ae0125be5becab54287670e8f4023e2527",
+    "size": 55064
+  },
+  "vendor/loongforge/embodied/model/pi05/model_configuration_pi05.py": {
+    "sha256": "0328f7a700c582623cae9730ebc118d4b26fa06d09d85b1ac0e689370a4d778d",
+    "size": 3338
+  },
+  "vendor/LICENSE.LoongForge": {
+    "sha256": "36d78d9587d3c8bfd9fe1eb3b5dafca7c4858b0f9e0fcdd83ec3cc42a0bc393d",
+    "size": 11351
+  },
+  "vendor/lerobot/policies/pi_gemma.py": {
+    "sha256": "fe287aa89ad2c826093306a89b6752ec00d19eea52a5f2b4b4d463246e294722",
+    "size": 13445
+  },
+  "vendor/lerobot/utils/import_utils.py": {
+    "sha256": "e18703fc04659c6dc95c4170c20fb7b05c258f4e3df370db7a3361f3ef409dce",
+    "size": 7207
+  },
+  "vendor/LICENSE.LeRobot": {
+    "sha256": "0583375a0ec642ec79c447781f34322b0cfa66baff31258214d040f1f6d86d7c",
+    "size": 27627
+  },
+  "fixtures/tokenizer.model": {
+    "sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6",
+    "size": 4264023
+  },
+  "fixtures/hbot_contract.json": {
+    "sha256": "97b921e9b71d6ad87cfd099f8a83e64409334d197251700a909aeafacb18958c",
+    "size": 2188
+  },
+  "fixtures/model_config.json": {
+    "sha256": "5c1f75fb9f558d0dde6381eb8e9f291cc7d890b551b6ec1597938d882cb41a24",
+    "size": 378
+  },
+  "fixtures/norm_stats.json": {
+    "sha256": "9a03add59ed3904ef741db4e31472326ff15e5251fff0fe3062a8e02eba6c693",
+    "size": 2088
+  },
+  "fixtures/processor_config.json": {
+    "sha256": "5121e3005c69cb13fd55c2c0d595fc7df7c3688c34d46872c153f0a5a44e3811",
+    "size": 634
+  },
+  "fixtures/training_transform_reference.py": {
+    "sha256": "2b5a6115f5312556907df4bea780b29b8b1860d4154333bf909442c502633f86",
+    "size": 8798
+  }
+}
