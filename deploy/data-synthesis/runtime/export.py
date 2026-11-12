@@ -47,6 +47,8 @@ def main():
     require(bool(rows), 'No accepted samples')
     base = root/'exports'/args.name
     base.mkdir(parents=True, exist_ok=False)
+    # Freeze provenance alongside this export; collection can be resumed later.
+    save(base/'source_manifest.json', rows)
     entries = []
     for row in rows:
         source = contained(root, row['mcap_relative'])

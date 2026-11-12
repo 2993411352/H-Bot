@@ -151,4 +151,33 @@ python3 manage.py export --worker 102 --name export_v1
 
 导出路径为 `worker_XXXX/exports/export_v1/lerobot_v21/`，视频在其中的 `videos/` 目录。训练时使用汇总通过且人工审核通过的数据，并配合导出的 `training_anchor_masks.json` 过滤无效窗口。
 
+## 可视化回放与标注
+
+导出完成后，启动之前使用的三相机标注工作台：
+
+```bash
+python3 manage.py viewer --workers 101 --export-name export_v1 --name review_v1
+# 同时查看多位参与者的数据
+# python3 manage.py viewer --workers 101 102 --export-name export_v1 --name team_review_v1
+```
+
+首次运行自动安装独立的 CPU 网页环境，不占用采集 GPU。看到 `VIEWER_READY` 后，在自己的电脑终端或 PowerShell 中建立转发：
+
+```bash
+ssh -N -T -o ExitOnForwardFailure=yes -L 127.0.0.1:18765:127.0.0.1:18765 用户名@采集机器IP
+```
+
+SSH 端口不是 22 时，在命令中加入 `-p 端口号`。保持转发终端打开，然后用浏览器访问 **http://127.0.0.1:18765**；在采集机器本机使用浏览器时无需转发。
+
+网页可同步播放两路外部相机和腕部相机，逐帧定位，查看语言指令、夹爪曲线和种子，标注阶段、质量、堆叠循环及关键区间。左侧按实际轨迹数量统计审核进度，`W101` 等标记区分不同采集者。
+
+1. 选择任务与轨迹，播放视频并逐段确定边界。
+2. 用 `I`、`O` 标记起止帧，选择阶段与质量，添加区间；区间包含起止帧。
+3. 可先保存草稿；补齐全轨迹并填写标注者后，点击“确认审核完成”。
+4. 点击“导出标签”下载 JSON。需排除的片段标为“不用于正向模仿”，后续训练时据此筛选。
+
+标签和历史版本保存在 `work/reviews/review_v1/`，原视频与 Parquet 只读。再次运行相同命令可继续审核；更换导出批次或参与者列表时使用新的 `--name`。备份时先停止网页，再复制整个审核目录。网页不会自动修改训练配置。
+
+网页也可在独立 tmux 会话中运行。端口被占用时加 `--port 18766`，并将转发命令两侧端口相应替换。更新网页代码后运行原命令加 `--rebuild` 即可。
+
 版本、质量检查及实现说明见 [技术说明](TECHNICAL_NOTES.md)。

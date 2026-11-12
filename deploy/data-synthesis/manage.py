@@ -100,6 +100,12 @@ def main():
     merge = sub.add_parser('merge-check')
     merge.add_argument('--workers', type=int, nargs='+', required=True)
     merge.add_argument('--name', required=True)
+    viewer = sub.add_parser('viewer', help='Three-camera playback and manual annotation (CPU only)')
+    viewer.add_argument('--workers', type=int, nargs='+', required=True)
+    viewer.add_argument('--export-name', default='export_v1')
+    viewer.add_argument('--name', default='review_v1', help='Persistent review workspace name')
+    viewer.add_argument('--port', type=int, default=18765)
+    viewer.add_argument('--rebuild', action='store_true', help='Rebuild the small CPU viewer image after updating code')
     args = p.parse_args()
     require(platform.system() == 'Linux' and platform.machine() == 'x86_64' and
             'microsoft' not in platform.release().lower(),
@@ -109,6 +115,31 @@ def main():
         cfg[key] = str(Path(cfg[key]).expanduser().resolve())
         require(',' not in cfg[key], 'Docker mount paths must not contain commas')
     base = Path(cfg['work'])
+    if args.cmd == 'viewer':
+        require(re.fullmatch(r'[A-Za-z0-9_-]+', args.name), 'Use a simple review name')
+        require(re.fullmatch(r'[A-Za-z0-9_-]+', args.export_name), 'Use a simple export name')
+        require(1024 <= args.port <= 65535, 'Choose a port between 1024 and 65535')
+        require(base.is_dir(), 'Collection work directory does not exist')
+        require(len(args.workers) == len(set(args.workers)) and all(w > 0 for w in args.workers), 'Choose distinct positive worker IDs')
+        subprocess.run(['docker', 'info', '--format', '{{.ServerVersion}}'], check=True)
+        image = cfg['image_prefix']+'-viewer:v1'
+        exists = subprocess.run(['docker', 'image', 'inspect', image], stdout=subprocess.DEVNULL,
+                                stderr=subprocess.DEVNULL).returncode == 0
+        if args.rebuild or not exists:
+            subprocess.run(['docker', 'build', '--tag', image, str(HERE/'viewer')], check=True)
+        review = base/'reviews'/args.name
+        review.mkdir(parents=True, exist_ok=True)
+        require(review.resolve().is_relative_to(base), 'Review path must stay inside work directory')
+        print(f'Open http://127.0.0.1:{args.port} via SSH forwarding; labels: {review}', flush=True)
+        # Source is read-only, only this workspace is writable. No GPU or assets.
+        subprocess.run(['docker', 'run', '--rm', '--init', '--network', 'host',
+            '--user', f'{os.getuid()}:{os.getgid()}',
+            '--mount', f'type=bind,src={base},dst=/source,readonly',
+            '--mount', f'type=bind,src={review},dst=/review',
+            '-e', 'HOME=/review', '-e', 'CUDA_VISIBLE_DEVICES=', '-e', 'NVIDIA_VISIBLE_DEVICES=void',
+            image, '--workers', *map(str,args.workers), '--export-name', args.export_name,
+            '--port', str(args.port)], check=True)
+        return
     if args.cmd in ('pause', 'status'):
         path = base/f'worker_{args.worker:04d}'
         require(path.is_dir(), 'No such worker')

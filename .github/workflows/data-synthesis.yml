@@ -15,14 +15,20 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install numpy==1.26.4 PyYAML==6.0.2 mcap==1.6.0 mcap-protobuf-support==0.6.0 Pillow==11.3.0
+      - run: python -m pip install -r deploy/data-synthesis/viewer/requirements.txt
       - name: Identity, targeting, duplicate filtering and shell checks
         env:
-          PYTHONPATH: deploy/data-synthesis/runtime
+          PYTHONPATH: deploy/data-synthesis/runtime:deploy/data-synthesis/viewer
           CUDA_VISIBLE_DEVICES: ''
         run: |
           bash -n deploy/data-synthesis/install-host.sh
           python -m compileall -q deploy/data-synthesis
           python -m unittest discover -s deploy/data-synthesis/tests -v
+          node --check deploy/data-synthesis/viewer/static/app.js
+      - name: Build and check CPU viewer container
+        run: |
+          docker build -t hbot-viewer-ci deploy/data-synthesis/viewer
+          docker run --rm hbot-viewer-ci --help
       - name: Verify patch applies to exact upstream
         run: |
           git clone --filter=blob:none https://github.com/HorizonRobotics/RoboOrchardSim.git /tmp/synthesis-upstream

@@ -22,6 +22,8 @@ bash run-official.sh --gpu 0
 
 [`deploy/data-synthesis/`](deploy/data-synthesis/README.md) 提供新机器的 Docker/NVIDIA runtime 安装、Isaac Sim 环境、四任务采集和 MP4/LeRobot 导出。支持 RTX A5000、RTX 5070 Ti 等显卡，默认每人每个任务采集 400 条，并包含共享索引与跨机器去重。安装和采集在参与者自己的 Linux 主机执行。
 
+导出后运行 `python3 manage.py viewer --workers 101 --name review_v1`，即可通过 SSH 端口转发使用三相机回放与标注网页。包含逐帧查看、夹爪曲线、阶段标签、质量审核和标签导出，标签与原始数据分开保存。启动及转发命令见采集包 README。
+
 ## 历史本地结果（2026-11-02）
 
 | 模型 | 回合数 | 平均分 | 成功率 |

@@ -1,0 +1,17 @@
+/* Keep trajectory selection available in a narrow browser side panel. */
+@media(max-width:800px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  aside{gap:10px;padding:14px;min-width:0}
+  .aside-heading{display:block}
+  .aside-heading p{margin:0}
+  .aside-heading .progress{margin:9px 0 7px}
+  nav{gap:3px}
+  .task{padding:7px}
+  .list-head{display:flex;align-items:center;gap:10px;padding:9px 7px 0}
+  .list-head label{margin:0;white-space:nowrap}
+  .list-head select{max-width:240px}
+  .episode-list{display:flex;flex:none;gap:4px;min-width:0;width:100%;min-height:0;max-height:78px;overflow-x:auto}
+  .episode-item{flex:0 0 200px;white-space:normal}
+  .frame-info #frameAccuracy{display:inline}
+  .frame-info{flex-wrap:wrap}
+}
