@@ -1,0 +1,722 @@
+--- a/robo_orchard_sim/pipeline/data_synthesis/single_task.py
++++ b/robo_orchard_sim/pipeline/data_synthesis/single_task.py
+@@ -17,6 +17,7 @@
+ """Single-task data synthesis runner."""
+ 
+ from __future__ import annotations
++import json
+ import os
+ 
+ # import traceback
+@@ -58,6 +59,7 @@
+     SCENE_NOT_SETTLED: str = "scene_not_settled"
+     SUCCESS: str = "success"
+     EPISODE_ERROR: str = "episode_error"
++    SCENE_INIT_FAILED: str = "SCENE_INIT_FAILED"
+ 
+ 
+ STOP_REASON = EpisodeStopReason()
+@@ -249,12 +251,36 @@
+                     f"{type(exc).__name__}: {exc}"
+                 )
+                 # traceback.print_exc()
++                is_scene_init_failure = (
++                    type(exc).__name__ == "SceneInitFailedError"
++                    or "SCENE_INIT_FAILED" in str(exc)
++                )
++                if is_scene_init_failure:
++                    failure_path = Path(record_dir).parent / "scene_init_failure.json"
++                    failure_path.parent.mkdir(parents=True, exist_ok=True)
++                    failure_path.write_text(
++                        __import__("json").dumps(
++                            {
++                                "status": STOP_REASON.SCENE_INIT_FAILED,
++                                "episode_index": episode_index,
++                                "seed": seed,
++                                "error_type": type(exc).__name__,
++                                "error": str(exc),
++                            },
++                            indent=2,
++                        ),
++                        encoding="utf-8",
++                    )
+                 summaries.append(
+                     EpisodeSummary(
+                         episode_index=episode_index,
+                         seed=seed,
+                         steps=0,
+-                        stop_reason=(f"episode_error:{type(exc).__name__}"),
++                        stop_reason=(
++                            STOP_REASON.SCENE_INIT_FAILED
++                            if is_scene_init_failure
++                            else f"episode_error:{type(exc).__name__}"
++                        ),
+                         success=False,
+                         record_dir=record_dir,
+                         mcap_paths=self.find_mcap_paths(record_dir),
+@@ -838,38 +864,73 @@
+             metrics={},
+         )
+         env_action_state = EnvActionState.from_env(env)
+-
+-        while steps < self.cfg.max_steps:
+-            if not sim_app.is_running():
+-                stop_reason = STOP_REASON.SIM_APP_STOPPED
+-                break
+-
+-            joint_commands, state = manager.get_action(env)
+-            for log_line in status_logger.collect(
+-                running_actions=state.running_actions,
+-                step_idx=steps,
+-            ):
+-                print(log_line)
+-
+-            if joint_commands:
+-                for joint_command in joint_commands.values():
+-                    env_action_state.update(
+-                        embodiment.translate_joint_command_to_env_action(
+-                            joint_command
+-                        ),
++        diagnostic_path = os.environ.get("P2C_DIAGNOSTICS_PATH")
++        diagnostic_file = None
++        if diagnostic_path:
++            Path(diagnostic_path).parent.mkdir(parents=True, exist_ok=True)
++            diagnostic_file = open(diagnostic_path, "w", encoding="utf-8")
++
++        try:
++            while steps < self.cfg.max_steps:
++                if not sim_app.is_running():
++                    stop_reason = STOP_REASON.SIM_APP_STOPPED
++                    break
++
++                joint_commands, state = manager.get_action(env)
++                for log_line in status_logger.collect(
++                    running_actions=state.running_actions,
++                    step_idx=steps,
++                ):
++                    print(log_line)
++
++                if joint_commands:
++                    for joint_command in joint_commands.values():
++                        env_action_state.update(
++                            embodiment.translate_joint_command_to_env_action(
++                                joint_command
++                            ),
++                        )
++                _ = env.step(env_action_state.action())
++                validator_output = validator.evaluate(env, env_idx=0)
++                steps += 1
++
++                if diagnostic_file is not None:
++                    contact_details = []
++                    checker_suite = getattr(validator, "checker_suite", None)
++                    for checker in getattr(checker_suite, "checkers", ()):
++                        details = getattr(checker, "last_diagnostics", None)
++                        if details is not None:
++                            contact_details.extend(details)
++                    diagnostic_file.write(
++                        json.dumps(
++                            {
++                                "step": steps,
++                                "env_busy": bool(state.env_busy),
++                                "running_actions": [
++                                    str(action) for action in state.running_actions
++                                ],
++                                "success": bool(validator_output.success),
++                                "progress": float(validator_output.progress),
++                                "metrics": validator_output.metrics,
++                                "contact_details": contact_details,
++                            },
++                            sort_keys=True,
++                        )
++                        + "\n"
+                     )
+-            _ = env.step(env_action_state.action())
+-            validator_output = validator.evaluate(env, env_idx=0)
+-            steps += 1
+-
+-            # if validator_output.success:
+-            #     stop_reason = STOP_REASON.SUCCESS
+-            #     self.wait_until_robot_stationary(env, sim_app)
+-            #     break
+-            if not state.env_busy:
+-                stop_reason = STOP_REASON.ACTION_PLAN_COMPLETE
+-                self.wait_until_robot_stationary(env, sim_app)
+-                break
++                    diagnostic_file.flush()
++
++                # if validator_output.success:
++                #     stop_reason = STOP_REASON.SUCCESS
++                #     self.wait_until_robot_stationary(env, sim_app)
++                #     break
++                if not state.env_busy:
++                    stop_reason = STOP_REASON.ACTION_PLAN_COMPLETE
++                    self.wait_until_robot_stationary(env, sim_app)
++                    break
++        finally:
++            if diagnostic_file is not None:
++                diagnostic_file.close()
+ 
+         return steps, stop_reason, validator_output
+ 
+--- a/robo_orchard_sim/ext/envs/managers/events/pose_reset.py
++++ b/robo_orchard_sim/ext/envs/managers/events/pose_reset.py
+@@ -15,7 +15,10 @@
+ # permissions and limitations under the License.
+ 
+ import logging
++import json
++import os
+ import random
++from pathlib import Path
+ from collections.abc import Sequence
+ 
+ import isaaclab.utils.math as math_utils
+@@ -39,7 +42,7 @@
+ from robo_orchard_sim.utils.env_utils import sample_poses
+ from robo_orchard_sim.utils.usd import get_prim_aabb
+ 
+-__all__ = ["PoseResetTerm", "PoseResetTermCfg"]
++__all__ = ["PoseResetTerm", "PoseResetTermCfg", "SceneInitFailedError"]
+ 
+ logger = logging.getLogger(__name__)
+ 
+@@ -53,6 +56,73 @@
+     float | None,
+ ]
+ _CROSS_GROUP_CACHE: dict[str, dict[int, list[_CacheEntry]]] = {}
++
++
++class SceneInitFailedError(RuntimeError):
++    """Raised when object placement cannot produce a valid scene."""
++
++
++def _solve_aabb_layout(
++    half_extents: list[tuple[float, float]],
++    x_range: tuple[float, float],
++    y_range: tuple[float, float],
++    min_separation: float,
++) -> tuple[list[tuple[float, float]] | None, str]:
++    """Solve the exact four-way AABB separation model used at runtime."""
++    import numpy as np
++    from scipy.optimize import Bounds, LinearConstraint, milp
++
++    n = len(half_extents)
++    pairs = [(i, j) for i in range(n) for j in range(i + 1, n)]
++    nvars = 2 * n + 4 * len(pairs)
++    c = np.zeros(nvars)
++    integrality = np.zeros(nvars)
++    lower = np.full(nvars, -np.inf)
++    upper = np.full(nvars, np.inf)
++    lower[:n], upper[:n] = x_range
++    lower[n : 2 * n], upper[n : 2 * n] = y_range
++    integrality[2 * n :] = 1
++    lower[2 * n :], upper[2 * n :] = 0, 1
++    max_hx = max((hx for hx, _ in half_extents), default=0.0)
++    max_hy = max((hy for _, hy in half_extents), default=0.0)
++    big_x = x_range[1] - x_range[0] + 2 * max_hx + min_separation
++    big_y = y_range[1] - y_range[0] + 2 * max_hy + min_separation
++    rows, lbs, ubs = [], [], []
++    for pair_idx, (i, j) in enumerate(pairs):
++        base = 2 * n + 4 * pair_idx
++        req_x = half_extents[i][0] + half_extents[j][0] + min_separation
++        req_y = half_extents[i][1] + half_extents[j][1] + min_separation
++        for left, right, binary, big, required in (
++            (i, j, base, big_x, req_x),
++            (j, i, base + 1, big_x, req_x),
++        ):
++            row = np.zeros(nvars)
++            row[left], row[right], row[binary] = 1, -1, big
++            rows.append(row); lbs.append(-np.inf); ubs.append(big - required)
++        for below, above, binary, big, required in (
++            (i, j, base + 2, big_y, req_y),
++            (j, i, base + 3, big_y, req_y),
++        ):
++            row = np.zeros(nvars)
++            row[n + below], row[n + above], row[binary] = 1, -1, big
++            rows.append(row); lbs.append(-np.inf); ubs.append(big - required)
++        row = np.zeros(nvars)
++        row[base : base + 4] = 1
++        rows.append(row); lbs.append(1); ubs.append(4)
++    if not rows:
++        return [(sum(x_range) / 2, sum(y_range) / 2)], "single asset"
++    result = milp(
++        c=c,
++        integrality=integrality,
++        bounds=Bounds(lower, upper),
++        constraints=LinearConstraint(np.vstack(rows), np.asarray(lbs), np.asarray(ubs)),
++        options={"time_limit": 30.0},
++    )
++    if not result.success or result.x is None:
++        return None, f"MILP status={result.status}: {result.message}"
++    return [
++        (float(result.x[i]), float(result.x[n + i])) for i in range(n)
++    ], str(result.message)
+ 
+ 
+ class PoseResetTerm(
+@@ -239,6 +309,76 @@
+             global_cache.setdefault(env_id, [])
+         return env_id_list, global_cache
+ 
++    def _scene_init_diagnostic(
++        self,
++        *,
++        reason: str,
++        tags: list[str],
++        half_extents: list[tuple[float, float]],
++        x_range: tuple[float, float],
++        y_range: tuple[float, float],
++        min_separation: float,
++    ) -> dict:
++        payload = {
++            "status": "SCENE_INIT_FAILED",
++            "reason": reason,
++            "assets": [
++                {"tag": tag, "half_extents_xy_m": extents}
++                for tag, extents in zip(tags, half_extents, strict=True)
++            ],
++            "constraints": {
++                "center_x_range_m": x_range,
++                "center_y_range_m": y_range,
++                "min_separation_m": min_separation,
++            },
++        }
++        failure_dir = os.environ.get("HBOT_SCENE_INIT_FAILURE_DIR")
++        if failure_dir:
++            path = Path(failure_dir)
++            path.mkdir(parents=True, exist_ok=True)
++            output = path / "scene_init_failed.json"
++            output.write_text(json.dumps(payload, indent=2), encoding="utf-8")
++        return payload
++
++    def _write_scene_init_audit(
++        self,
++        *,
++        placement_mode: str,
++        tags: list[str],
++        half_extents: list[tuple[float, float]],
++        x_range: tuple[float, float],
++        y_range: tuple[float, float],
++        min_separation: float,
++    ) -> None:
++        """Record whether original sampling or constructive fallback won."""
++        audit_dir = os.environ.get("HBOT_SCENE_INIT_AUDIT_DIR")
++        if not audit_dir:
++            return
++        payload = {
++            "status": "SCENE_INIT_OK",
++            "seed": os.environ.get("HBOT_EPISODE_SEED"),
++            "placement_mode": placement_mode,
++            "distribution_equivalence": (
++                "original_random_sampler"
++                if placement_mode == "random_sampling"
++                else "NOT_EQUIVALENT_constructive_MILP_fallback"
++            ),
++            "assets": [
++                {"tag": tag, "half_extents_xy_m": extents}
++                for tag, extents in zip(tags, half_extents, strict=True)
++            ],
++            "constraints": {
++                "center_x_range_m": x_range,
++                "center_y_range_m": y_range,
++                "min_separation_m": min_separation,
++            },
++        }
++        path = Path(audit_dir)
++        path.mkdir(parents=True, exist_ok=True)
++        (path / "scene_init_audit.json").write_text(
++            json.dumps(payload, indent=2), encoding="utf-8"
++        )
++
+     def _apply_random_non_overlap(self, env_ids: torch.Tensor):
+         """Sample poses ensuring XY non-overlap for all configured assets.
+ 
+@@ -251,6 +391,31 @@
+         max_retries = int(self._cfg.max_retries)
+         absolute_resample = bool(self._cfg.absolute_sampling)
+         group_attempts = 256
++        placement_mode = "random_sampling"
++
++        pr = self._cfg.pose_range or {}
++        x_range = tuple(float(v) for v in pr.get("x", (0.0, 0.0)))
++        y_range = tuple(float(v) for v in pr.get("y", (0.0, 0.0)))
++        tags = [
++            self._get_asset_tag(asset, asset_idx)
++            for asset_idx, asset in enumerate(self._assets)
++        ]
++        half_extents = [
++            self._asset_xy_extents.get(tag, (0.01, 0.01)) for tag in tags
++        ]
++        feasible_layout, feasibility_reason = _solve_aabb_layout(
++            half_extents, x_range, y_range, min_sep
++        )
++        if feasible_layout is None:
++            diagnostic = self._scene_init_diagnostic(
++                reason=f"geometric_preflight_failed: {feasibility_reason}",
++                tags=tags,
++                half_extents=half_extents,
++                x_range=x_range,
++                y_range=y_range,
++                min_separation=min_sep,
++            )
++            raise SceneInitFailedError(json.dumps(diagnostic, sort_keys=True))
+ 
+         # Retry the whole asset group to avoid partial placements.
+         attempt = 0
+@@ -364,10 +529,55 @@
+             else:
+                 attempt += 1
+         if not success:
++            # The exact preflight proved this asset set is feasible. Use its
++            # constructive solution instead of silently leaving assets at the
++            # origin or multiplying random retries.
+             print(
+-                f"[PoseResetTerm] Group sampling failed after {group_attempts} attempts; placements skipped."  # noqa: E501
++                f"[PoseResetTerm] Random group sampling failed after {group_attempts} attempts; using verified constructive layout."
+             )
+-            return
++            placements.clear()
++            placement_mode = "constructive_milp_fallback"
++            final_env_cache = [[] for _ in range(len(env_ids))]
++            for asset_idx, asset in enumerate(self._assets):
++                tag = tags[asset_idx]
++                hx, hy = half_extents[asset_idx]
++                asset_offsets: list[list[float]] = []
++                root_states = asset.data.default_root_state[env_ids].clone()
++                env_origins = self._env.scene.env_origins[env_ids]
++                for i_env in range(len(env_ids)):
++                    cand = self._uniform_sample_pose()
++                    cand[0], cand[1] = feasible_layout[asset_idx]
++                    if "z" in pr:
++                        z_min_cfg, z_max_cfg = pr["z"]
++                        cand[2] = (z_min_cfg + z_max_cfg) * 0.5
++                    else:
++                        cand[2] = 0.0
++                    z_min = self._asset_z_min.get(tag)
++                    if z_min is not None:
++                        floor_offset = _Z_CLEARANCE - z_min
++                        if not absolute_resample:
++                            floor_offset -= float(root_states[i_env, 2])
++                        cand[2] = max(cand[2], floor_offset)
++                    asset_offsets.append(cand)
++                    base_x = float(env_origins[i_env, 0])
++                    base_y = float(env_origins[i_env, 1])
++                    if not absolute_resample:
++                        base_x += float(root_states[i_env, 0])
++                        base_y += float(root_states[i_env, 1])
++                    final_env_cache[i_env].append(
++                        (
++                            tag,
++                            (base_x + cand[0], base_y + cand[1]),
++                            (hx, hy),
++                            None,
++                            None,
++                        )
++                    )
++                offsets_tensor = torch.tensor(asset_offsets).to(
++                    self._env.device, dtype=torch.float32
++                )
++                placements.append((asset, root_states, offsets_tensor))
++            success = True
+         for asset, root_states, offsets_tensor in placements:
+             if absolute_resample:
+                 positions = (
+@@ -396,6 +606,14 @@
+             ):
+                 global_cache[env_id] = list(entries)
+             _CROSS_GROUP_CACHE[self._group_key] = global_cache
++        self._write_scene_init_audit(
++            placement_mode=placement_mode,
++            tags=tags,
++            half_extents=half_extents,
++            x_range=x_range,
++            y_range=y_range,
++            min_separation=min_sep,
++        )
+         return
+ 
+     def _uniform_sample_pose(self) -> list[float]:
+--- a/robo_orchard_sim/ext/envs/managers/events/layout_reset.py
++++ b/robo_orchard_sim/ext/envs/managers/events/layout_reset.py
+@@ -13,7 +13,7 @@
+ from collections.abc import Sequence
+ 
+ import torch
+-from robo_orchard_core.envs.manager_based_env import ResetEvent
++from robo_orchard_sim.ext.envs.manager_based_env import ResetEvent
+ from robo_orchard_core.envs.managers.events.event_term import (
+     EventTermBase,
+     EventTermBaseCfg,
+--- a/robo_orchard_sim/ext/envs/managers/actions/articulation/joint_position.py
++++ b/robo_orchard_sim/ext/envs/managers/actions/articulation/joint_position.py
+@@ -52,6 +52,44 @@
+             self.processed_actions, joint_ids=self.joint_ids
+         )
+ 
++        # P2D: Read-only control-chain trace; no change to action semantics.
++        import os
++        import json
++
++        trace_path = os.environ.get("P2D_ACTION_TRACE")
++        if trace_path and len(self.joint_ids) == 7:
++            self._p2d_calls = getattr(self, "_p2d_calls", 0) + 1
++            if self._p2d_calls % 20 == 0:
++                data = self._asset.data
++                ids = self.joint_ids
++
++                def vals(x, subset=False):
++                    if x is None:
++                        return None
++                    if subset:
++                        x = x[:, ids]
++                    return x[0].detach().cpu().tolist()
++
++                row = {
++                    "source_file": __file__,
++                    "apply_call": self._p2d_calls,
++                    "joint_names": list(self.joint_names),
++                    "joint_ids": list(ids),
++                    "raw": vals(self._raw_actions),
++                    "processed": vals(self.processed_actions),
++                    "target": vals(data.joint_pos_target, True),
++                    "actual": vals(data.joint_pos, True),
++                    "velocity": vals(data.joint_vel, True),
++                    "stiffness": vals(
++                        getattr(data, "joint_stiffness", None), True
++                    ),
++                    "damping": vals(
++                        getattr(data, "joint_damping", None), True
++                    ),
++                }
++                with open(trace_path, "a", encoding="utf-8") as f:
++                    f.write(json.dumps(row) + "\n")
++
+ 
+ class ArticulationJointPositionActionTermCfg(ArticulationJointActionTermCfg):
+     class_type: ClassType_co[ArticulationJointPositionActionTerm] = (
+--- a/robo_orchard_sim/task_components/trajs_gen/executors/pick.py
++++ b/robo_orchard_sim/task_components/trajs_gen/executors/pick.py
+@@ -91,6 +91,14 @@
+             resolved=resolved,
+             runtime_state=runtime_state,
+         )
++        if any(self.cfg.grasp_position_offset_robot_base):
++            offset = torch.tensor(
++                self.cfg.grasp_position_offset_robot_base,
++                dtype=grasp_pose.dtype,
++                device=grasp_pose.device,
++            )
++            grasp_pose = grasp_pose.clone()
++            grasp_pose[..., :3] += offset
+         debug_target_pose = self.build_debug_target_pose(
+             env=env,
+             runtime_state=runtime_state,
+@@ -128,6 +136,17 @@
+             gripper_val=open_val,
+             mode=trajs_mode,
+         )
++        hold_trajs = None
++        if self.cfg.pre_close_hold_steps > 0:
++            hold_trajs = self.gen_gripper_trajs(
++                current_joint_positions=self.get_last_trajs(traj2)[
++                    :, : len(resolved.joint_ids)
++                ],
++                start_gripper_val=open_val,
++                end_gripper_val=open_val,
++                length=self.cfg.pre_close_hold_steps,
++                enable_interpolation=False,
++            )
+         close_trajs = self.gen_gripper_trajs(
+             current_joint_positions=self.get_last_trajs(traj2)[
+                 :, : len(resolved.joint_ids)
+@@ -136,7 +155,36 @@
+             end_gripper_val=close_val,
+             length=self.cfg.close_gripper_steps,
+         )
+-        trajectories = self._merge_trajs(traj1, traj2, close_trajs)
++
++        # P2D experimental post-close hold; disabled by default.
++        import os
++        post_close_steps = int(
++            os.environ.get("P2D_POST_CLOSE_STEPS", "0")
++        )
++        if not 0 <= post_close_steps <= 45:
++            raise ValueError("Invalid P2D_POST_CLOSE_STEPS")
++        post_close_trajs = None
++        if post_close_steps:
++            post_close_trajs = self.gen_gripper_trajs(
++                current_joint_positions=self.get_last_trajs(
++                    close_trajs
++                )[:, :len(resolved.joint_ids)],
++                start_gripper_val=close_val,
++                end_gripper_val=close_val,
++                length=post_close_steps,
++                enable_interpolation=False,
++            )
++            print(
++                f"P2D_POST_CLOSE_HOLD={post_close_steps}",
++                flush=True,
++            )
++        trajectories = self._merge_trajs(
++            traj1,
++            traj2,
++            *(() if hold_trajs is None else (hold_trajs,)),
++            close_trajs,
++            *(() if post_close_trajs is None else (post_close_trajs,)),
++        )
+         success = bool(torch.all(success_flag1 & success_flag2).item())
+         return Trajectories(
+             trajectories=trajectories,
+@@ -658,6 +706,19 @@
+     pre_grasp: PoseGeneratorCfg | None = None
+     grasp_mode: GraspMode = "Default"
+     close_gripper_steps: int = 20
++    pre_close_hold_steps: int = 0
++    """Open-gripper hold after reaching the grasp pose and before closing.
++
++    This lets the physical arm settle onto the final planned joint target;
++    zero preserves the original executor behavior.
++    """
++
++    grasp_position_offset_robot_base: tuple[float, float, float] = (
++        0.0,
++        0.0,
++        0.0,
++    )
++    """Optional isolated expert offset; zero preserves planner semantics."""
+ 
+     top_down_max_tilt_deg: float = 45.0
+     """How far a ``Top-down`` grasp may tilt off vertical, in degrees.
+--- a/robo_orchard_sim/task_components/validators/checkers.py
++++ b/robo_orchard_sim/task_components/validators/checkers.py
+@@ -898,6 +898,9 @@
+         self.contact_metric = contact_metric
+         self.grasp_metric = grasp_metric
+         self._bindings: dict[str, ContactBinding] = {}
++        # P2-C isolated-run diagnostics.  This is observational only: the
++        # returned contact/grasp booleans below retain their original logic.
++        self.last_diagnostics: list[dict[str, object]] = []
+ 
+     @staticmethod
+     def _target_paths(
+@@ -962,6 +965,33 @@
+         )
+         first_norm = torch.linalg.norm(first)
+         second_norm = torch.linalg.norm(second)
++        diagnostic: dict[str, object] = {
++            "target": str(target),
++            "sensor_names": list(pair.sensor_names),
++            "force_threshold": self.force_threshold,
++            "max_opposition_cosine": self.max_opposition_cosine,
++            "min_inward_cosine": self.min_inward_cosine,
++            "first_force_w": first.detach().cpu().tolist(),
++            "second_force_w": second.detach().cpu().tolist(),
++            "first_force_norm": first_norm.item(),
++            "second_force_norm": second_norm.item(),
++        }
++
++        def finish(
++            contacted_value: bool,
++            grasped_value: bool,
++            reason: str,
++            **values: object,
++        ) -> tuple[bool, bool]:
++            diagnostic.update(values)
++            diagnostic.update(
++                contacted=contacted_value,
++                grasped=grasped_value,
++                reason=reason,
++            )
++            self.last_diagnostics.append(diagnostic)
++            return contacted_value, grasped_value
++
+         contacted = bool(
+             first_norm.item() > self.force_threshold
+             or second_norm.item() > self.force_threshold
+@@ -970,15 +1000,18 @@
+             first_norm.item() <= self.force_threshold
+             or second_norm.item() <= self.force_threshold
+         ):
+-            return contacted, False
++            return finish(contacted, False, "force_below_threshold")
+ 
+         first_dir = first / first_norm
+         second_dir = second / second_norm
+-        if (
+-            torch.dot(first_dir, second_dir).item()
+-            > self.max_opposition_cosine
+-        ):
+-            return contacted, False
++        opposition_dot = torch.dot(first_dir, second_dir).item()
++        if opposition_dot > self.max_opposition_cosine:
++            return finish(
++                contacted,
++                False,
++                "forces_not_opposed",
++                opposition_dot=opposition_dot,
++            )
+ 
+         first_pos = self._binding(
+             pair.sensor_names[0]
+@@ -988,18 +1021,45 @@
+         ).finger_contact_position(env, target, env_idx=env_idx)
+         finger_axis = second_pos - first_pos
+         if not torch.isfinite(finger_axis).all().item():
+-            return contacted, False
++            return finish(
++                contacted,
++                False,
++                "nonfinite_contact_position",
++                opposition_dot=opposition_dot,
++                first_contact_pos_w=first_pos.detach().cpu().tolist(),
++                second_contact_pos_w=second_pos.detach().cpu().tolist(),
++            )
+         finger_distance = torch.linalg.norm(finger_axis)
+         if finger_distance.item() <= torch.finfo(finger_axis.dtype).eps:
+-            return contacted, False
++            return finish(
++                contacted,
++                False,
++                "coincident_contact_positions",
++                opposition_dot=opposition_dot,
++                first_contact_pos_w=first_pos.detach().cpu().tolist(),
++                second_contact_pos_w=second_pos.detach().cpu().tolist(),
++                finger_distance=finger_distance.item(),
++            )
+         finger_axis = finger_axis / finger_distance
+         # Sensors report forces on the fingers; negate for forces on target.
++        first_inward_cosine = torch.dot(-first_dir, finger_axis).item()
++        second_inward_cosine = torch.dot(-second_dir, -finger_axis).item()
+         grasped = (
+-            torch.dot(-first_dir, finger_axis).item() >= self.min_inward_cosine
+-            and torch.dot(-second_dir, -finger_axis).item()
+-            >= self.min_inward_cosine
+-        )
+-        return contacted, grasped
++            first_inward_cosine >= self.min_inward_cosine
++            and second_inward_cosine >= self.min_inward_cosine
++        )
++        return finish(
++            contacted,
++            grasped,
++            "grasped" if grasped else "forces_not_inward",
++            opposition_dot=opposition_dot,
++            first_contact_pos_w=first_pos.detach().cpu().tolist(),
++            second_contact_pos_w=second_pos.detach().cpu().tolist(),
++            finger_distance=finger_distance.item(),
++            finger_axis_w=finger_axis.detach().cpu().tolist(),
++            first_inward_cosine=first_inward_cosine,
++            second_inward_cosine=second_inward_cosine,
++        )
+ 
+     def evaluate(
+         self,
+@@ -1013,6 +1073,7 @@
+         if robot is None:
+             raise ValueError("Contact checking requires robot metadata.")
+         pairs = gripper_contact_sensors(context)
++        self.last_diagnostics = []
+         components = tuple(iter_articulation_bodies(env, scope))
+         targets = self._target_paths(env, scope, components)
+         for pair in pairs:

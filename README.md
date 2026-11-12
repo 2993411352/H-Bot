@@ -18,6 +18,10 @@ bash run-official.sh --gpu 0
 
 通过 `HBOT_BACKEND=jax` 或 `loongforge` 选择对应环境与适配；模板默认 LoongForge。两种 checkpoint 不做格式转换，也不能混用归一化。完整安装、权重目录、断线处理和日志说明见部署文档。
 
+## 多人协作合成数据
+
+[`deploy/data-synthesis/`](deploy/data-synthesis/README.md) 提供新机器的 Docker/NVIDIA runtime 安装、Isaac Sim 环境、四任务采集和 MP4/LeRobot 导出。支持 RTX A5000、RTX 5070 Ti 等显卡，默认每人每个任务采集 400 条，并包含共享索引与跨机器去重。安装和采集在参与者自己的 Linux 主机执行。
+
 ## 历史本地结果（2026-11-02）
 
 | 模型 | 回合数 | 平均分 | 成功率 |

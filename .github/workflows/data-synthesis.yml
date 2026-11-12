@@ -1,0 +1,30 @@
+name: Portable synthesis CPU checks
+on:
+  push:
+    paths: ['deploy/data-synthesis/**', '.github/workflows/data-synthesis.yml']
+  pull_request:
+    paths: ['deploy/data-synthesis/**', '.github/workflows/data-synthesis.yml']
+permissions:
+  contents: read
+jobs:
+  cpu:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==1.26.4 PyYAML==6.0.2 mcap==1.6.0 mcap-protobuf-support==0.6.0 Pillow==11.3.0
+      - name: Identity, targeting, duplicate filtering and shell checks
+        env:
+          PYTHONPATH: deploy/data-synthesis/runtime
+          CUDA_VISIBLE_DEVICES: ''
+        run: |
+          bash -n deploy/data-synthesis/install-host.sh
+          python -m compileall -q deploy/data-synthesis
+          python -m unittest discover -s deploy/data-synthesis/tests -v
+      - name: Verify patch applies to exact upstream
+        run: |
+          git clone --filter=blob:none https://github.com/HorizonRobotics/RoboOrchardSim.git /tmp/synthesis-upstream
+          git -C /tmp/synthesis-upstream checkout --detach f2e041e5fabe354c1398ea97c934f603bb65d14d
+          git -C /tmp/synthesis-upstream apply --check "$GITHUB_WORKSPACE/deploy/data-synthesis/patches/collector.patch"

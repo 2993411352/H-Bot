@@ -1,0 +1,8 @@
+{
+  "gpu": 0,
+  "assets": "/data/hbot/assets",
+  "work": "/data/hbot/collection",
+  "reference": "/data/hbot/team-reference",
+  "image_prefix": "hbot/synthesis-v1",
+  "accept_eula": false
+}
