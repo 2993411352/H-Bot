@@ -3,6 +3,7 @@ from pathlib import Path
 import pyarrow.parquet as pq
 import yaml
 from common import require, sha
+from coverage_sampling import catalog
 
 
 def inventory(root=Path('/assets/OBJECTS_v2')):
@@ -22,8 +23,9 @@ def inventory(root=Path('/assets/OBJECTS_v2')):
     containers = {r['category'] for r in rows if 'is_container' in (r['tags'] or [])}
     require(set(('bowl', 'basket', 'tray', 'plate')) <= containers, 'Seen containers incomplete')
     require(bool(categories), 'No graspable seen categories')
-    return dict(training_categories=categories, seen_count=len(rows),
-                split_sha256=sha(split), index_sha256=sha(index))
+    result = catalog(rows)
+    result.update(seen_count=len(rows), split_sha256=sha(split), index_sha256=sha(index))
+    return result
 
 
 if __name__ == '__main__':

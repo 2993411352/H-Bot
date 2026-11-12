@@ -10,11 +10,37 @@ import hashlib
 import json
 from pathlib import Path
 import sqlite3
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent/'runtime'))
+from coverage_sampling import compact
 
 p = argparse.ArgumentParser()
 p.add_argument('--registry', type=Path, required=True)
 p.add_argument('--output', type=Path, required=True)
+p.add_argument('--original-root', type=Path, help='LeRobot root containing task folders/meta/source_records.json')
+p.add_argument('--manifests', type=Path, nargs='*', default=[], help='Accepted synthetic manifests, never evaluation outputs')
 args = p.parse_args()
+# Build compact scene coverage before creating an output directory. Videos,
+# absolute data paths, prompts and evaluation seeds are not distributed.
+coverage = []
+if args.original_root:
+    for source in sorted(args.original_root.glob('*/meta/source_records.json')):
+        for row in json.loads(source.read_text()):
+            r = compact(row)
+            if r['task'] in ('pick_attribute', 'spatial_directions') and r['target_uuid']:
+                coverage.append(r)
+    if not coverage:
+        raise ValueError('No color/spatial training source_records found')
+for manifest in args.manifests:
+    rows = json.loads(manifest.read_text())
+    if not isinstance(rows, list):
+        raise ValueError('Supply accepted candidate manifests, not status/evaluation files')
+    for row in rows:
+        if not row.get('raw_gate_pass') or not row.get('dedup_gate_pass'):
+            raise ValueError('Coverage manifest includes an unaccepted candidate')
+        r = compact(row)
+        if r['task'] in ('pick_attribute', 'spatial_directions'):
+            coverage.append(r)
 args.output.mkdir(parents=True, exist_ok=False)
 dst = args.output/'registry.sqlite3'
 with sqlite3.connect(f'file:{args.registry.resolve()}?mode=ro', uri=True) as original:
@@ -45,4 +71,7 @@ with dst.open('rb') as f:
     records=count, kinds=kinds, sha256=h.hexdigest(),
     scope='snapshot_of_supplied_registry',
     warning='Coverage is only as complete as the supplied coordinator index.'), indent=2))
+(args.output/'coverage.json').write_text(json.dumps(dict(schema=1, records=coverage,
+    original_training_included=bool(args.original_root),
+    synthetic_manifests=len(args.manifests)), indent=2))
 print(args.output)

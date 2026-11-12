@@ -3,9 +3,10 @@ import copy
 from collections import Counter
 
 from targeting_base import (  # Frozen, previously exercised implementation.
-    TASKS, allocate, choose_profile, make_config, target_category,
-    verify_metadata,
+    TASKS, allocate, choose_profile, make_config as base_make_config, target_category,
+    verify_metadata as base_verify_metadata,
 )
+import coverage_sampling
 
 DIRECTIONS = ("front", "right", "left", "behind")
 CONTAINERS = ("bowl", "basket", "tray", "plate")
@@ -101,6 +102,8 @@ def specialize(profile, task, rows, batches, inventory):
     if task == "stack_cubes":
         return profile
     rows = list(rows)
+    if inventory.get('coverage_pools') and task in ('pick_attribute', 'spatial_directions'):
+        return coverage_sampling.select(profile, task, rows, batches, inventory)
     allowed = set(inventory["training_categories"])
     mode = profile["category_pool"]
     pool = sorted(allowed if mode == "all" else
@@ -151,3 +154,19 @@ def specialize(profile, task, rows, batches, inventory):
             profile["confusable"] = next(b for a, b in CONTRAST_PAIRS
                                           if a == category and b in allowed)
     return profile
+
+
+def make_config(base_config, task, profile):
+    return coverage_sampling.configure(base_make_config(base_config, task, profile), task, profile)
+
+
+def verify_metadata(task, profile, meta):
+    result = base_verify_metadata(task, profile, meta)
+    result['failures'] += coverage_sampling.verify(task, profile, meta)
+    result['pass_check'] = not result['failures']
+    if profile.get('coverage_version'):
+        actual = coverage_sampling.compact({'metadata': meta}, task)
+        result.update(requested_layout_bin=profile.get('layout_bin'),
+                      measured_layout_bin=coverage_sampling.pose_bin(task, actual),
+                      actual_scene=actual)
+    return result

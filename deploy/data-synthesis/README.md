@@ -13,6 +13,23 @@
 
 当前脚本不采集 Open_Drawer 和 Joint_Direction。合成数据无需模型权重或平台测评链接；正式模型测评使用 [official-pi05 部署包](../official-pi05/README.md)。
 
+## 场景覆盖采集规则
+
+颜色和空间抓取会结合原始训练示范、共享覆盖记录及本机已完成的数据，每次选择欠覆盖的目标实例和场景组合。
+
+| 任务 | 选样方式 |
+|---|---|
+| 颜色抓取 | 优先补缺少的目标实例，再选择同类别、不同颜色的干扰物组合；保留 65% 广覆盖、20% 细长物品、15% 小型物品配额 |
+| 空间抓取 | 平衡四个方向，同时补齐“目标类别 × 方向”，轮换目标实例、不同类别的参照物及参照物实例 |
+| 物体放置 | 继续补充欠覆盖类别、容易混淆的干扰物以及不同容器组合 |
+| 堆叠方块 | 继续覆盖左、右、远端、中央和完整工作区，保留困难场景 |
+
+颜色任务轮换左右摆放区域和四个朝向区间；空间任务轮换参照物左右区域，以及目标与参照物的近、远距离区间。每五次选择中有一次保留原始完整摆放范围。所有摆放仍由仿真初始化、碰撞检查与专家规划执行。
+
+目标和参照物按 UUID 指定，成功后核对实际物品与请求一致；位置和朝向覆盖按真实初始状态统计。失败尝试不算覆盖，持续失败的实例会降低连续重试优先级，让其他欠覆盖实例先得到机会。各 worker 使用不同选择顺序，仍需共享索引和汇总去重。
+
+`coverage_status.json` 可查看目标实例覆盖、尚未覆盖的 UUID、类别与方向矩阵、颜色组合和实际摆放区间。seen 资产数不等于专家可抓取实例数，脚本会按资产标签和任务能力筛选并记录候选池。
+
 ## 安装环境
 
 准备原生 Ubuntu 22.04/24.04 x86_64、可用的 NVIDIA 驱动，以及足够保存资产和采集数据的磁盘空间。建议 64 GB 以上内存、至少 1 TB 空余磁盘。Windows 用户通过 SSH 连接 Linux 机器操作。
@@ -74,7 +91,8 @@ python3 manage.py assets-check
 ```text
 team-reference/
 ├── registry.sqlite3
-└── reference.json
+├── reference.json
+└── coverage.json
 ```
 
 将 `local.json` 中的 `reference` 指向此目录。采集时会检查与已有数据及本机已采集数据是否重复，汇总时还会检查参与者之间的重复数据。
@@ -84,10 +102,15 @@ team-reference/
 ```bash
 python3 snapshot-reference.py \
   --registry /absolute/path/to/dedup/registry.sqlite3 \
+  --original-root /absolute/path/to/lerobot_unpacked \
+  --manifests /absolute/path/to/pick_attribute_candidate_manifest.json \
+              /absolute/path/to/spatial_directions_candidate_manifest.json \
   --output /absolute/path/to/team-reference
 ```
 
-索引通过团队文件传输共享，不提交到公开 GitHub。
+`--original-root` 下应包含各任务目录中的 `meta/source_records.json`；没有已有合成数据时可省略 `--manifests`。清单只接收已通过采集和去重的数据。覆盖文件保存物品身份、方向及可用的初始位姿，不复制视频或私有数据路径。原始元数据缺少的干扰物身份、初始位姿不会被补造。
+
+索引通过团队文件传输共享，不提交到公开 GitHub。启动采集需要包含原始示范的 `coverage.json`，旧版共享索引应重新准备。
 
 ## 开始采集
 

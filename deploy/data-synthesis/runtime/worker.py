@@ -14,6 +14,7 @@ import yaml
 from common import TASKS, LIMITS, require, seed_for, sha, save
 from inventory import inventory
 from targeting import definitions, allocate, choose_profile, specialize, make_config
+from coverage_sampling import report as coverage_report
 
 
 def now():
@@ -38,6 +39,14 @@ def main():
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         plan_path = root / 'plan.json'
         inv = inventory()
+        coverage_path = Path('/reference/coverage.json')
+        require(coverage_path.is_file(), 'Missing coverage.json; regenerate the shared reference snapshot')
+        coverage_reference = json.loads(coverage_path.read_text())
+        require(coverage_reference.get('schema') == 1, 'Unsupported coverage reference schema')
+        require(coverage_reference.get('original_training_included'),
+                'Regenerate reference with --original-root so original demonstrations inform coverage')
+        inv['coverage_baseline'] = coverage_reference['records']
+        inv['selection_salt'] = args.worker
         code = {str(f.relative_to('/opt/hbot')): sha(f)
                 for folder in ('runtime', 'configs', 'patches')
                 for f in sorted((Path('/opt/hbot') / folder).rglob('*'))
@@ -47,6 +56,7 @@ def main():
                     inventory=inv, code_sha256=code,
                     memory_profile=os.environ['HBOT_MEMORY_PROFILE'],
                     reference_sha256=sha('/reference/registry.sqlite3'),
+                    coverage_reference_sha256=sha(coverage_path),
                     build=json.loads(Path('/opt/hbot/build.json').read_text()))
         if plan_path.exists():
             require(args.resume, 'Run exists. Inspect status before explicit --resume')
@@ -134,6 +144,9 @@ def main():
                     state.update(status='between_episodes', updated_at=now())
                     save(statefile, state)
                     save(root/'manifest.json', state['accepted'])
+                    save(root/'coverage_status.json', {t: coverage_report(t,
+                        [r for r in state['accepted'] if r['task'] == t], inv)
+                        for t in ('pick_attribute', 'spatial_directions')})
                     print(task, len([r for r in state['accepted'] if r['task']==task]),
                           '/', args.quota, 'accepted', flush=True)
                 except BaseException as exc:
