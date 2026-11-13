@@ -55,6 +55,8 @@ RTX A5000 使用 `sm_86`，RTX 5070 Ti 使用 `sm_120`。16 GB 卡采用 `compac
 
 种子在进程启动前写盘；运行锁防止重复提交，同一主机使用 GPU 锁。干净暂停可以原参数续采。代码、资产索引、共享指纹库、参数改变则拒绝续采。异常状态由协调者检查后处理，不自动回收种子或覆盖目录。
 
+每批采集通过独立 Linux subreaper 运行。仿真正常退出、直接 `os._exit`、超时或收到停止信号后，仅清理并回收该批自己的后代进程，包括 Xvfb 和脱离会话的 Isaac 辅助进程。清理回执写入 `process_cleanup.json`；回执缺失或仍有残留时停止派发，保留轨迹及错误。可在采集镜像内运行 `python3 /opt/hbot/tests/check_process_supervisor.py --xvfb-cycles 20` 检查此退出路径。
+
 资产只读挂载，仅索引复制到每个运行的私有目录供 upstream 文件锁使用，禁止自动重建索引。下载命令会固定并记录资产 commit；资源检查只验证必要文件，不等同于所有下载文件的完整性验证。
 
 新增参与者发生 CUDA/Vulkan 故障时，收集显卡型号、驱动、`build.json`、`status.json` 和候选 `stdout.log`。不通过修改成功标准或剔除困难类别来凑配额。

@@ -123,10 +123,19 @@ def main():
                        '--profile', str(batch/'profile.json'), '--seed', str(seed),
                        '--episodes', '1', '--max-steps', str(LIMITS[task]),
                        '--output', str(batch/'raw')]
+                cleanup_report = batch/'process_cleanup.json'
+                cmd = [sys.executable, '/opt/hbot/runtime/process_supervisor.py',
+                       '--report', str(cleanup_report), '--timeout-seconds', '3600',
+                       '--'] + cmd
                 try:
                     with (batch/'stdout.log').open('w') as log:
                         rc = subprocess.call(cmd, stdout=log, stderr=subprocess.STDOUT,
                                              pass_fds=(lock.fileno(),))
+                    require(cleanup_report.is_file(), 'Process cleanup receipt missing; stopping collection')
+                    cleanup = json.loads(cleanup_report.read_text())
+                    record['process_cleanup'] = cleanup
+                    require(cleanup.get('ok') and not cleanup.get('remaining'),
+                            'Owned child cleanup incomplete; stopping collection')
                     require(rc == 0, f'Collector exit code {rc}; see {batch}/stdout.log')
                     episode = batch/'raw'/f'episode_{seed}.json'
                     require(episode.is_file(), 'Missing durable episode audit')
