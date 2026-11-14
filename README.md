@@ -4,6 +4,12 @@
 
 ## 新机器部署正式测评
 
+**Windows PowerShell＋WSL2 Ubuntu** 的 LoongForge 权重部署可以在仓库根目录执行以下命令。后续权重配置、自检和正式启动见 [Windows 使用说明](deploy/official-pi05/WINDOWS.md)。
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\deploy\official-pi05\windows.ps1 Setup
+```
+
 使用 [`deploy/official-pi05/`](deploy/official-pi05/README.md)：包含 B16 · 100k（JAX）和 LoongForge reviewed-v3（PyTorch）的正式 WSS 服务、固定依赖安装脚本、环境配置模板，以及原有 CPU 检查和真实权重 WSS 自测。正式仿真由平台运行，模型机器无需安装 Isaac Sim 或下载仿真资产。
 
 ```bash

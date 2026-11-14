@@ -1,5 +1,7 @@
 # 在新机器上运行 π₀.₅ 正式测评服务
 
+Windows 用户使用 [PowerShell＋WSL2 一键部署](WINDOWS.md)。入口 `windows.ps1` 提供 LoongForge 环境安装、权重配置、自检和 tmux 正式测评会话管理。
+
 这是本项目正式服务的可迁移版本，支持旧 B16 · 100k JAX 权重与本轮 LoongForge/PyTorch 权重。保留已使用的 `run-official.sh`、`--check` 和 `--self-test` 流程，去除原机器目录、账户和桌面代理依赖。
 
 选择与权重匹配的后端，两种环境独立安装：
